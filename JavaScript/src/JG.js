@@ -141,10 +141,12 @@ var JG = (function () {
                 idToken = jwt_decode(result.id_token);
             }
         }
+		
+		var data = false;
 
         if (success) {
 
-            var data = {
+            data = {
                 connected: true,
                 accessToken: result.access_token,
                 displayName: idToken.name,
@@ -154,8 +156,7 @@ var JG = (function () {
 
             Cookies.set('JGOAUTH', JSON.stringify(data), { expires: result.expires });
         } else {
-			var data = false;
-            Cookies.expire('JGOAUTH');
+			 Cookies.expire('JGOAUTH');
         }
 
         var loginButtons = document.querySelectorAll('jg-login');
