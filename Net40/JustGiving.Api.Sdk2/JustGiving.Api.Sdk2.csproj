@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6F0AD4EA-D87E-4738-8E09-E839EA0D9C87}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>JustGiving.Api.Sdk2</RootNamespace>
+    <AssemblyName>JustGiving.Api.Sdk2</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>..\packages\log4net.2.0.3\lib\net40-client\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp">
+      <HintPath>..\packages\RestSharp.105.0.1\lib\net4-client\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Clients\Account\AccountClient.cs" />
+    <Compile Include="JustGivingApiClient2.cs" />
+    <Compile Include="Clients\Account\IAccountClient.cs" />
+    <Compile Include="Clients\Charity\CharityClient.cs" />
+    <Compile Include="Clients\Charity\ICharityClient.cs" />
+    <Compile Include="Clients\ClientBase.cs" />
+    <Compile Include="Clients\Countries\CountryClient.cs" />
+    <Compile Include="Clients\Countries\ICountryClient.cs" />
+    <Compile Include="Configuration\Logging\LoggingOptions.cs" />
+    <Compile Include="Http\RestRequest.cs" />
+    <Compile Include="Logging\ApiRequestLogger.cs" />
+    <Compile Include="Logging\ILogProvider.cs" />
+    <Compile Include="Logging\Log4NetLogProvider.cs" />
+    <Compile Include="Model\Account\Request\AddInterestRequest.cs" />
+    <Compile Include="Model\Account\Request\RateContentRequest.cs" />
+    <Compile Include="Model\Account\Request\RatingIntent.cs" />
+    <Compile Include="Model\Account\Request\RatingType.cs" />
+    <Compile Include="Model\Account\Request\Registration.cs" />
+    <Compile Include="Model\Account\Request\ValidateUserRequest.cs" />
+    <Compile Include="Model\Account\Response\AccountRegistration.cs" />
+    <Compile Include="Model\Account\Response\FundraisingPage.cs" />
+    <Compile Include="Model\Account\Response\GetContentFeedResponse.cs" />
+    <Compile Include="Model\Account\Response\GetDonationsResponse.cs" />
+    <Compile Include="Model\Account\Response\GetUserContentRatingHistoryResponse.cs" />
+    <Compile Include="Model\Account\Response\InMemoryPerson.cs" />
+    <Compile Include="Model\Account\Response\KeyValue.cs" />
+    <Compile Include="Model\Account\Response\Pagination.cs" />
+    <Compile Include="Model\Account\Response\Rating.cs" />
+    <Compile Include="Model\Account\Response\ValidateUser.cs" />
+    <Compile Include="Model\Charity\Request\CharityPageAttributionRequest.cs" />
+    <Compile Include="Model\Charity\Response\Charity.cs" />
+    <Compile Include="Model\Charity\Response\CharityCategory.cs" />
+    <Compile Include="Model\Charity\Response\CharityPageAttributionResponse.cs" />
+    <Compile Include="Model\Charity\Response\Donation.cs" />
+    <Compile Include="Model\Charity\Response\GetEventsByCharityIdResponse.cs" />
+    <Compile Include="Model\Countries\Response\Country.cs" />
+    <Compile Include="Security\AuthorizationMode.cs" />
+    <Compile Include="Security\Basic\BasicCredential.cs" />
+    <Compile Include="Configuration\ClientOptions.cs" />
+    <Compile Include="Http\Endpoints.cs" />
+    <Compile Include="Model\Account\Response\Account.cs" />
+    <Compile Include="Security\OAuth\OAuthAccessToken.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Http\RestClientFactory.cs" />
+    <Compile Include="Serialization\CaseChangingSerializationStrategy.cs" />
+    <Compile Include="Serialization\JustGivingJsonSerializer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JustGiving.Api.Sdk2", "JustGiving.Api.Sdk2\JustGiving.Api.Sdk2.csproj", "{6F0AD4EA-D87E-4738-8E09-E839EA0D9C87}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JustGiving.Api.Sdk2.Test.Unit", "JustGiving.Api.Sdk2.Test.Unit\JustGiving.Api.Sdk2.Test.Unit.csproj", "{08B0B4C1-3997-49A4-9439-3C84AC5C1C0E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JustGiving.Api.Sdk2.Test.Integration", "JustGiving.Api.Sdk2.Test.Integration\JustGiving.Api.Sdk2.Test.Integration.csproj", "{5ACB045B-9ED2-4C72-ABAB-35D83975C08F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6F0AD4EA-D87E-4738-8E09-E839EA0D9C87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F0AD4EA-D87E-4738-8E09-E839EA0D9C87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F0AD4EA-D87E-4738-8E09-E839EA0D9C87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F0AD4EA-D87E-4738-8E09-E839EA0D9C87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08B0B4C1-3997-49A4-9439-3C84AC5C1C0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08B0B4C1-3997-49A4-9439-3C84AC5C1C0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08B0B4C1-3997-49A4-9439-3C84AC5C1C0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08B0B4C1-3997-49A4-9439-3C84AC5C1C0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5ACB045B-9ED2-4C72-ABAB-35D83975C08F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5ACB045B-9ED2-4C72-ABAB-35D83975C08F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5ACB045B-9ED2-4C72-ABAB-35D83975C08F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5ACB045B-9ED2-4C72-ABAB-35D83975C08F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
