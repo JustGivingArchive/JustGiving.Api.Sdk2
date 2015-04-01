@@ -13,6 +13,9 @@ using RestSharp;
 
 namespace JustGiving.Api.Sdk2
 {
+    /// <summary>
+    /// Main entry point into the SDK. Instantiate this class using one of the constructors to begin using the JustGiving API.
+    /// </summary>
     public class JustGivingApiClient2
     {
         private AccountClient _accounts;
@@ -26,7 +29,7 @@ namespace JustGiving.Api.Sdk2
         /// <summary>
         /// Creates an Api client which uses an OAuth2 access token for authorization. This is the preferred method of authenticating, as it offers the best security and will work with all JustGiving user accounts.
         /// </summary>
-        /// <param name="appId">The Appliaction ID you received when you registered your app on the JustGiving developer portal.</param>
+        /// <param name="appId">The Application ID you received when you registered your app on the JustGiving developer portal.</param>
         /// <param name="applicationKey">The Application Key you created for your app on the JustGiving developer portal. You must include it here for your app to work.</param>
         /// <param name="oauthAccessToken">A valid OAuth2 access token issued by identity.justgiving.com</param>
         public JustGivingApiClient2(string appId, string applicationKey, OAuthAccessToken oauthAccessToken)
@@ -53,7 +56,7 @@ namespace JustGiving.Api.Sdk2
         /// <summary>
         /// Creates an Api client which uses a username and password for Basic authorization. This method carries security risks and will not be available to JustGiving users with different user account types (such as Facebook).
         /// </summary>
-        /// <param name="appId">The Appliaction ID you received when you registered your app on the JustGiving developer portal.</param>
+        /// <param name="appId">The Application ID you received when you registered your app on the JustGiving developer portal.</param>
         /// <param name="basicAuthCredential">The username and password of a registered JustGiving user.</param>
         public JustGivingApiClient2(string appId, BasicCredential basicAuthCredential)
         {
@@ -79,7 +82,7 @@ namespace JustGiving.Api.Sdk2
         /// <summary>
         /// Creates an Api client which uses a username and password for Basic authorization. This method carries security risks and will not be available to JustGiving users with different user account types (such as Facebook).
         /// </summary>
-        /// <param name="appId">The Appliaction ID you received when you registered your app on the JustGiving developer portal.</param>
+        /// <param name="appId">The Application ID you received when you registered your app on the JustGiving developer portal.</param>
         /// <param name="applicationKey">If you created a Application Key for this app in the Developer Portal, you must include it here for your app to work.</param>
         /// <param name="basicAuthCredential">The username and password of a registered JustGiving user.</param>
         public JustGivingApiClient2(string appId, string applicationKey, BasicCredential basicAuthCredential)
@@ -111,7 +114,7 @@ namespace JustGiving.Api.Sdk2
         /// <summary>
         /// Creates an anonymous Api client using common default settings. This client will not be able to access protected Api resources which require authentication.
         /// </summary>
-        /// <param name="appId">The Appliaction ID you received when you registered your app on the JustGiving developer portal.</param>
+        /// <param name="appId">The Application ID you received when you registered your app on the JustGiving developer portal.</param>
         public JustGivingApiClient2(string appId)
         {
             if (string.IsNullOrWhiteSpace(appId))
@@ -189,7 +192,7 @@ namespace JustGiving.Api.Sdk2
         }
         
         /// <summary>
-        /// API for managing user accounts and identity.
+        /// API resources for working with user accounts and personalised information.
         /// </summary>
         public AccountClient Accounts
         {
@@ -205,7 +208,7 @@ namespace JustGiving.Api.Sdk2
         }
 
         /// <summary>
-        /// API for working with Charity data.
+        /// API resources for working with Charity data.
         /// </summary>
         public CharityClient Charities
         {
@@ -221,7 +224,7 @@ namespace JustGiving.Api.Sdk2
         }
 
         /// <summary>
-        /// API for working with Country data.
+        /// API resources for working with Country data.
         /// </summary>
         public CountryClient Countries
         {

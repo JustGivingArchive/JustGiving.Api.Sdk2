@@ -1,0 +1,25 @@
+{
+  "name": "justgiving-sdk",
+  "version": "2.0.0",
+  "homepage": "https://github.com/JustGiving/JustGiving.Api.Sdk2",
+  "authors": [
+    "Jon Rowett <jon.rowett@justgiving.com>"
+  ],
+  "description": "Javascript client for the JustGiving Consumer REST API",
+  "main": "src/JG.js",
+  "keywords": [
+    "justgiving"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "Cookies": "~1.2.1",
+    "jwt-decode": "~1.1.0"
+  }
+}

@@ -5,6 +5,9 @@ using RestSharp;
 
 namespace JustGiving.Api.Sdk2.Logging
 {
+    /// <summary>
+    /// Provides rich logging for the API clients.
+    /// </summary>
     internal class ApiRequestLogger
     {
         private readonly ILogProvider _log;
