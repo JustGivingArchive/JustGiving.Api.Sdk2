@@ -30,7 +30,7 @@ if(myContentFeed.StatusCode == HttpStatusCode.Ok)
 }
 ```
 
-## JavaScript API features
+## JavaScript SDK features
 
 - Extremely low barrier to entry - connect to the JG platform in two lines of HTML
 - New "Connect with JustGiving" button allows JG users to sign in to external apps via OAuth2 and OpenId Connect
