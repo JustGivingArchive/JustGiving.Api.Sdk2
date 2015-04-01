@@ -15,6 +15,21 @@ New public SDKs for the Consumer API for Microsoft .NET and JavaScript
 - Removed support for whitelabel domains / RFL / API "versions" which don't exist
 - Less code, less clutter, less maintainence
 
+### Example:
+
+```
+var client = new JustGivingApiClient2("bafff466", new OAuthAccessToken("sdfijojweoimicew0932dnmosdf")); 
+client.UseSandbox();
+client.LogEverything();
+
+var myContentFeed = client.Accounts.GetContentFeed();
+
+if(myContentFeed.StatusCode == HttpStatusCode.Ok)
+{
+  return View("ContentFeed", myContentFeed.Data);
+}
+```
+
 ## JavaScript API features
 
 - Extremely low barrier to entry - connect to the JG platform in two lines of HTML
@@ -36,6 +51,9 @@ New public SDKs for the Consumer API for Microsoft .NET and JavaScript
         function handleLoginState(result){
           if(result){
             alert('Hi, ' + result.displayName);
+            
+            var feed = JG.getFeed();
+            // ...do something with the content feed
           }
         }
 </script>
