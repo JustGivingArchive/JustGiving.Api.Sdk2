@@ -17,6 +17,6 @@ New public SDKs for the Consumer API for Microsoft .NET and JavaScript
 
 ## JavaScript API features
 
-- Extremely low barrier to entry
-- New "Connect with JustGiving" button allows third parties to hook into our platform via OAuth2 and OpenId Connect
-- Easy client-side access to Consumer API resources such as Fundraising Page creation, and user content feeds
+- Extremely low barrier to entry - connect to the JG platform in two lines of HTML
+- New "Connect with JustGiving" button allows JG users to sign in to external apps via OAuth2 and OpenId Connect
+- Easy client-side access to Consumer API resources such as Fundraising Page creation and personalised content feeds
