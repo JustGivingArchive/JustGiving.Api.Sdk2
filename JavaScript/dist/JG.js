@@ -317,7 +317,7 @@ if (typeof global.window.define == 'function' && global.window.define.amd) {
         }
 
         callback(result);
-    return result.connected;
+        return result.connected;
     }
 
     var signOut = function () {

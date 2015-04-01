@@ -42,7 +42,7 @@ var JG = (function () {
         }
 
         callback(result);
-    return result.connected;
+        return result.connected;
     }
 
     var signOut = function () {
