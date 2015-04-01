@@ -285,11 +285,13 @@ if (typeof global.window.define == 'function' && global.window.define.amd) {
         _apiEndpoint = Constants.environments[_environment];
         _authorizationEndpoint = Constants.identityServers[_environment] + Constants.authorizeResource;
 
+	    var signedIn = false;
         if (window.location.hash) {
-            var signedIn = _processTokenCallback();
-
-            
+            signedIn = _processTokenCallback();
         }
+		else {
+		    signedIn = checkConnected();
+		}
 
         if (!signedIn) {
             _initLoginButtons();
@@ -315,6 +317,7 @@ if (typeof global.window.define == 'function' && global.window.define.amd) {
         }
 
         callback(result);
+		return result.connected;
     }
 
     var signOut = function () {

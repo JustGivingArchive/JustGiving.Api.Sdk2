@@ -10,11 +10,13 @@ var JG = (function () {
         _apiEndpoint = Constants.environments[_environment];
         _authorizationEndpoint = Constants.identityServers[_environment] + Constants.authorizeResource;
 
+	    var signedIn = false;
         if (window.location.hash) {
-            var signedIn = _processTokenCallback();
-
-            
+            signedIn = _processTokenCallback();
         }
+		else {
+		    signedIn = checkConnected();
+		}
 
         if (!signedIn) {
             _initLoginButtons();
@@ -40,6 +42,7 @@ var JG = (function () {
         }
 
         callback(result);
+		return result.connected;
     }
 
     var signOut = function () {
