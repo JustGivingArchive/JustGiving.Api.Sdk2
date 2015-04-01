@@ -10,7 +10,7 @@
         }
 
         /// <summary>
-        /// Does what you'd expect.
+        /// Does what you'd expect. Any sensitive data in requests or responses will be logged.
         /// </summary>
         public static LoggingOptions LogEverything
         {
@@ -26,7 +26,7 @@
         }
 
         /// <summary>
-        /// No information about HTTP requests or responses will be logged.
+        /// No logging.
         /// </summary>
         public static LoggingOptions Silent
         {
@@ -42,13 +42,18 @@
         }
 
         /// <summary>
-        /// Minimal information about failing HTTP requests will be logged only.
+        /// Minimal information about failing HTTP requests will be logged only. Sensitive data will not be logged.
         /// </summary>
         public static LoggingOptions Default
         {
             get
             {
-                return new LoggingOptions();
+                return new LoggingOptions
+                {
+                    LogAllMessageContent = false,
+                    LogFailedRequests = true,
+                    LogSuccessfulRequests = false,
+                };
             }
         }
 

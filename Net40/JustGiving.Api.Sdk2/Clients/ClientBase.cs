@@ -1,8 +1,6 @@
 using System;
 using JustGiving.Api.Sdk2.Logging;
-using JustGiving.Api.Sdk2.Serialization;
 using RestSharp;
-using RestSharp.Serializers;
 
 namespace JustGiving.Api.Sdk2.Clients
 {
@@ -17,7 +15,7 @@ namespace JustGiving.Api.Sdk2.Clients
             _logger = logger;
         }
 
-        protected IRestResponse<T> Execute<T>(IRestRequest request) where T : new()
+        protected IRestResponse<T> Execute<T>(JustGiving.Api.Sdk2.Http.RestRequest request) where T : new()
         {
             request.AddHeader("Accept", "application/json");
             request.RequestFormat = DataFormat.Json;
@@ -40,7 +38,7 @@ namespace JustGiving.Api.Sdk2.Clients
             return response;
         }
 
-        protected IRestResponse Execute(IRestRequest request)
+        protected IRestResponse Execute(JustGiving.Api.Sdk2.Http.RestRequest request)
         {
             request.AddHeader("Accept", "application/json");
             request.RequestFormat = DataFormat.Json;

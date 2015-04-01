@@ -4,6 +4,9 @@ using RestSharp;
 
 namespace JustGiving.Api.Sdk2.Http
 {
+    /// <summary>
+    /// Looks like we have to implement our own IRestRequest if we want control over message serialization :-/
+    /// </summary>
     public class RestRequest : RestSharp.RestRequest
     {
         public RestRequest()

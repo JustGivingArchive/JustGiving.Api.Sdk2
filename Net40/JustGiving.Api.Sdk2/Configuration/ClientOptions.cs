@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 using System.Reflection;
 using JustGiving.Api.Sdk2.Configuration.Logging;
+using JustGiving.Api.Sdk2.Http;
 using JustGiving.Api.Sdk2.Security;
 using JustGiving.Api.Sdk2.Security.Basic;
 using JustGiving.Api.Sdk2.Security.OAuth;
@@ -19,6 +20,7 @@ namespace JustGiving.Api.Sdk2.Configuration
         {
             _appId = appId;
             LoggingOptions = LoggingOptions.Default;
+            Endpoint = Endpoints.Production;
         }
 
         public ClientOptions(string appId, string applicationKey)
@@ -26,6 +28,7 @@ namespace JustGiving.Api.Sdk2.Configuration
             _appId = appId;
             _applicationKey = applicationKey;
             LoggingOptions = LoggingOptions.Default;
+            Endpoint = Endpoints.Production;
         }
 
         public string AppId

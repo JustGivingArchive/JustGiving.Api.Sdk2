@@ -3,6 +3,7 @@ using JustGiving.Api.Sdk2.Clients.Account;
 using JustGiving.Api.Sdk2.Clients.Charity;
 using JustGiving.Api.Sdk2.Clients.Countries;
 using JustGiving.Api.Sdk2.Configuration;
+using JustGiving.Api.Sdk2.Configuration.Logging;
 using JustGiving.Api.Sdk2.Http;
 using JustGiving.Api.Sdk2.Logging;
 using JustGiving.Api.Sdk2.Security;
@@ -45,6 +46,7 @@ namespace JustGiving.Api.Sdk2
                 AuthorizationMode = AuthorizationMode.OAuth,
                 Endpoint = Endpoints.Production,
                 OAuthAccessToken = oauthAccessToken,
+                LoggingOptions = LoggingOptions.Default
             };
         }
 
@@ -69,7 +71,8 @@ namespace JustGiving.Api.Sdk2
             {
                 AuthorizationMode = AuthorizationMode.Basic,
                 Endpoint = Endpoints.Production,
-                BasicAuthSettings = basicAuthCredential
+                BasicAuthSettings = basicAuthCredential,
+                LoggingOptions = LoggingOptions.Default
             };
         }
 
@@ -100,7 +103,8 @@ namespace JustGiving.Api.Sdk2
             {
                 AuthorizationMode = AuthorizationMode.Basic,
                 Endpoint = Endpoints.Production,
-                BasicAuthSettings = basicAuthCredential
+                BasicAuthSettings = basicAuthCredential,
+                LoggingOptions = LoggingOptions.Default
             };
         }
 
@@ -118,7 +122,8 @@ namespace JustGiving.Api.Sdk2
             _options = new ClientOptions(appId)
             {
                 AuthorizationMode = AuthorizationMode.Anonymous,
-                Endpoint = Endpoints.Production
+                Endpoint = Endpoints.Production,
+                LoggingOptions = LoggingOptions.Default
             };
         }
 
@@ -142,7 +147,8 @@ namespace JustGiving.Api.Sdk2
             _options = new ClientOptions(appId, applicationKey)
             {
                 AuthorizationMode = AuthorizationMode.Anonymous,
-                Endpoint = Endpoints.Production
+                Endpoint = Endpoints.Production,
+                LoggingOptions = LoggingOptions.Default
             };
         }
 
