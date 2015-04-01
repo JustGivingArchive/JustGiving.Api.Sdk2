@@ -285,13 +285,13 @@ if (typeof global.window.define == 'function' && global.window.define.amd) {
         _apiEndpoint = Constants.environments[_environment];
         _authorizationEndpoint = Constants.identityServers[_environment] + Constants.authorizeResource;
 
-	    var signedIn = false;
+      var signedIn = false;
         if (window.location.hash) {
             signedIn = _processTokenCallback();
         }
-		else {
-		    signedIn = checkConnected();
-		}
+    else {
+        signedIn = checkConnected();
+    }
 
         if (!signedIn) {
             _initLoginButtons();
@@ -317,7 +317,7 @@ if (typeof global.window.define == 'function' && global.window.define.amd) {
         }
 
         callback(result);
-		return result.connected;
+    return result.connected;
     }
 
     var signOut = function () {
@@ -419,8 +419,8 @@ if (typeof global.window.define == 'function' && global.window.define.amd) {
                 idToken = jwt_decode(result.id_token);
             }
         }
-		
-		var data = false;
+    
+    var data = false;
 
         if (success) {
 
@@ -434,7 +434,7 @@ if (typeof global.window.define == 'function' && global.window.define.amd) {
 
             Cookies.set('JGOAUTH', JSON.stringify(data), { expires: result.expires });
         } else {
-			 Cookies.expire('JGOAUTH');
+       Cookies.expire('JGOAUTH');
         }
 
         var loginButtons = document.querySelectorAll('jg-login');

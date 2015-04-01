@@ -10,13 +10,13 @@ var JG = (function () {
         _apiEndpoint = Constants.environments[_environment];
         _authorizationEndpoint = Constants.identityServers[_environment] + Constants.authorizeResource;
 
-	    var signedIn = false;
+      var signedIn = false;
         if (window.location.hash) {
             signedIn = _processTokenCallback();
         }
-		else {
-		    signedIn = checkConnected();
-		}
+    else {
+        signedIn = checkConnected();
+    }
 
         if (!signedIn) {
             _initLoginButtons();
@@ -42,7 +42,7 @@ var JG = (function () {
         }
 
         callback(result);
-		return result.connected;
+    return result.connected;
     }
 
     var signOut = function () {
@@ -144,8 +144,8 @@ var JG = (function () {
                 idToken = jwt_decode(result.id_token);
             }
         }
-		
-		var data = false;
+    
+    var data = false;
 
         if (success) {
 
@@ -159,7 +159,7 @@ var JG = (function () {
 
             Cookies.set('JGOAUTH', JSON.stringify(data), { expires: result.expires });
         } else {
-			 Cookies.expire('JGOAUTH');
+       Cookies.expire('JGOAUTH');
         }
 
         var loginButtons = document.querySelectorAll('jg-login');
