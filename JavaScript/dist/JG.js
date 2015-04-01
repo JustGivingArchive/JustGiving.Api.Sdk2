@@ -419,7 +419,7 @@ if (typeof global.window.define == 'function' && global.window.define.amd) {
 
         if (success) {
 
-            var cookie = {
+            var data = {
                 connected: true,
                 accessToken: result.access_token,
                 displayName: idToken.name,
@@ -427,8 +427,9 @@ if (typeof global.window.define == 'function' && global.window.define.amd) {
                 email: idToken.email
             }
 
-            Cookies.set('JGOAUTH', JSON.stringify(cookie), { expires: result.expires });
+            Cookies.set('JGOAUTH', JSON.stringify(data), { expires: result.expires });
         } else {
+			var data = false;
             Cookies.expire('JGOAUTH');
         }
 
@@ -438,7 +439,7 @@ if (typeof global.window.define == 'function' && global.window.define.amd) {
             if (loginButton.getAttribute('onlogin')) {
                 var methodName = loginButton.getAttribute('onlogin');
                 var callback = window[methodName];
-                callback();
+                callback(data);
             }
         });
 

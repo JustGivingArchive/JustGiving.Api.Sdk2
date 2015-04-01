@@ -144,7 +144,7 @@ var JG = (function () {
 
         if (success) {
 
-            var cookie = {
+            var data = {
                 connected: true,
                 accessToken: result.access_token,
                 displayName: idToken.name,
@@ -152,8 +152,9 @@ var JG = (function () {
                 email: idToken.email
             }
 
-            Cookies.set('JGOAUTH', JSON.stringify(cookie), { expires: result.expires });
+            Cookies.set('JGOAUTH', JSON.stringify(data), { expires: result.expires });
         } else {
+			var data = false;
             Cookies.expire('JGOAUTH');
         }
 
@@ -163,7 +164,7 @@ var JG = (function () {
             if (loginButton.getAttribute('onlogin')) {
                 var methodName = loginButton.getAttribute('onlogin');
                 var callback = window[methodName];
-                callback();
+                callback(data);
             }
         });
 
