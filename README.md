@@ -1,8 +1,9 @@
 # JustGiving.Api.Sdk2
 
-New version of the public .NET SDK for the Consumer API. 
+New public SDKs for the Consumer API for Microsoft .NET and JavaScript
 
-## Improvements over the old SDK
+
+## Improvements over the old .NET SDK
 
 - Supports authorization via OpenId Connect (OAuth2) and HTTP Basic
 - Consistent method and parameter names: they now match API resource URIs and the public documentation
@@ -13,3 +14,30 @@ New version of the public .NET SDK for the Consumer API.
 - JSON only, no XML
 - Removed support for whitelabel domains / RFL / API "versions" which don't exist
 - Less code, less clutter, less maintainence
+
+## JavaScript API features
+
+- Extremely low barrier to entry - connect to the JG platform in two lines of HTML
+- New "Connect with JustGiving" button allows JG users to sign in to external apps via OAuth2 and OpenId Connect
+- Easy client-side access to Consumer API resources such as Fundraising Page creation and personalised content feeds
+
+### Example:
+
+```
+<script src="JG.js"></script>
+<jg-login onlogin="handleLoginState" />
+
+<script>
+        JG.init({
+            appId: 'bafff466',
+            environment: 'sandbox'
+        });
+        
+        function handleLoginState(result){
+          if(result){
+            alert('Hi, ' + result.displayName);
+          }
+        }
+</script>
+```
+
