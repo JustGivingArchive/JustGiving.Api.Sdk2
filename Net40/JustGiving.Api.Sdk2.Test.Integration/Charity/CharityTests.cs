@@ -7,10 +7,10 @@ namespace JustGiving.Api.Sdk2.Test.Integration.Charity
     public class CharityTests
     {
         [Test]
-        public void GetCharityById()
+        public async void GetCharityById()
         {
             var client = TestContext.CreateAnonymousClient();
-            var response = client.Charities.GetCharityById(TestContext.DemoCharityId);
+            var response = await client.Charities.GetCharityById(TestContext.DemoCharityId);
             Assert.That(response.StatusCode, Is.EqualTo(HttpStatusCode.OK));
             Assert.That(response.Data, Is.Not.Null);
             Assert.That(response.Data.Name, Is.Not.Null);
@@ -18,30 +18,30 @@ namespace JustGiving.Api.Sdk2.Test.Integration.Charity
         }
 
         [Test]
-        public void GetEventsByCharityId()
+        public async void GetEventsByCharityId()
         {
             var client = TestContext.CreateAnonymousClient();
-            var response = client.Charities.GetEventsByCharityId(TestContext.DemoCharityId);
+            var response = await client.Charities.GetEventsByCharityId(TestContext.DemoCharityId);
             Assert.That(response.StatusCode, Is.EqualTo(HttpStatusCode.OK));
             Assert.That(response.Data, Is.Not.Null);
             Assert.That(response.Data.Events.Count, Is.GreaterThan(0));
         }
 
         [Test]
-        public void GetCharityDonations()
+        public async void GetCharityDonations()
         {
             var client = TestContext.CreateAnonymousClient();
-            var response = client.Charities.GetCharityDonations(TestContext.DemoCharityId);
+            var response = await client.Charities.GetCharityDonations(TestContext.DemoCharityId);
             Assert.That(response.StatusCode, Is.EqualTo(HttpStatusCode.OK));
             Assert.That(response.Data, Is.Not.Null);
             Assert.That(response.Data.Count, Is.GreaterThan(0));
         }
 
         [Test]
-        public void GetCharityCategories()
+        public async void GetCharityCategories()
         {
             var client = TestContext.CreateAnonymousClient();
-            var response = client.Charities.GetCharityCategories();
+            var response = await client.Charities.GetCharityCategories();
             Assert.That(response.StatusCode, Is.EqualTo(HttpStatusCode.OK));
             Assert.That(response.Data, Is.Not.Null);
             Assert.That(response.Data.Count, Is.GreaterThan(0));

@@ -28,19 +28,19 @@ namespace JustGiving.Api.Sdk2.Model.Account.Response
         public double DonorLocalAmount { get; set; }
         public string DonorLocalCurrencyCode { get; set; }
         public double EstimatedTaxReclaim { get; set; }
-        int Id { get; set; }
-        string Image { get; set; }
-        string Message { get; set; }
-        string Source { get; set; }
-        string Status { get; set; }
-        string ThirdPartyReference { get; set; }
-        int CharityId { get; set; }
-        string CharityName { get; set; }
-        string LogoAbsoluteUrl { get; set; }
-        List<KeyValue> OwnerProfileImageUrls { get; set; }
-        string PageOwnerName { get; set; }
-        string PageShortName { get; set; }
-        string PageTitle { get; set; }
-        string PaymentType { get; set; }
+        public int Id { get; set; }
+        public string Image { get; set; }
+        public string Message { get; set; }
+        public string Source { get; set; }
+        public string Status { get; set; }
+        public string ThirdPartyReference { get; set; }
+        public int CharityId { get; set; }
+        public string CharityName { get; set; }
+        public string LogoAbsoluteUrl { get; set; }
+        public List<KeyValue> OwnerProfileImageUrls { get; set; }
+        public string PageOwnerName { get; set; }
+        public string PageShortName { get; set; }
+        public string PageTitle { get; set; }
+        public string PaymentType { get; set; }
     }
 }

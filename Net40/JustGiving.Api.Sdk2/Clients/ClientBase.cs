@@ -1,4 +1,5 @@
 using System;
+using System.Threading.Tasks;
 using JustGiving.Api.Sdk2.Logging;
 using RestSharp;
 
@@ -15,7 +16,7 @@ namespace JustGiving.Api.Sdk2.Clients
             _logger = logger;
         }
 
-        protected IRestResponse<T> Execute<T>(JustGiving.Api.Sdk2.Http.RestRequest request) where T : new()
+        protected async Task<IRestResponse<T>> Execute<T>(JustGiving.Api.Sdk2.Http.RestRequest request) where T : new()
         {
             request.AddHeader("Accept", "application/json");
             request.RequestFormat = DataFormat.Json;
@@ -23,7 +24,7 @@ namespace JustGiving.Api.Sdk2.Clients
             IRestResponse<T> response = null;
             try
             {
-                response = _restClient.Execute<T>(request);
+                response = await _restClient.ExecuteTaskAsync<T>(request);
             }
             catch (Exception e)
             {
@@ -38,7 +39,7 @@ namespace JustGiving.Api.Sdk2.Clients
             return response;
         }
 
-        protected IRestResponse Execute(JustGiving.Api.Sdk2.Http.RestRequest request)
+        protected async Task<IRestResponse> Execute(JustGiving.Api.Sdk2.Http.RestRequest request)
         {
             request.AddHeader("Accept", "application/json");
             request.RequestFormat = DataFormat.Json;
@@ -46,7 +47,7 @@ namespace JustGiving.Api.Sdk2.Clients
             IRestResponse response = null;
             try
             {
-                response = _restClient.Execute(request);
+                response = await _restClient.ExecuteTaskAsync(request);
             }
             catch (Exception e)
             {

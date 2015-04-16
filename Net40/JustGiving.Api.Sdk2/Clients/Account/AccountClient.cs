@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using JustGiving.Api.Sdk2.Logging;
 using JustGiving.Api.Sdk2.Model.Account.Request;
 using JustGiving.Api.Sdk2.Model.Account.Response;
@@ -14,7 +15,7 @@ namespace JustGiving.Api.Sdk2.Clients.Account
         {
         }
 
-        public IRestResponse<AccountRegistration> AccountRegistration(Registration accountRegistration)
+        public async Task<IRestResponse<AccountRegistration>> AccountRegistration(Registration accountRegistration)
         {
             const string resource = "/v1/account";
 
@@ -22,10 +23,10 @@ namespace JustGiving.Api.Sdk2.Clients.Account
 
             request.AddJsonBody(accountRegistration);
 
-            return Execute<AccountRegistration>(request);
+            return await Execute<AccountRegistration>(request);
         }
 
-        public IRestResponse<ValidateUser> Validate(ValidateUserRequest credentials)
+        public async Task<IRestResponse<ValidateUser>> Validate(ValidateUserRequest credentials)
         {
             const string resource = "/v1/account/validate";
 
@@ -33,19 +34,19 @@ namespace JustGiving.Api.Sdk2.Clients.Account
 
             request.AddJsonBody(credentials);
 
-            return Execute<ValidateUser>(request);
+            return await Execute<ValidateUser>(request);
         }
 
-        public IRestResponse<Model.Account.Response.Account> RetrieveAccount()
+        public async Task<IRestResponse<Model.Account.Response.Account>> RetrieveAccount()
         {
             const string resource = "/v1/account";
 
             var request = new RestRequest(resource, Method.GET);
 
-            return Execute<Model.Account.Response.Account>(request);
+            return await Execute<Model.Account.Response.Account>(request);
         }
 
-        public IRestResponse<List<FundraisingPage>> GetFundraisingPagesForUser(string emailAddress)
+        public async Task<IRestResponse<List<FundraisingPage>>> GetFundraisingPagesForUser(string emailAddress)
         {
             const string resource = "/v1/account/{email}/pages";
 
@@ -53,10 +54,10 @@ namespace JustGiving.Api.Sdk2.Clients.Account
 
             request.AddUrlSegment("email", emailAddress);
 
-            return Execute<List<FundraisingPage>>(request);
+            return await Execute<List<FundraisingPage>>(request);
         }
 
-        public IRestResponse RequestPasswordReminder(string emailAddress)
+        public async Task<IRestResponse> RequestPasswordReminder(string emailAddress)
         {
             const string resource = "/v1/account/{email}/requestpasswordreminder";
 
@@ -64,10 +65,10 @@ namespace JustGiving.Api.Sdk2.Clients.Account
 
             request.AddUrlSegment("email", emailAddress);
 
-            return Execute(request);
+            return await Execute(request);
         }
 
-        public IRestResponse<GetDonationsResponse> GetDonationsForUser(int charityId, int pageNum = 0, int pageSize = 150)
+        public async Task<IRestResponse<GetDonationsResponse>> GetDonationsForUser(int charityId, int pageNum = 0, int pageSize = 150)
         {
             const string resource = "/v1/account/donations";
 
@@ -77,10 +78,10 @@ namespace JustGiving.Api.Sdk2.Clients.Account
             request.AddParameter("pageNum", pageNum, ParameterType.QueryString);
             request.AddParameter("pageSize", pageSize, ParameterType.QueryString);
 
-            return Execute<GetDonationsResponse>(request);
+            return await Execute<GetDonationsResponse>(request);
         }
 
-        public IRestResponse AccountAvailabilityCheck(string email)
+        public async Task<IRestResponse> AccountAvailabilityCheck(string email)
         {
             const string resource = "/v1/account/{email}";
 
@@ -88,10 +89,10 @@ namespace JustGiving.Api.Sdk2.Clients.Account
 
             request.AddUrlSegment("email", email);
 
-            return Execute(request);
+            return await Execute(request);
         }
 
-        public IRestResponse<GetUserContentRatingHistoryResponse> GetUserContentRatingHistory(int page = 0, int pageSize = 150)
+        public async Task<IRestResponse<GetUserContentRatingHistoryResponse>> GetUserContentRatingHistory(int page = 0, int pageSize = 150)
         {
             const string resource = "/v1/account/rating";
             var request = new RestRequest(resource, Method.GET);
@@ -99,44 +100,44 @@ namespace JustGiving.Api.Sdk2.Clients.Account
             request.AddParameter("page", page, ParameterType.QueryString);
             request.AddParameter("pageSize", pageSize, ParameterType.QueryString);
 
-            return Execute<GetUserContentRatingHistoryResponse>(request);
+            return await Execute<GetUserContentRatingHistoryResponse>(request);
         }
 
-        public IRestResponse RateContent(RateContentRequest rating)
+        public async Task<IRestResponse> RateContent(RateContentRequest rating)
         {
             const string resource = "/v1/account/rating";
             var request = new RestRequest(resource, Method.POST);
             request.AddJsonBody(rating);
 
-            return Execute(request);
+            return await Execute(request);
         }
-        public IRestResponse<GetContentFeedResponse> GetContentFeed()
+        public async Task<IRestResponse<GetContentFeedResponse>> GetContentFeed()
         {
             const string resource = "/v1/account/feed";
             var request = new RestRequest(resource, Method.GET);
-            return Execute<GetContentFeedResponse>(request);
+            return await Execute<GetContentFeedResponse>(request);
         }
 
-        public IRestResponse<List<string>> InterestsGet()
+        public async Task<IRestResponse<List<string>>> InterestsGet()
         {
             const string resource = "/v1/account/interest";
             var request = new RestRequest(resource, Method.GET);
-            return Execute<List<string>>(request);
+            return await Execute<List<string>>(request);
         }
 
-        public IRestResponse InterestsAdd(string interest)
+        public async Task<IRestResponse> InterestsAdd(string interest)
         {
             const string resource = "/v1/account/interest";
             var request = new RestRequest(resource, Method.POST);
             request.AddJsonBody(new AddInterestRequest(interest));
-            return Execute(request);
+            return await Execute(request);
         }
-        public IRestResponse InterestsReplace(params string[] interests)
+        public async Task<IRestResponse> InterestsReplace(params string[] interests)
         {
             const string resource = "/v1/account/interest";
             var request = new RestRequest(resource, Method.PUT);
             request.AddJsonBody(new List<string>(interests));
-            return Execute(request);
+            return await Execute(request);
         }
     }
 }

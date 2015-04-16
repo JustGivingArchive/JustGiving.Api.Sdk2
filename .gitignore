@@ -197,3 +197,4 @@ FakesAssemblies/
 
 # Javascript stuff
 Javascript/build/
+/Net40/JustGiving.Api.Sdk2.Test.Integration/*.txt?*

@@ -7,10 +7,10 @@ namespace JustGiving.Api.Sdk2.Test.Integration.Countries
     public class CountryTests
     {
         [Test]
-        public void ListCountries()
+        public async void ListCountries()
         {
             var client = TestContext.CreateAnonymousClient();
-            var response = client.Countries.ListCountries();
+            var response = await client.Countries.ListCountries();
             Assert.That(response.StatusCode, Is.EqualTo(HttpStatusCode.OK));
             Assert.That(response.Data, Is.Not.Null);
             Assert.That(response.Data.Count, Is.GreaterThan(0));

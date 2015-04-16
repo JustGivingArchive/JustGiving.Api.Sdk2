@@ -10,20 +10,20 @@ namespace JustGiving.Api.Sdk2.Test.Integration.Account
     public class AccountTests
     {
         [Test]
-        public void CreateAccount()
+        public async void CreateAccount()
         {
             var client = TestContext.CreateAnonymousClient();
             string username;
             string password;
             var reg = AccountHelper.CreateRegistration(out username, out password);
 
-            var response = client.Accounts.AccountRegistration(reg);
+            var response = await client.Accounts.AccountRegistration(reg);
 
             Assert.That(response.StatusCode, Is.EqualTo(HttpStatusCode.OK));
         }
 
         [Test]
-        public void CreateAndValidateAccount()
+        public async void CreateAndValidateAccount()
         {
             var client = TestContext.CreateAnonymousClient();
             string username;
@@ -32,7 +32,7 @@ namespace JustGiving.Api.Sdk2.Test.Integration.Account
 
             client.Accounts.AccountRegistration(reg);
 
-            var response = client.Accounts.Validate(new ValidateUserRequest()
+            var response = await client.Accounts.Validate(new ValidateUserRequest()
             {
                 Email = username,
                 Password = password
@@ -42,18 +42,18 @@ namespace JustGiving.Api.Sdk2.Test.Integration.Account
         }
 
         [Test]
-        public void CreateAndRetrieveAccount()
+        public async void CreateAndRetrieveAccount()
         {
             var client = TestContext.CreateAnonymousClient();
             string username;
             string password;
             var reg = AccountHelper.CreateRegistration(out username, out password);
 
-            client.Accounts.AccountRegistration(reg);
+            await client.Accounts.AccountRegistration(reg);
 
             client = TestContext.CreateBasicAuthClient(username, password);
 
-            var response = client.Accounts.RetrieveAccount();
+            var response = await client.Accounts.RetrieveAccount();
 
             Assert.That(response.StatusCode, Is.EqualTo(HttpStatusCode.OK));
             Assert.That(response.Data, Is.Not.Null);
@@ -61,50 +61,50 @@ namespace JustGiving.Api.Sdk2.Test.Integration.Account
         }
 
         [Test]
-        public void GetPagesForUser()
+        public async void GetPagesForUser()
         {
             var client = TestContext.CreateAnonymousClient();
-            var response = client.Accounts.GetFundraisingPagesForUser("jamie@justgiving.com");
+            var response = await client.Accounts.GetFundraisingPagesForUser("jamie@justgiving.com");
             Assert.That(response.StatusCode, Is.EqualTo(HttpStatusCode.OK));
             Assert.That(response.Data, Is.Not.Null);
             Assert.That(response.Data.Count, Is.GreaterThan(0));
         }
 
         [Test]
-        public void GetDonationsForUser()
+        public async void GetDonationsForUser()
         {
-            var client = TestContext.CreateBasicAuthClientAndUser();
+            var client = await TestContext.CreateBasicAuthClientAndUser();
 
-            var response = client.Accounts.GetDonationsForUser(2050);
+            var response = await client.Accounts.GetDonationsForUser(2050);
             Assert.That(response.StatusCode, Is.EqualTo(HttpStatusCode.OK));
             Assert.That(response.Data, Is.Not.Null);
         }
 
         [Test]
-        public void AccountAvailability()
+        public async void AccountAvailability()
         {
             var client = TestContext.CreateAnonymousClient();
 
             var doesntExist = Guid.NewGuid() + "@justgiving.com";
-            var response = client.Accounts.AccountAvailabilityCheck(doesntExist);
+            var response = await client.Accounts.AccountAvailabilityCheck(doesntExist);
             Assert.That(response.StatusCode, Is.EqualTo(HttpStatusCode.NotFound));
             
             string username;
             string password;
             var reg = AccountHelper.CreateRegistration(out username, out password);
 
-            client.Accounts.AccountRegistration(reg);
-            response = client.Accounts.AccountAvailabilityCheck(username);
+            await client.Accounts.AccountRegistration(reg);
+            response = await client.Accounts.AccountAvailabilityCheck(username);
 
             Assert.That(response.StatusCode, Is.EqualTo(HttpStatusCode.OK));
         }
 
         [Test]
-        public void RateContent()
+        public async void RateContent()
         {
-            var client = TestContext.CreateBasicAuthClientAndUser();
+            var client = await TestContext.CreateBasicAuthClientAndUser();
 
-            var response = client.Accounts.RateContent(new RateContentRequest
+            var response = await client.Accounts.RateContent(new RateContentRequest
             {
                 ContentData = "a-cool-page",
                 Created = DateTime.Now,
@@ -116,11 +116,11 @@ namespace JustGiving.Api.Sdk2.Test.Integration.Account
         }
 
         [Test]
-        public void GetUserContentRatingHistory()
+        public async void GetUserContentRatingHistory()
         {
-            var client = TestContext.CreateBasicAuthClientAndUser();
+            var client = await TestContext.CreateBasicAuthClientAndUser();
 
-            client.Accounts.RateContent(new RateContentRequest
+            await client.Accounts.RateContent(new RateContentRequest
             {
                 ContentData = "a-cool-page",
                 Created = DateTime.Now,
@@ -128,7 +128,7 @@ namespace JustGiving.Api.Sdk2.Test.Integration.Account
                 Type = RatingType.FundraisingPage
             });
 
-            var response = client.Accounts.GetUserContentRatingHistory();
+            var response = await client.Accounts.GetUserContentRatingHistory();
 
             Assert.That(response.StatusCode, Is.EqualTo(HttpStatusCode.OK));
             Assert.That(response.Data, Is.Not.Null);
@@ -137,34 +137,34 @@ namespace JustGiving.Api.Sdk2.Test.Integration.Account
         }
 
         [Test]
-        public void GetUserContentFeed()
+        public async void GetUserContentFeed()
         {
-            var client = TestContext.CreateBasicAuthClientAndUser();
+            var client = await TestContext.CreateBasicAuthClientAndUser();
 
-            var response = client.Accounts.GetContentFeed();
+            var response = await client.Accounts.GetContentFeed();
 
             Assert.That(response.StatusCode, Is.EqualTo(HttpStatusCode.OK));
             Assert.That(response.Data, Is.Not.Null);
         }
 
         [Test]
-        public void InterestsAdd()
+        public async void InterestsAdd()
         {
-            var client = TestContext.CreateBasicAuthClientAndUser();
+            var client = await TestContext.CreateBasicAuthClientAndUser();
 
-            var response = client.Accounts.InterestsAdd("brewing beer");
+            var response = await client.Accounts.InterestsAdd("brewing beer");
             Assert.That(response.StatusCode, Is.EqualTo(HttpStatusCode.Created));
         }
 
         [Test]
-        public void InterestsGet()
+        public async void InterestsGet()
         {
-            var client = TestContext.CreateBasicAuthClientAndUser();
+            var client = await TestContext.CreateBasicAuthClientAndUser();
 
             client.Accounts.InterestsAdd("brewing beer");
             client.Accounts.InterestsAdd("riding bikes");
 
-            var response = client.Accounts.InterestsGet();
+            var response = await client.Accounts.InterestsGet();
             Assert.That(response.StatusCode, Is.EqualTo(HttpStatusCode.OK));
             Assert.That(response.Data.Count, Is.GreaterThan(0));
             Assert.That(response.Data.Contains("brewing beer"));
@@ -172,16 +172,16 @@ namespace JustGiving.Api.Sdk2.Test.Integration.Account
         }
 
         [Test]
-        public void InterestsReplace()
+        public async void InterestsReplace()
         {
-            var client = TestContext.CreateBasicAuthClientAndUser();
+            var client = await TestContext.CreateBasicAuthClientAndUser();
 
-            client.Accounts.InterestsAdd("brewing beer");
-            client.Accounts.InterestsAdd("riding bikes");
+            await client.Accounts.InterestsAdd("brewing beer");
+            await client.Accounts.InterestsAdd("riding bikes");
 
-            client.Accounts.InterestsReplace("riding horses", "brewing trouble");
+            await client.Accounts.InterestsReplace("riding horses", "brewing trouble");
 
-            var response = client.Accounts.InterestsGet();
+            var response = await client.Accounts.InterestsGet();
             Assert.That(response.StatusCode, Is.EqualTo(HttpStatusCode.OK));
             Assert.That(response.Data.Count, Is.GreaterThan(0));
             Assert.That(response.Data.Contains("brewing beer"), Is.False);

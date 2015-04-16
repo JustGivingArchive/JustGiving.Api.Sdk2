@@ -1,6 +1,7 @@
 ﻿using System;
 using System.CodeDom;
 using System.Net;
+using System.Threading.Tasks;
 using JustGiving.Api.Sdk2.Security.Basic;
 using JustGiving.Api.Sdk2.Test.Integration.Account;
 
@@ -26,13 +27,13 @@ namespace JustGiving.Api.Sdk2.Test.Integration
             return client;
         }
 
-        public static JustGivingApiClient2 CreateBasicAuthClientAndUser()
+        public static async Task<JustGivingApiClient2> CreateBasicAuthClientAndUser()
         {
             string username;
             string password;
             var registration = AccountHelper.CreateRegistration(out username, out password);
             var client = CreateAnonymousClient();
-            var response = client.Accounts.AccountRegistration(registration);
+            var response = await client.Accounts.AccountRegistration(registration);
             if (response.StatusCode != HttpStatusCode.OK)
             {
                 throw new Exception("Could not create a remote user account");
