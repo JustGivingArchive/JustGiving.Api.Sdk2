@@ -12,6 +12,7 @@ New public SDKs for the Consumer API for Microsoft .NET and JavaScript
 - Performs extended logging of HTTP interactions for easier remote troubleshooting (no more "what's a header?")
 - Cleaner, easier configuration with sensible defaults
 - JSON only, no XML
+- Asynchronous
 - Removed support for whitelabel domains / RFL / API "versions" which don't exist
 - Less code, less clutter, less maintainence
 
@@ -22,7 +23,7 @@ var client = new JustGivingApiClient2("bafff466", new OAuthAccessToken("sdfijojw
 client.UseSandbox();
 client.LogEverything();
 
-var myContentFeed = client.Accounts.GetContentFeed();
+var myContentFeed = await client.Accounts.GetContentFeed();
 
 if(myContentFeed.StatusCode == HttpStatusCode.Ok)
 {
