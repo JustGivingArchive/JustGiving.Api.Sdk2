@@ -60,7 +60,7 @@ class JG {
   }
 
   checkAccountAvailability(email) {
-    return this._fetch(`account/${email}`);
+    return this._fetch(`account/${encodeURIComponent(email)}`);
   }
 
   getContentFeed() {

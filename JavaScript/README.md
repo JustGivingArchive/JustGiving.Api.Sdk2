@@ -31,7 +31,7 @@ To run the example, please create a credentials.js file in this directory:
 
 ```json
 credentials = {
-  appId: '{your app ID}',
-  basicAuthToken: 'Basic {your base64-encoded username/password}'
+  "appId": "{your app ID}",
+  "basicAuthToken": "Basic {your base64-encoded username/password}"
 };
 ```

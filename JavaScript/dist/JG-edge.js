@@ -83,7 +83,7 @@ var JG = (function () {
   }, {
     key: 'checkAccountAvailability',
     value: function checkAccountAvailability(email) {
-      return this._fetch('account/' + email);
+      return this._fetch('account/' + encodeURIComponent(email));
     }
   }, {
     key: 'getContentFeed',
