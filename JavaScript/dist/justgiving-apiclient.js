@@ -2,28 +2,41 @@
  * JG - JustGiving API SDK
  * @version v2.0.0
  * @link https://api.justgiving.com/
- * @license WTFPL
+ * @license MIT
  */
-'use strict';
-
-var _classCallCheck = function (instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } };
-
-var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-
-var JG = (function () {
-  function JG(url, appId, accessToken) {
-    _classCallCheck(this, JG);
-
-    if (typeof url !== 'string') throw new Error('URL is required');
-    this._url = url;
-    this._appId = appId;
-    this._accessToken = accessToken;
-    this._version = 'v1';
+(function (global, factory) {
+  if (typeof define === 'function' && define.amd) {
+    define('JustGiving', ['exports'], factory);
+  } else if (typeof exports !== 'undefined') {
+    factory(exports);
+  } else {
+    var mod = {
+      exports: {}
+    };
+    factory(mod.exports);
+    global.JustGiving = mod.exports;
   }
+})(this, function (exports) {
+  'use strict';
 
-  _createClass(JG, [{
-    key: '_getOptions',
-    value: function _getOptions(payload, method) {
+  var _classCallCheck = function (instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } };
+
+  Object.defineProperty(exports, '__esModule', {
+    value: true
+  });
+
+  var ApiClient = (function () {
+    function ApiClient(url, appId, accessToken) {
+      _classCallCheck(this, ApiClient);
+
+      if (typeof url !== 'string') throw new Error('URL is required');
+      this._url = url;
+      this._appId = appId;
+      this._accessToken = accessToken;
+      this._version = 'v1';
+    }
+
+    ApiClient.prototype._getOptions = function _getOptions(payload, method) {
       var options = { method: method || 'GET', headers: new Headers({ 'x-app-id': this._appId, Accept: 'application/json' }) };
       if (this._accessToken) {
         options.headers.append('Authorization', this._accessToken);
@@ -34,10 +47,9 @@ var JG = (function () {
         options.headers.append('Content-Type', 'application/json');
       }
       return options;
-    }
-  }, {
-    key: '_handleResponse',
-    value: function _handleResponse(response) {
+    };
+
+    ApiClient.prototype._handleResponse = function _handleResponse(response) {
       if (response.status >= 400) {
         var contentType = response.headers.get('content-type');
 
@@ -53,192 +65,162 @@ var JG = (function () {
       }
 
       return response.json();
-    }
-  }, {
-    key: '_fetch',
-    value: function _fetch(resource, payload, method) {
+    };
+
+    ApiClient.prototype._fetch = function _fetch(resource, payload, method) {
       return fetch('' + this._url + '/' + this._version + '/' + resource, this._getOptions(payload, method)).then(this._handleResponse);
-    }
-  }, {
-    key: 'validateAccount',
+    };
 
     // Account resource
-    value: function validateAccount(email, password) {
+
+    ApiClient.prototype.validateAccount = function validateAccount(email, password) {
       return this._fetch('account/validate', { email: email, password: password });
-    }
-  }, {
-    key: 'getFundraisingPagesForUser',
-    value: function getFundraisingPagesForUser(email, charityId) {
+    };
+
+    ApiClient.prototype.getFundraisingPagesForUser = function getFundraisingPagesForUser(email, charityId) {
       var charityRestriction = charityId ? '?charityId=' + charityId : '';
       return this._fetch('account/' + email + '/pages' + charityRestriction);
-    }
-  }, {
-    key: 'getDonationsForUser',
-    value: function getDonationsForUser(pageSize, pageNum, charityId) {
+    };
+
+    ApiClient.prototype.getDonationsForUser = function getDonationsForUser(pageSize, pageNum, charityId) {
       var charityRestriction = charityId ? 'charityId=' + charityId + '&' : '';
       var pageSizeRestriction = pageSize ? 'pageSize=' + pageSize + '&' : '';
       var pageNumRestriction = pageNum ? 'pageNum=' + pageNum + '&' : '';
       return this._fetch('account/donations?' + pageSizeRestriction + '' + pageNumRestriction + '' + charityRestriction);
-    }
-  }, {
-    key: 'checkAccountAvailability',
-    value: function checkAccountAvailability(email) {
+    };
+
+    ApiClient.prototype.checkAccountAvailability = function checkAccountAvailability(email) {
       return this._fetch('account/' + encodeURIComponent(email));
-    }
-  }, {
-    key: 'getContentFeed',
-    value: function getContentFeed() {
+    };
+
+    ApiClient.prototype.getContentFeed = function getContentFeed() {
       return this._fetch('account/feed');
-    }
-  }, {
-    key: 'getAccountRating',
-    value: function getAccountRating(pageSize, pageNum) {
+    };
+
+    ApiClient.prototype.getAccountRating = function getAccountRating(pageSize, pageNum) {
       var pageSizeRestriction = pageSize ? 'pageSize=' + pageSize + '&' : '';
       var pageNumRestriction = pageNum ? 'page=' + pageNum + '&' : '';
       return this._fetch('account/rating?' + pageSizeRestriction + '' + pageNumRestriction);
-    }
-  }, {
-    key: 'getAccount',
-    value: function getAccount() {
+    };
+
+    ApiClient.prototype.getAccount = function getAccount() {
       return this._fetch('account');
-    }
-  }, {
-    key: 'getInterests',
-    value: function getInterests() {
+    };
+
+    ApiClient.prototype.getInterests = function getInterests() {
       return this._fetch('account/interest');
-    }
-  }, {
-    key: 'addInterest',
-    value: function addInterest(interest) {
+    };
+
+    ApiClient.prototype.addInterest = function addInterest(interest) {
       return this._fetch('account/interest', { interest: interest });
-    }
-  }, {
-    key: 'replaceInterests',
-    value: function replaceInterests() {
+    };
+
+    ApiClient.prototype.replaceInterests = function replaceInterests() {
       for (var _len = arguments.length, interests = Array(_len), _key = 0; _key < _len; _key++) {
         interests[_key] = arguments[_key];
       }
 
       return this._fetch('account/interest', interests, 'PUT');
-    }
-  }, {
-    key: 'requestPasswordReminder',
-    value: function requestPasswordReminder(email) {
+    };
+
+    ApiClient.prototype.requestPasswordReminder = function requestPasswordReminder(email) {
       return this._fetch('account/' + email + '/requestpasswordreminder');
-    }
-  }, {
-    key: 'changePassword',
-    value: function changePassword(email, currentPassword, newPassword) {
+    };
+
+    ApiClient.prototype.changePassword = function changePassword(email, currentPassword, newPassword) {
       if (!email || !currentPassword || !newPassword) throw new Error('All parameters are required');
       return this._fetch('account/changePassword?emailaddress=' + email + '&currentpassword=' + encodeURIComponent(currentPassword) + '&newpassword=' + encodeURIComponent(newPassword), undefined, 'POST');
-    }
-  }, {
-    key: 'getCountries',
+    };
 
     // Countries resource
-    value: function getCountries() {
+
+    ApiClient.prototype.getCountries = function getCountries() {
       return this._fetch('countries');
-    }
-  }, {
-    key: 'getCurrencies',
+    };
 
     // Currency resource
-    value: function getCurrencies() {
+
+    ApiClient.prototype.getCurrencies = function getCurrencies() {
       return this._fetch('fundraising/currencies');
-    }
-  }, {
-    key: 'getCharityCategories',
+    };
 
     // Charity resource
-    value: function getCharityCategories() {
+
+    ApiClient.prototype.getCharityCategories = function getCharityCategories() {
       return this._fetch('charity/categories');
-    }
-  }, {
-    key: 'getCharity',
-    value: function getCharity(charityId) {
+    };
+
+    ApiClient.prototype.getCharity = function getCharity(charityId) {
       return this._fetch('charity/' + charityId);
-    }
-  }, {
-    key: 'getEventsByCharity',
-    value: function getEventsByCharity(charityId, pageSize, pageNum) {
+    };
+
+    ApiClient.prototype.getEventsByCharity = function getEventsByCharity(charityId, pageSize, pageNum) {
       var pageSizeRestriction = pageSize ? 'pageSize=' + pageSize + '&' : '';
       var pageNumRestriction = pageNum ? 'pageNum=' + pageNum + '&' : '';
 
       return this._fetch('charity/' + charityId + '/events?' + pageSizeRestriction + '' + pageNumRestriction);
-    }
-  }, {
-    key: 'getDonation',
+    };
 
     // Donation resource
-    value: function getDonation(donationId) {
+
+    ApiClient.prototype.getDonation = function getDonation(donationId) {
       return this._fetch('donation/' + donationId);
-    }
-  }, {
-    key: 'getDonationByReference',
-    value: function getDonationByReference(thirdPartyReference) {
+    };
+
+    ApiClient.prototype.getDonationByReference = function getDonationByReference(thirdPartyReference) {
       return this._fetch('donation/ref/' + encodeURIComponent(thirdPartyReference));
-    }
-  }, {
-    key: 'getDonationStatus',
-    value: function getDonationStatus(donationId) {
+    };
+
+    ApiClient.prototype.getDonationStatus = function getDonationStatus(donationId) {
       return this._fetch('donation/' + donationId + '/status');
-    }
-  }, {
-    key: 'getEvent',
+    };
 
     // Event resource
-    value: function getEvent(eventId) {
+
+    ApiClient.prototype.getEvent = function getEvent(eventId) {
       return this._fetch('event/' + eventId);
-    }
-  }, {
-    key: 'getEventPages',
-    value: function getEventPages(eventId, pageSize, pageNum) {
+    };
+
+    ApiClient.prototype.getEventPages = function getEventPages(eventId, pageSize, pageNum) {
       var pageSizeRestriction = pageSize ? 'pageSize=' + pageSize + '&' : '';
       var pageNumRestriction = pageNum ? 'page=' + pageNum + '&' : '';
 
       return this._fetch('event/' + eventId + '/pages?' + pageSizeRestriction + '' + pageNumRestriction);
-    }
-  }, {
-    key: 'registerEvent',
-    value: function registerEvent(eventDetails) {
+    };
+
+    ApiClient.prototype.registerEvent = function registerEvent(eventDetails) {
       return this._fetch('event', eventDetails);
-    }
-  }, {
-    key: 'getFundraisingPages',
+    };
 
     // Fundraising resource
-    value: function getFundraisingPages() {
+
+    ApiClient.prototype.getFundraisingPages = function getFundraisingPages() {
       return this._fetch('fundraising/pages');
-    }
-  }, {
-    key: 'getFundraisingPage',
-    value: function getFundraisingPage(pageShortName) {
+    };
+
+    ApiClient.prototype.getFundraisingPage = function getFundraisingPage(pageShortName) {
       return this._fetch('fundraising/pages/' + encodeURIComponent(pageShortName));
-    }
-  }, {
-    key: 'suggestPageShortName',
-    value: function suggestPageShortName(preferredName) {
+    };
+
+    ApiClient.prototype.suggestPageShortName = function suggestPageShortName(preferredName) {
       return this._fetch('fundraising/pages/suggest?preferredName=' + encodeURIComponent(preferredName));
-    }
-  }, {
-    key: 'onesearch',
+    };
 
     // OneSearch resource
-    value: function onesearch(searchTerm, grouping, index, pageSize, pageNum, country) {
+
+    ApiClient.prototype.onesearch = function onesearch(searchTerm, grouping, index, pageSize, pageNum, country) {
       return this._fetch('onesearch?q=' + encodeURIComponent(searchTerm) + '&g=' + encodeURIComponent(grouping) + '&i=' + encodeURIComponent(index) + '&limit=' + pageSize + '&offset=' + pageNum + '&country=' + country);
-    }
-  }, {
-    key: 'getProject',
+    };
 
     // Project resource
-    value: function getProject(projectId) {
+
+    ApiClient.prototype.getProject = function getProject(projectId) {
       return this._fetch('project/global/' + projectId);
-    }
-  }, {
-    key: 'searchCharities',
+    };
 
     // Search resource
-    value: function searchCharities(searchTerm, charityId, categoryId, pageNum, pageSize) {
+
+    ApiClient.prototype.searchCharities = function searchCharities(searchTerm, charityId, categoryId, pageNum, pageSize) {
       var pageSizeRestriction = pageSize ? 'pageSize=' + pageSize + '&' : '';
       var pageNumRestriction = pageNum ? 'page=' + pageNum + '&' : '';
       var charityIdRestriction = charityId.length ? charityId.map(function (id) {
@@ -248,38 +230,35 @@ var JG = (function () {
         return 'categoryId=' + id + '&';
       }).join() : 'categoryId=' + categoryId + '&';
       return this._fetch('charity/search?q=' + encodeURIComponent(searchTerm) + '&' + categoryIdRestriction + '' + charityIdRestriction + '' + pageSizeRestriction + '' + pageNumRestriction);
-    }
-  }, {
-    key: 'searchEvents',
-    value: function searchEvents(searchTerm, pageNum, pageSize) {
+    };
+
+    ApiClient.prototype.searchEvents = function searchEvents(searchTerm, pageNum, pageSize) {
       var pageSizeRestriction = pageSize ? 'pageSize=' + pageSize + '&' : '';
       var pageNumRestriction = pageNum ? 'page=' + pageNum + '&' : '';
       return this._fetch('event/search?q=' + encodeURIComponent(searchTerm) + '&' + pageSizeRestriction + '' + pageNumRestriction);
-    }
-  }, {
-    key: 'getTeam',
+    };
 
     // Team resource
-    value: function getTeam(shortName) {
-      return this._fetch('team/' + encodeURIComponent(shortName));
-    }
-  }, {
-    key: 'checkTeamExists',
-    value: function checkTeamExists(shortName) {
-      return this._fetch('team/' + encodeURIComponent(shortName), undefined, 'HEAD');
-    }
-  }, {
-    key: 'createOrUpdateTeam',
-    value: function createOrUpdateTeam(shortName, details) {
-      return this._fetch('team/' + encodeURIComponent(shortName), details, 'PUT');
-    }
-  }, {
-    key: 'joinTeam',
-    value: function joinTeam(teamShortName, pageShortName) {
-      return this._fetch('team/join/' + encodeURIComponent(teamShortName), { pageShortName: pageShortName }, 'PUT');
-    }
-  }]);
 
-  return JG;
-})();
-//# sourceMappingURL=JG-edge.js.map
+    ApiClient.prototype.getTeam = function getTeam(shortName) {
+      return this._fetch('team/' + encodeURIComponent(shortName));
+    };
+
+    ApiClient.prototype.checkTeamExists = function checkTeamExists(shortName) {
+      return this._fetch('team/' + encodeURIComponent(shortName), undefined, 'HEAD');
+    };
+
+    ApiClient.prototype.createOrUpdateTeam = function createOrUpdateTeam(shortName, details) {
+      return this._fetch('team/' + encodeURIComponent(shortName), details, 'PUT');
+    };
+
+    ApiClient.prototype.joinTeam = function joinTeam(teamShortName, pageShortName) {
+      return this._fetch('team/join/' + encodeURIComponent(teamShortName), { pageShortName: pageShortName }, 'PUT');
+    };
+
+    return ApiClient;
+  })();
+
+  exports.ApiClient = ApiClient;
+});
+//# sourceMappingURL=justgiving-apiclient.js.map

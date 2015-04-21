@@ -1,4 +1,4 @@
-class JG {
+export class ApiClient {
   constructor(url, appId, accessToken) {
     if (typeof url !== 'string') throw new Error('URL is required');
     this._url = url;

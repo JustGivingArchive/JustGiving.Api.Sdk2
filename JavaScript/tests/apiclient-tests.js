@@ -3,12 +3,10 @@
 var should = require('should'),
     fs = require('fs'),
     vm = require('vm'),
-    sinon = require('sinon');
+    sinon = require('sinon'),
+    JG = require('../dist/justgiving-apiclient.js').ApiClient;
 
 require('es6-promise').polyfill();
-
-var code = fs.readFileSync('dist/JG-edge.js');
-vm.runInThisContext(code, {filename:'dist/JG-edge.js'});
 
 // Fakes
 global.Headers = function() {};

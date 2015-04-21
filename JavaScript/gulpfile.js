@@ -7,10 +7,11 @@ var gulp = require('gulp'),
     eslint = require('gulp-eslint'),
     header = require('gulp-header'),
     pkg = require('./package.json'),
-    mocha = require('gulp-mocha');
+    mocha = require('gulp-mocha'),
+    webserver = require('gulp-webserver');
 
 var paths = {
-  scripts: ['src/**/JG-edge.js'],
+  scripts: ['src/**/justgiving-apiclient.js'],
   tests: ['tests/**/*.js']
 };
 
@@ -23,13 +24,13 @@ var banner = ['/**',
   ''].join('\n');
 
 gulp.task('clean', function(cb) {
-  del('./dist/JG-edge*', cb);
+  del('./dist/justgiving-apiclient*', cb);
 });
 
 gulp.task('build', ['build-full'], function() {
-   return gulp.src('dist/JG-edge.js')
+   return gulp.src('dist/justgiving-apiclient.js')
      .pipe(uglify())
-     .pipe(rename('JG-edge.min.js'))
+     .pipe(rename('justgiving-apiclient.min.js'))
      .pipe(header(banner, { pkg : pkg } ))
      .pipe(gulp.dest('dist'));
 });
@@ -37,7 +38,7 @@ gulp.task('build', ['build-full'], function() {
 gulp.task('build-full', ['lint', 'clean'], function(){
   return gulp.src(paths.scripts)
     .pipe(sourcemaps.init())
-    .pipe(babel())
+    .pipe(babel({modules:'umd', loose:'es6.classes', moduleId:'JustGiving'}))
     .pipe(header(banner, { pkg : pkg } ))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('dist'));
@@ -56,8 +57,17 @@ gulp.task('lint', function () {
 });
 
 gulp.task('test', ['build'], function() {
-  return gulp.src(['tests/*.js', 'dist/JG-edge.js'])
+  return gulp.src(['tests/*.js', 'dist/justgiving-apiclient.js'])
     .pipe(mocha());
 });
 
-gulp.task('default', ['watch', 'test'], function() {});
+gulp.task('webserver', function() {
+  // eg http://localhost:8000/examples/method-samples.html or http://localhost:8000/examples/chained.knockout.html
+  gulp.src('.')
+    .pipe(webserver({
+      livereload: true,
+      directoryListing: true
+    }));
+});
+
+gulp.task('default', ['watch', 'test', 'webserver'], function() {});

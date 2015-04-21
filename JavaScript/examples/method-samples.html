@@ -6,23 +6,23 @@
 Please see the DevTools console for all output.
 
 <!-- polyfills -->
-<script src="bower_components/fetch/fetch.js"></script>
-<script src="bower_components/es6-promise/promise.js"></script>
+<script src="../bower_components/fetch/fetch.js"></script>
+<script src="../bower_components/es6-promise/promise.js"></script>
 
-<script src="dist/JG-edge.js"></script>
+<script src="../dist/justgiving-apiclient.js"></script>
 <script src="credentials.js"></script>
 <script>
 (function() {
   "use strict";
 
   <!-- Put your credentials into credentials.js -->
-  var jg = new JG('https://api-sandbox.justgiving.com', credentials.appId, credentials.basicAuthToken);
-  var jgAnon = new JG('https://api-sandbox.justgiving.com', credentials.appId);
+  var jg = new JustGiving.ApiClient('https://api-sandbox.justgiving.com', credentials.appId, credentials.basicAuthToken);
+  var jgAnon = new JustGiving.ApiClient('https://api-sandbox.justgiving.com', credentials.appId);
 
   var log = function(context) {return console.log.bind(console, context);};
   var errorLog = function(context) {return console.error.bind(console, context);};
 
-  jgAnon.getAccount()
+  jg.getAccount()
     .then(log('getAccount'))
     .catch(errorLog('getAccount'));
 
@@ -89,6 +89,14 @@ Please see the DevTools console for all output.
   jgAnon.getFundraisingPage('run-developer')
     .then(log('getFundraisingPage'))
     .catch(errorLog('getFundraisingPage'));
+
+  jg.getFundraisingPages()
+    .then(function(pages) {
+      var pagePromises = pages.map(function(page) {return jgAnon.getFundraisingPage(page.pageShortName);});
+      return Promise.all(pagePromises);
+    })
+    .then(log('getFundraisingPages chained'))
+    .catch(errorLog('getFundraisingPages chained'));
 
   jgAnon.suggestPageShortName('Giving For Good')
     .then(log('suggestPageShortName'))
