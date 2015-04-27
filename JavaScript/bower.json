@@ -20,9 +20,6 @@
   ],
   "dependencies": {
     "Cookies": "~1.2.1",
-    "jwt-decode": "~1.1.0",
-    "fetch": "~0.7.0",
-    "es6-promise": "~2.1.0",
-    "knockout": "~3.3.0"
+    "jwt-decode": "~1.1.0"
   }
 }
