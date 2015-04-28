@@ -3,6 +3,7 @@ using JustGiving.Api.Sdk2.Clients.Account;
 using JustGiving.Api.Sdk2.Clients.Charity;
 using JustGiving.Api.Sdk2.Clients.Countries;
 using JustGiving.Api.Sdk2.Clients.Currency;
+using JustGiving.Api.Sdk2.Clients.Donation;
 using JustGiving.Api.Sdk2.Configuration;
 using JustGiving.Api.Sdk2.Configuration.Logging;
 using JustGiving.Api.Sdk2.Http;
@@ -23,6 +24,7 @@ namespace JustGiving.Api.Sdk2
         private CharityClient _charities;
         private CountryClient _countries;
         private CurrencyClient _currency;
+        private DonationClient _donation;
         private IRestClient _restClient;
         private ApiRequestLogger _logger;
         private readonly ClientOptions _options;
@@ -254,6 +256,22 @@ namespace JustGiving.Api.Sdk2
                 }
 
                 return _currency;
+            }
+        }
+
+        /// <summary>
+        /// API resources for retrieving donation information.
+        /// </summary>
+        public DonationClient Donation
+        {
+            get
+            {
+                if (_donation == null)
+                {
+                    _donation = new DonationClient(RestClient, Logger);
+                }
+
+                return _donation;
             }
         }
 

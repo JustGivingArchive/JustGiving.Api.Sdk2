@@ -60,3 +60,675 @@
 [HttpHeader] X-Powered-By: ASP.NET
 [ResponseBody] [{"currencyCode":"GBP","currencySymbol":"£","description":"British Pounds"},{"currencyCode":"USD","currencySymbol":"$","description":"US Dollars"},{"currencyCode":"HKD","currencySymbol":"$","description":"Hong Kong Dollars"},{"currencyCode":"SGD","currencySymbol":"$","description":"Singapore Dollars"},{"currencyCode":"CAD","currencySymbol":"$","description":"Canadian Dollars"},{"currencyCode":"AED","currencySymbol":"?.?","description":"UAE Dirham"},{"currencyCode":"AUD","currencySymbol":"$","description":"Australian Dollars"},{"currencyCode":"ZAR","currencySymbol":"R","description":"South African Rand"},{"currencyCode":"EUR","currencySymbol":"€","description":"Euro"}]
 
+2015-04-28 14:48:42,599 [Runner thread] WARN  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] GET https://api-sandbox.justgiving.com/v1/donation/{id}
+[AuthorizationMode] Anonymous
+[AppId] 6c37285f
+[ApplicationKey?] No
+[UrlSegment] id: 35985104
+[HttpHeader] Accept: application/json
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 404 Donation not found
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 311ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/28/2015 13:48:42
+[HttpHeader] X-JustGiving-Operation: DonationApi:RetrieveDonationDetails
+[HttpHeader] Content-Length: 113
+[HttpHeader] Cache-Control: private, s-maxage=0
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Tue, 28 Apr 2015 13:48:42 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"amount":null,"donationRef":null,"donorDisplayName":"Anonymous","id":0,"thirdPartyReference":null,"charityId":0}
+
+2015-04-28 14:49:37,013 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] GET https://api-sandbox.justgiving.com/v1/charity/{charityId}/donations
+[AuthorizationMode] Anonymous
+[AppId] 6c37285f
+[ApplicationKey?] No
+[UrlSegment] charityId: 2050
+[HttpHeader] Accept: application/json
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 740ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/28/2015 13:49:36
+[HttpHeader] X-JustGiving-Operation: CharityApi:GetCharityDonations
+[HttpHeader] Content-Length: 1635
+[HttpHeader] Cache-Control: private
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Tue, 28 Apr 2015 13:49:37 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"donations":[{"amount":30.0000,"currencyCode":"GBP","donationDate":"\/Date(1430181440000+0100)\/","donorDisplayName":"Other Gbiuwslpqbmsst  Dyunhwskrtzdrw","donorLocalAmount":30.000000,"donorLocalCurrencyCode":"GBP","estimatedTaxReclaim":7.5000,"imageUrl":"https:\/\/www.justgiving.com\/content\/images\/graphics\/icons\/avatars\/facebook-avatar.gif","message":"This really is an awesome donation...from AutoTester!"},{"amount":30.0000,"currencyCode":"GBP","donationDate":"\/Date(1430181440000+0100)\/","donorDisplayName":"Other Xtqlvfwhoxeswj  Zhibfvhsyuiztd","donorLocalAmount":30.000000,"donorLocalCurrencyCode":"GBP","estimatedTaxReclaim":7.5000,"imageUrl":"https:\/\/www.justgiving.com\/content\/images\/graphics\/icons\/avatars\/facebook-avatar.gif","message":"This really is an awesome donation...from AutoTester!"},{"amount":30.0000,"currencyCode":"GBP","donationDate":"\/Date(1430095048000+0100)\/","donorDisplayName":"Other Qeigwtjupirxwd  Dromznfryagrvm","donorLocalAmount":30.000000,"donorLocalCurrencyCode":"GBP","estimatedTaxReclaim":7.5000,"imageUrl":"https:\/\/www.justgiving.com\/content\/images\/graphics\/icons\/avatars\/facebook-avatar.gif","message":"This really is an awesome donation...from AutoTester!"},{"amount":30.0000,"currencyCode":"GBP","donationDate":"\/Date(1430095046000+0100)\/","donorDisplayName":"Other Wieqvsvhqbruit  Rboylyrjwppshe","donorLocalAmount":30.000000,"donorLocalCurrencyCode":"GBP","estimatedTaxReclaim":7.5000,"imageUrl":"https:\/\/www.justgiving.com\/content\/images\/graphics\/icons\/avatars\/facebook-avatar.gif","message":"This really is an awesome donation...from AutoTester!"}]}
+
+2015-04-28 14:50:31,515 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] GET https://api-sandbox.justgiving.com/v1/charity/{charityId}/donations
+[AuthorizationMode] Anonymous
+[AppId] 6c37285f
+[ApplicationKey?] No
+[UrlSegment] charityId: 2357
+[HttpHeader] Accept: application/json
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 649ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/28/2015 13:50:31
+[HttpHeader] X-JustGiving-Operation: CharityApi:GetCharityDonations
+[HttpHeader] Content-Length: 350
+[HttpHeader] Cache-Control: private
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Tue, 28 Apr 2015 13:50:31 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"donations":[{"amount":4.5000,"currencyCode":"GBP","donationDate":"\/Date(1421962446000+0000)\/","donorDisplayName":"Anonymous","donorLocalAmount":4.500000,"donorLocalCurrencyCode":"GBP","estimatedTaxReclaim":1.1250,"imageUrl":"https:\/\/www.justgiving.com\/content\/images\/graphics\/icons\/avatars\/facebook-avatar.gif","message":"test messgae"}]}
+
+2015-04-28 14:54:43,233 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] GET https://api-sandbox.justgiving.com/v1/charity/{charityId}/donations
+[AuthorizationMode] Anonymous
+[AppId] 6c37285f
+[ApplicationKey?] No
+[UrlSegment] charityId: 2357
+[HttpHeader] Accept: application/json
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 569ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/28/2015 13:54:42
+[HttpHeader] X-JustGiving-Operation: CharityApi:GetCharityDonations
+[HttpHeader] Content-Length: 350
+[HttpHeader] Cache-Control: private
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Tue, 28 Apr 2015 13:54:43 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"donations":[{"amount":4.5000,"currencyCode":"GBP","donationDate":"\/Date(1421962446000+0000)\/","donorDisplayName":"Anonymous","donorLocalAmount":4.500000,"donorLocalCurrencyCode":"GBP","estimatedTaxReclaim":1.1250,"imageUrl":"https:\/\/www.justgiving.com\/content\/images\/graphics\/icons\/avatars\/facebook-avatar.gif","message":"test messgae"}]}
+
+2015-04-28 14:55:22,122 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] GET https://api-sandbox.justgiving.com/v1/charity/{charityId}/donations
+[AuthorizationMode] Anonymous
+[AppId] 6c37285f
+[ApplicationKey?] No
+[UrlSegment] charityId: 2050
+[HttpHeader] Accept: application/json
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 495ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/28/2015 13:55:21
+[HttpHeader] X-JustGiving-Operation: CharityApi:GetCharityDonations
+[HttpHeader] Content-Length: 1635
+[HttpHeader] Cache-Control: private
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Tue, 28 Apr 2015 13:55:22 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"donations":[{"amount":30.0000,"currencyCode":"GBP","donationDate":"\/Date(1430181440000+0100)\/","donorDisplayName":"Other Gbiuwslpqbmsst  Dyunhwskrtzdrw","donorLocalAmount":30.000000,"donorLocalCurrencyCode":"GBP","estimatedTaxReclaim":7.5000,"imageUrl":"https:\/\/www.justgiving.com\/content\/images\/graphics\/icons\/avatars\/facebook-avatar.gif","message":"This really is an awesome donation...from AutoTester!"},{"amount":30.0000,"currencyCode":"GBP","donationDate":"\/Date(1430181440000+0100)\/","donorDisplayName":"Other Xtqlvfwhoxeswj  Zhibfvhsyuiztd","donorLocalAmount":30.000000,"donorLocalCurrencyCode":"GBP","estimatedTaxReclaim":7.5000,"imageUrl":"https:\/\/www.justgiving.com\/content\/images\/graphics\/icons\/avatars\/facebook-avatar.gif","message":"This really is an awesome donation...from AutoTester!"},{"amount":30.0000,"currencyCode":"GBP","donationDate":"\/Date(1430095048000+0100)\/","donorDisplayName":"Other Qeigwtjupirxwd  Dromznfryagrvm","donorLocalAmount":30.000000,"donorLocalCurrencyCode":"GBP","estimatedTaxReclaim":7.5000,"imageUrl":"https:\/\/www.justgiving.com\/content\/images\/graphics\/icons\/avatars\/facebook-avatar.gif","message":"This really is an awesome donation...from AutoTester!"},{"amount":30.0000,"currencyCode":"GBP","donationDate":"\/Date(1430095046000+0100)\/","donorDisplayName":"Other Wieqvsvhqbruit  Rboylyrjwppshe","donorLocalAmount":30.000000,"donorLocalCurrencyCode":"GBP","estimatedTaxReclaim":7.5000,"imageUrl":"https:\/\/www.justgiving.com\/content\/images\/graphics\/icons\/avatars\/facebook-avatar.gif","message":"This really is an awesome donation...from AutoTester!"}]}
+
+2015-04-28 14:55:31,214 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] GET https://api-sandbox.justgiving.com/v1/charity/{charityId}/donations
+[AuthorizationMode] Anonymous
+[AppId] 6c37285f
+[ApplicationKey?] No
+[UrlSegment] charityId: 2050
+[HttpHeader] Accept: application/json
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 465ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/28/2015 13:55:30
+[HttpHeader] X-JustGiving-Operation: CharityApi:GetCharityDonations
+[HttpHeader] Content-Length: 1635
+[HttpHeader] Cache-Control: private
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Tue, 28 Apr 2015 13:55:31 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"donations":[{"amount":30.0000,"currencyCode":"GBP","donationDate":"\/Date(1430181440000+0100)\/","donorDisplayName":"Other Gbiuwslpqbmsst  Dyunhwskrtzdrw","donorLocalAmount":30.000000,"donorLocalCurrencyCode":"GBP","estimatedTaxReclaim":7.5000,"imageUrl":"https:\/\/www.justgiving.com\/content\/images\/graphics\/icons\/avatars\/facebook-avatar.gif","message":"This really is an awesome donation...from AutoTester!"},{"amount":30.0000,"currencyCode":"GBP","donationDate":"\/Date(1430181440000+0100)\/","donorDisplayName":"Other Xtqlvfwhoxeswj  Zhibfvhsyuiztd","donorLocalAmount":30.000000,"donorLocalCurrencyCode":"GBP","estimatedTaxReclaim":7.5000,"imageUrl":"https:\/\/www.justgiving.com\/content\/images\/graphics\/icons\/avatars\/facebook-avatar.gif","message":"This really is an awesome donation...from AutoTester!"},{"amount":30.0000,"currencyCode":"GBP","donationDate":"\/Date(1430095048000+0100)\/","donorDisplayName":"Other Qeigwtjupirxwd  Dromznfryagrvm","donorLocalAmount":30.000000,"donorLocalCurrencyCode":"GBP","estimatedTaxReclaim":7.5000,"imageUrl":"https:\/\/www.justgiving.com\/content\/images\/graphics\/icons\/avatars\/facebook-avatar.gif","message":"This really is an awesome donation...from AutoTester!"},{"amount":30.0000,"currencyCode":"GBP","donationDate":"\/Date(1430095046000+0100)\/","donorDisplayName":"Other Wieqvsvhqbruit  Rboylyrjwppshe","donorLocalAmount":30.000000,"donorLocalCurrencyCode":"GBP","estimatedTaxReclaim":7.5000,"imageUrl":"https:\/\/www.justgiving.com\/content\/images\/graphics\/icons\/avatars\/facebook-avatar.gif","message":"This really is an awesome donation...from AutoTester!"}]}
+
+2015-04-28 15:00:31,436 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] GET https://api-sandbox.justgiving.com/v1/donation/ref/{ref}
+[AuthorizationMode] Anonymous
+[AppId] 6c37285f
+[ApplicationKey?] No
+[UrlSegment] ref: TEST
+[HttpHeader] Accept: application/json
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 OK
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 432ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/28/2015 14:00:31
+[HttpHeader] X-JustGiving-Operation: DonationApi:RetrieveDonationDetailsByReference
+[HttpHeader] Content-Length: 123
+[HttpHeader] Cache-Control: private
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Tue, 28 Apr 2015 14:00:31 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"donations":[],"pagination":{"pageNumber":1,"pageSizeRequested":100,"pageSizeReturned":0,"totalPages":1,"totalResults":0}}
+
+2015-04-28 15:00:42,250 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] GET https://api-sandbox.justgiving.com/v1/donation/ref/{ref}
+[AuthorizationMode] Anonymous
+[AppId] 6c37285f
+[ApplicationKey?] No
+[UrlSegment] ref: REF
+[HttpHeader] Accept: application/json
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 OK
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 375ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/28/2015 14:00:42
+[HttpHeader] X-JustGiving-Operation: DonationApi:RetrieveDonationDetailsByReference
+[HttpHeader] Content-Length: 123
+[HttpHeader] Cache-Control: private
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Tue, 28 Apr 2015 14:00:42 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"donations":[],"pagination":{"pageNumber":1,"pageSizeRequested":100,"pageSizeReturned":0,"totalPages":1,"totalResults":0}}
+
+2015-04-28 15:01:05,281 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] GET https://api-sandbox.justgiving.com/v1/donation/ref/{ref}
+[AuthorizationMode] Anonymous
+[AppId] 6c37285f
+[ApplicationKey?] No
+[UrlSegment] ref: MY-REF
+[HttpHeader] Accept: application/json
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 OK
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 381ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/28/2015 14:01:05
+[HttpHeader] X-JustGiving-Operation: DonationApi:RetrieveDonationDetailsByReference
+[HttpHeader] Content-Length: 123
+[HttpHeader] Cache-Control: private
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Tue, 28 Apr 2015 14:01:05 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"donations":[],"pagination":{"pageNumber":1,"pageSizeRequested":100,"pageSizeReturned":0,"totalPages":1,"totalResults":0}}
+
+2015-04-28 15:01:16,670 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] GET https://api-sandbox.justgiving.com/v1/donation/ref/{ref}
+[AuthorizationMode] Anonymous
+[AppId] 6c37285f
+[ApplicationKey?] No
+[UrlSegment] ref: 123
+[HttpHeader] Accept: application/json
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 OK
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 774ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/28/2015 14:01:16
+[HttpHeader] X-JustGiving-Operation: DonationApi:RetrieveDonationDetailsByReference
+[HttpHeader] Content-Length: 811
+[HttpHeader] Cache-Control: private
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Tue, 28 Apr 2015 14:01:16 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"donations":[{"amount":"2.0000","currencyCode":"GBP","donationDate":"\/Date(1343208676000+0100)\/","donationRef":"32475798","donorDisplayName":"Wteab Emapila","donorLocalAmount":"0.000000","donorLocalCurrencyCode":"GBP","estimatedTaxReclaim":0.5000,"id":35496324,"message":"","source":"DirectDonations","status":"Accepted","thirdPartyReference":"123","charityId":13441},{"amount":"100.0000","currencyCode":"GBP","donationDate":"\/Date(1339617089000+0100)\/","donationRef":"32475382","donorDisplayName":"Kxcvf Kbrjb","donorLocalAmount":"0.000000","donorLocalCurrencyCode":"GBP","id":35495901,"message":"","source":"SponsorshipDonations","status":"Accepted","thirdPartyReference":"123","charityId":2357}],"pagination":{"pageNumber":1,"pageSizeRequested":100,"pageSizeReturned":2,"totalPages":1,"totalResults":2}}
+
+2015-04-28 15:01:26,183 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] GET https://api-sandbox.justgiving.com/v1/donation/ref/{ref}
+[AuthorizationMode] Anonymous
+[AppId] 6c37285f
+[ApplicationKey?] No
+[UrlSegment] ref: 1234
+[HttpHeader] Accept: application/json
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 OK
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 967ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/28/2015 14:01:25
+[HttpHeader] X-JustGiving-Operation: DonationApi:RetrieveDonationDetailsByReference
+[HttpHeader] Content-Length: 1044
+[HttpHeader] Cache-Control: private
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Tue, 28 Apr 2015 14:01:26 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"donations":[{"amount":"2.0000","currencyCode":"GBP","donationDate":"\/Date(1426161296000+0000)\/","donationRef":"32482550","donorDisplayName":" ","donorLocalAmount":"2.000000","donorLocalCurrencyCode":"GBP","id":35519347,"image":"","message":"","source":"DirectDonations","status":"Accepted","thirdPartyReference":"1234","charityId":2050},{"amount":null,"currencyCode":"GBP","donationDate":"\/Date(1426161058000+0000)\/","donationRef":"32482549","donorDisplayName":" ","id":35519346,"image":"","message":"","source":"DirectDonations","status":"Accepted","thirdPartyReference":"1234","charityId":2050},{"amount":"2.0000","currencyCode":"GBP","donationDate":"\/Date(1376409543000+0100)\/","donationRef":"32478051","donorDisplayName":"Martin Carolan","donorLocalAmount":"2.000000","donorLocalCurrencyCode":"GBP","id":35498624,"message":"","source":"SponsorshipDonations","status":"Accepted","thirdPartyReference":"1234","charityId":254}],"pagination":{"pageNumber":1,"pageSizeRequested":100,"pageSizeReturned":3,"totalPages":1,"totalResults":3}}
+
+2015-04-28 15:01:35,964 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] GET https://api-sandbox.justgiving.com/v1/donation/ref/{ref}
+[AuthorizationMode] Anonymous
+[AppId] 6c37285f
+[ApplicationKey?] No
+[UrlSegment] ref: SDI
+[HttpHeader] Accept: application/json
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 OK
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 314ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/28/2015 14:01:35
+[HttpHeader] X-JustGiving-Operation: DonationApi:RetrieveDonationDetailsByReference
+[HttpHeader] Content-Length: 123
+[HttpHeader] Cache-Control: private
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Tue, 28 Apr 2015 14:01:36 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"donations":[],"pagination":{"pageNumber":1,"pageSizeRequested":100,"pageSizeReturned":0,"totalPages":1,"totalResults":0}}
+
+2015-04-28 15:01:45,545 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] GET https://api-sandbox.justgiving.com/v1/donation/ref/{ref}
+[AuthorizationMode] Anonymous
+[AppId] 6c37285f
+[ApplicationKey?] No
+[UrlSegment] ref: jamie
+[HttpHeader] Accept: application/json
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 OK
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 584ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/28/2015 14:01:45
+[HttpHeader] X-JustGiving-Operation: DonationApi:RetrieveDonationDetailsByReference
+[HttpHeader] Content-Length: 494
+[HttpHeader] Cache-Control: private
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Tue, 28 Apr 2015 14:01:45 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"donations":[{"amount":"10.0000","currencyCode":"GBP","donationDate":"\/Date(1381496178000+0100)\/","donationRef":"32478709","donorDisplayName":"Jamie Parkins","donorLocalAmount":"10.000000","donorLocalCurrencyCode":"GBP","estimatedTaxReclaim":2.5000,"id":35499282,"message":"SHUTUP!","source":"SponsorshipDonations","status":"Accepted","thirdPartyReference":"jamie","charityId":2357}],"pagination":{"pageNumber":1,"pageSizeRequested":100,"pageSizeReturned":1,"totalPages":1,"totalResults":1}}
+
+2015-04-28 15:03:43,097 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] GET https://api-sandbox.justgiving.com/v1/donation/ref/{ref}
+[AuthorizationMode] Anonymous
+[AppId] 6c37285f
+[ApplicationKey?] No
+[UrlSegment] ref: donatebox
+[HttpHeader] Accept: application/json
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 OK
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 3346ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/28/2015 14:03:39
+[HttpHeader] X-JustGiving-Operation: DonationApi:RetrieveDonationDetailsByReference
+[HttpHeader] Content-Length: 123
+[HttpHeader] Cache-Control: private
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Tue, 28 Apr 2015 14:03:42 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"donations":[],"pagination":{"pageNumber":1,"pageSizeRequested":100,"pageSizeReturned":0,"totalPages":1,"totalResults":0}}
+
+2015-04-28 15:09:45,294 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] GET https://api-sandbox.justgiving.com/v1/donation/{id}
+[AuthorizationMode] Anonymous
+[AppId] 6c37285f
+[ApplicationKey?] No
+[UrlSegment] id: 35508049
+[HttpHeader] Accept: application/json
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 OK
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 637ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/28/2015 14:09:44
+[HttpHeader] X-JustGiving-Operation: DonationApi:RetrieveDonationDetails
+[HttpHeader] Content-Length: 308
+[HttpHeader] Cache-Control: private, s-maxage=0
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Tue, 28 Apr 2015 14:09:45 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"amount":"5.0000","currencyCode":"GBP","donationDate":"\/Date(1411303229000+0100)\/","donationRef":"32481600","donorDisplayName":"Anonymous","donorLocalAmount":"5.000000","donorLocalCurrencyCode":"GBP","id":35508049,"source":"DirectDonations","status":"Accepted","thirdPartyReference":"1","charityId":13441}
+
+2015-04-28 15:09:46,272 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] GET https://api-sandbox.justgiving.com/v1/donation/ref/{ref}
+[AuthorizationMode] Anonymous
+[AppId] 6c37285f
+[ApplicationKey?] No
+[UrlSegment] ref: 1
+[HttpHeader] Accept: application/json
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 OK
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 810ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/28/2015 14:09:45
+[HttpHeader] X-JustGiving-Operation: DonationApi:RetrieveDonationDetailsByReference
+[HttpHeader] Content-Length: 1114
+[HttpHeader] Cache-Control: private
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Tue, 28 Apr 2015 14:09:46 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"donations":[{"amount":"5.0000","currencyCode":"GBP","donationDate":"\/Date(1411303229000+0100)\/","donationRef":"32481600","donorDisplayName":"R Clark","donorLocalAmount":"5.000000","donorLocalCurrencyCode":"GBP","id":35508049,"message":"","source":"DirectDonations","status":"Accepted","thirdPartyReference":"1","charityId":13441},{"amount":"5.0000","currencyCode":"GBP","donationDate":"\/Date(1411234266000+0100)\/","donationRef":"32481586","donorDisplayName":"R Clark","donorLocalAmount":"5.000000","donorLocalCurrencyCode":"GBP","id":35507944,"message":"","source":"DirectDonations","status":"Accepted","thirdPartyReference":"1","charityId":2050},{"amount":"30.0000","currencyCode":"GBP","donationDate":"\/Date(1340183718000+0100)\/","donationRef":"32475493","donorDisplayName":"jfk vrr","donorLocalAmount":"0.000000","donorLocalCurrencyCode":"GBP","estimatedTaxReclaim":7.5000,"id":35496013,"message":"","source":"SponsorshipDonations","status":"Accepted","thirdPartyReference":"1","charityId":233}],"pagination":{"pageNumber":1,"pageSizeRequested":100,"pageSizeReturned":3,"totalPages":1,"totalResults":3}}
+
+2015-04-28 15:10:08,829 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] GET https://api-sandbox.justgiving.com/v1/donation/{id}
+[AuthorizationMode] Anonymous
+[AppId] 6c37285f
+[ApplicationKey?] No
+[UrlSegment] id: 35508049
+[HttpHeader] Accept: application/json
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 OK
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 462ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/28/2015 14:10:08
+[HttpHeader] X-JustGiving-Operation: DonationApi:RetrieveDonationDetails
+[HttpHeader] Content-Length: 308
+[HttpHeader] Cache-Control: private, s-maxage=0
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Tue, 28 Apr 2015 14:10:09 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"amount":"5.0000","currencyCode":"GBP","donationDate":"\/Date(1411303229000+0100)\/","donationRef":"32481600","donorDisplayName":"Anonymous","donorLocalAmount":"5.000000","donorLocalCurrencyCode":"GBP","id":35508049,"source":"DirectDonations","status":"Accepted","thirdPartyReference":"1","charityId":13441}
+
+2015-04-28 15:10:45,126 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] GET https://api-sandbox.justgiving.com/v1/donation/{id}
+[AuthorizationMode] Anonymous
+[AppId] 6c37285f
+[ApplicationKey?] No
+[UrlSegment] id: 35508049
+[HttpHeader] Accept: application/json
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 OK
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 542ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/28/2015 14:10:44
+[HttpHeader] X-JustGiving-Operation: DonationApi:RetrieveDonationDetails
+[HttpHeader] Content-Length: 308
+[HttpHeader] Cache-Control: private, s-maxage=0
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Tue, 28 Apr 2015 14:10:45 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"amount":"5.0000","currencyCode":"GBP","donationDate":"\/Date(1411303229000+0100)\/","donationRef":"32481600","donorDisplayName":"Anonymous","donorLocalAmount":"5.000000","donorLocalCurrencyCode":"GBP","id":35508049,"source":"DirectDonations","status":"Accepted","thirdPartyReference":"1","charityId":13441}
+
+2015-04-28 15:12:18,464 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] GET https://api-sandbox.justgiving.com/v1/donation/ref/{ref}
+[AuthorizationMode] Anonymous
+[AppId] 6c37285f
+[ApplicationKey?] No
+[UrlSegment] ref: 1
+[HttpHeader] Accept: application/json
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 OK
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 883ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/28/2015 14:12:17
+[HttpHeader] X-JustGiving-Operation: DonationApi:RetrieveDonationDetailsByReference
+[HttpHeader] Content-Length: 1114
+[HttpHeader] Cache-Control: private
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Tue, 28 Apr 2015 14:12:18 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"donations":[{"amount":"5.0000","currencyCode":"GBP","donationDate":"\/Date(1411303229000+0100)\/","donationRef":"32481600","donorDisplayName":"R Clark","donorLocalAmount":"5.000000","donorLocalCurrencyCode":"GBP","id":35508049,"message":"","source":"DirectDonations","status":"Accepted","thirdPartyReference":"1","charityId":13441},{"amount":"5.0000","currencyCode":"GBP","donationDate":"\/Date(1411234266000+0100)\/","donationRef":"32481586","donorDisplayName":"R Clark","donorLocalAmount":"5.000000","donorLocalCurrencyCode":"GBP","id":35507944,"message":"","source":"DirectDonations","status":"Accepted","thirdPartyReference":"1","charityId":2050},{"amount":"30.0000","currencyCode":"GBP","donationDate":"\/Date(1340183718000+0100)\/","donationRef":"32475493","donorDisplayName":"jfk vrr","donorLocalAmount":"0.000000","donorLocalCurrencyCode":"GBP","estimatedTaxReclaim":7.5000,"id":35496013,"message":"","source":"SponsorshipDonations","status":"Accepted","thirdPartyReference":"1","charityId":233}],"pagination":{"pageNumber":1,"pageSizeRequested":100,"pageSizeReturned":3,"totalPages":1,"totalResults":3}}
+
+2015-04-28 15:12:31,596 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] GET https://api-sandbox.justgiving.com/v1/donation/ref/{ref}
+[AuthorizationMode] Anonymous
+[AppId] 6c37285f
+[ApplicationKey?] No
+[UrlSegment] ref: 1
+[HttpHeader] Accept: application/json
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 OK
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 787ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/28/2015 14:12:30
+[HttpHeader] X-JustGiving-Operation: DonationApi:RetrieveDonationDetailsByReference
+[HttpHeader] Content-Length: 1114
+[HttpHeader] Cache-Control: private
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Tue, 28 Apr 2015 14:12:31 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"donations":[{"amount":"5.0000","currencyCode":"GBP","donationDate":"\/Date(1411303229000+0100)\/","donationRef":"32481600","donorDisplayName":"R Clark","donorLocalAmount":"5.000000","donorLocalCurrencyCode":"GBP","id":35508049,"message":"","source":"DirectDonations","status":"Accepted","thirdPartyReference":"1","charityId":13441},{"amount":"5.0000","currencyCode":"GBP","donationDate":"\/Date(1411234266000+0100)\/","donationRef":"32481586","donorDisplayName":"R Clark","donorLocalAmount":"5.000000","donorLocalCurrencyCode":"GBP","id":35507944,"message":"","source":"DirectDonations","status":"Accepted","thirdPartyReference":"1","charityId":2050},{"amount":"30.0000","currencyCode":"GBP","donationDate":"\/Date(1340183718000+0100)\/","donationRef":"32475493","donorDisplayName":"jfk vrr","donorLocalAmount":"0.000000","donorLocalCurrencyCode":"GBP","estimatedTaxReclaim":7.5000,"id":35496013,"message":"","source":"SponsorshipDonations","status":"Accepted","thirdPartyReference":"1","charityId":233}],"pagination":{"pageNumber":1,"pageSizeRequested":100,"pageSizeReturned":3,"totalPages":1,"totalResults":3}}
+
+2015-04-28 15:13:28,250 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] GET https://api-sandbox.justgiving.com/v1/donation/{id}/status
+[AuthorizationMode] Anonymous
+[AppId] 6c37285f
+[ApplicationKey?] No
+[UrlSegment] id: 35508049
+[HttpHeader] Accept: application/json
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 OK
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 515ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/28/2015 14:13:27
+[HttpHeader] X-JustGiving-Operation: DonationApi:RetrieveDonationStatus
+[HttpHeader] Content-Length: 94
+[HttpHeader] Cache-Control: private
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Tue, 28 Apr 2015 14:13:28 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"amount":5.0000,"donationId":35508049,"donationRef":"32481600","ref":"1","status":"Accepted"}
+

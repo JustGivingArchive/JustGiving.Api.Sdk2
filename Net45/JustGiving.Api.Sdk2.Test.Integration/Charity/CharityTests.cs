@@ -34,7 +34,7 @@ namespace JustGiving.Api.Sdk2.Test.Integration.Charity
             var response = await client.Charities.GetCharityDonations(TestContext.DemoCharityId);
             Assert.That(response.StatusCode, Is.EqualTo(HttpStatusCode.OK));
             Assert.That(response.Data, Is.Not.Null);
-            Assert.That(response.Data.Count, Is.GreaterThan(0));
+            Assert.That(response.Data.Donations.Count, Is.GreaterThan(1));
         }
 
         [Test]

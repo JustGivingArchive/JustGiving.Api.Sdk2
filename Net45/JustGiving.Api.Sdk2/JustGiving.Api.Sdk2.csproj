@@ -53,6 +53,8 @@
     <Compile Include="Clients\Account\AccountClient.cs" />
     <Compile Include="Clients\Currency\CurrencyClient.cs" />
     <Compile Include="Clients\Currency\ICurrencyClient.cs" />
+    <Compile Include="Clients\Donation\DonationClient.cs" />
+    <Compile Include="Clients\Donation\IDonationClient.cs" />
     <Compile Include="JustGivingApiClient2.cs" />
     <Compile Include="Clients\Account\IAccountClient.cs" />
     <Compile Include="Clients\Charity\CharityClient.cs" />
@@ -84,11 +86,16 @@
     <Compile Include="Model\Charity\Request\CharityPageAttributionRequest.cs" />
     <Compile Include="Model\Charity\Response\Charity.cs" />
     <Compile Include="Model\Charity\Response\CharityCategory.cs" />
+    <Compile Include="Model\Charity\Response\CharityDonations.cs" />
     <Compile Include="Model\Charity\Response\CharityPageAttributionResponse.cs" />
     <Compile Include="Model\Charity\Response\Donation.cs" />
     <Compile Include="Model\Charity\Response\GetEventsByCharityIdResponse.cs" />
     <Compile Include="Model\Countries\Response\Country.cs" />
     <Compile Include="Model\Currency\Response\Currency.cs" />
+    <Compile Include="Model\Donation\Response\Donation.cs" />
+    <Compile Include="Model\Donation\Response\DonationsByReference.cs" />
+    <Compile Include="Model\Donation\Response\DonationStatus.cs" />
+    <Compile Include="Model\Donation\Response\Pagination.cs" />
     <Compile Include="Security\AuthorizationMode.cs" />
     <Compile Include="Security\Basic\BasicCredential.cs" />
     <Compile Include="Configuration\ClientOptions.cs" />

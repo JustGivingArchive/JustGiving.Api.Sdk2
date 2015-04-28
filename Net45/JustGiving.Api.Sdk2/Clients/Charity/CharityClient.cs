@@ -30,12 +30,12 @@ namespace JustGiving.Api.Sdk2.Clients.Charity
             return await Execute<GetEventsByCharityIdResponse>(request);
         }
 
-        public async Task<IRestResponse<List<Donation>>> GetCharityDonations(int charityId)
+        public async Task<IRestResponse<CharityDonations>> GetCharityDonations(int charityId)
         {
             const string resource = "/v1/charity/{charityId}/donations";
             var request = new RestRequest(resource, Method.GET);
             request.AddUrlSegment("charityId", charityId.ToString());
-            return await Execute<List<Donation>>(request);
+            return await Execute<CharityDonations>(request);
         }
         public async Task<IRestResponse> CharityDeleteFundraisingPageAttribution(int charityId, string pageShortName)
         {

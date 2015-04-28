@@ -9,7 +9,7 @@ namespace JustGiving.Api.Sdk2.Clients.Charity
     {
         Task<IRestResponse<Model.Charity.Response.Charity>> GetCharityById(int charityId);
         Task<IRestResponse<GetEventsByCharityIdResponse>> GetEventsByCharityId(int charityId, int pageNum = 0, int pageSize = 150);
-        Task<IRestResponse<List<Donation>>> GetCharityDonations(int charityId);
+        Task<IRestResponse<CharityDonations>> GetCharityDonations(int charityId);
         Task<IRestResponse> CharityDeleteFundraisingPageAttribution(int charityId, string pageShortName);
         Task<IRestResponse> CharityUpdateFundraisingPageAttribution(int charityId, string pageShortName, string attribution);
         Task<IRestResponse> CharityAppendToFundraisingPageAttribution(int charityId, string pageShortName, string attribution);
