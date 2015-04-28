@@ -2,6 +2,7 @@
 using JustGiving.Api.Sdk2.Clients.Account;
 using JustGiving.Api.Sdk2.Clients.Charity;
 using JustGiving.Api.Sdk2.Clients.Countries;
+using JustGiving.Api.Sdk2.Clients.Currency;
 using JustGiving.Api.Sdk2.Configuration;
 using JustGiving.Api.Sdk2.Configuration.Logging;
 using JustGiving.Api.Sdk2.Http;
@@ -21,6 +22,7 @@ namespace JustGiving.Api.Sdk2
         private AccountClient _accounts;
         private CharityClient _charities;
         private CountryClient _countries;
+        private CurrencyClient _currency;
         private IRestClient _restClient;
         private ApiRequestLogger _logger;
         private readonly ClientOptions _options;
@@ -236,6 +238,22 @@ namespace JustGiving.Api.Sdk2
                 }
 
                 return _countries;
+            }
+        }
+
+        /// <summary>
+        /// API resources for working with international currency data.
+        /// </summary>
+        public CurrencyClient Currency
+        {
+            get
+            {
+                if (_currency == null)
+                {
+                    _currency = new CurrencyClient(RestClient, Logger);
+                }
+
+                return _currency;
             }
         }
 

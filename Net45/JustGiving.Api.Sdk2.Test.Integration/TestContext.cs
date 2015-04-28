@@ -1,5 +1,4 @@
 ﻿using System;
-using System.CodeDom;
 using System.Net;
 using System.Threading.Tasks;
 using JustGiving.Api.Sdk2.Security.Basic;

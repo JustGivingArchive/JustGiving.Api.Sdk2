@@ -51,6 +51,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clients\Account\AccountClient.cs" />
+    <Compile Include="Clients\Currency\CurrencyClient.cs" />
+    <Compile Include="Clients\Currency\ICurrencyClient.cs" />
     <Compile Include="JustGivingApiClient2.cs" />
     <Compile Include="Clients\Account\IAccountClient.cs" />
     <Compile Include="Clients\Charity\CharityClient.cs" />
@@ -86,6 +88,7 @@
     <Compile Include="Model\Charity\Response\Donation.cs" />
     <Compile Include="Model\Charity\Response\GetEventsByCharityIdResponse.cs" />
     <Compile Include="Model\Countries\Response\Country.cs" />
+    <Compile Include="Model\Currency\Response\Currency.cs" />
     <Compile Include="Security\AuthorizationMode.cs" />
     <Compile Include="Security\Basic\BasicCredential.cs" />
     <Compile Include="Configuration\ClientOptions.cs" />
