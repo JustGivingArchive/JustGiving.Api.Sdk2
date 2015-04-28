@@ -11,11 +11,13 @@ namespace JustGiving.Api.Sdk2.Clients.Donation
         {
         }
 
-        public async Task<IRestResponse<DonationsByReference>> RetrieveDonationDetailsByReference(string thirdPartyReference)
+        public async Task<IRestResponse<DonationsByReference>> RetrieveDonationDetailsByReference(string thirdPartyReference, int pageNum = 1, int pageSize = 100)
         {
             const string resource = "/v1/donation/ref/{ref}";
             var request = new Http.RestRequest(resource, Method.GET);
             request.AddUrlSegment("ref", thirdPartyReference);
+            request.AddQueryParameter("pageNum", pageNum.ToString());
+            request.AddQueryParameter("pageSize", pageSize.ToString());
             return await Execute<DonationsByReference>(request);
         }
 

@@ -55,6 +55,9 @@
     <Compile Include="Clients\Currency\ICurrencyClient.cs" />
     <Compile Include="Clients\Donation\DonationClient.cs" />
     <Compile Include="Clients\Donation\IDonationClient.cs" />
+    <Compile Include="Clients\Event\EventClient.cs" />
+    <Compile Include="Clients\Event\EventTypes.cs" />
+    <Compile Include="Clients\Event\IEventClient.cs" />
     <Compile Include="JustGivingApiClient2.cs" />
     <Compile Include="Clients\Account\IAccountClient.cs" />
     <Compile Include="Clients\Charity\CharityClient.cs" />
@@ -96,6 +99,15 @@
     <Compile Include="Model\Donation\Response\DonationsByReference.cs" />
     <Compile Include="Model\Donation\Response\DonationStatus.cs" />
     <Compile Include="Model\Donation\Response\Pagination.cs" />
+    <Compile Include="Model\Event\Request\EventRegistration.cs" />
+    <Compile Include="Model\Event\Response\ErrorResponse.cs" />
+    <Compile Include="Model\Event\Response\Event.cs" />
+    <Compile Include="Model\Event\Response\EventRegistrationResponse.cs" />
+    <Compile Include="Model\Event\Response\FundraisingPageSummary.cs" />
+    <Compile Include="Model\Event\Response\Image.cs" />
+    <Compile Include="Model\Event\Response\InMemoryPerson.cs" />
+    <Compile Include="Model\Event\Response\PagesForEvent.cs" />
+    <Compile Include="Model\Event\Response\RestResponseNavigationElement.cs" />
     <Compile Include="Security\AuthorizationMode.cs" />
     <Compile Include="Security\Basic\BasicCredential.cs" />
     <Compile Include="Configuration\ClientOptions.cs" />
