@@ -42,6 +42,7 @@ namespace JustGiving.Api.Sdk2.Test.Integration
         }
 
         public const int DemoCharityId = 2050;
-        public const string DemoCharityFundraisingPageId = "trocboxtest4";
+        public const string DemoCharityFundraisingPageName = "trocboxtest4";
+        public const string PageWithDonations = "trocboxtest4";
     }
 }

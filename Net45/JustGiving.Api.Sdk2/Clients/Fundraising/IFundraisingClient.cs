@@ -13,5 +13,6 @@ namespace JustGiving.Api.Sdk2.Clients.Fundraising
         Task<IRestResponse<FundraisingPageRegistrationResponse>> RegisterFundraisingPage(FundraisingPageRegistration pageRegistration);
         Task<IRestResponse<FundraisingPageDetails>> GetFundraisingPageDetails(string pageShortName);
         Task<IRestResponse<List<FundraisingPageDetails>>> GetFundraisingPages();
+        Task<IRestResponse<FundraisingPageDonations>> GetFundraisingPageDonations(string pageShortName);
     }
 }

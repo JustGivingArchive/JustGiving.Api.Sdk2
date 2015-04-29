@@ -55,5 +55,14 @@ namespace JustGiving.Api.Sdk2.Clients.Fundraising
             var response = await Execute<List<FundraisingPageDetails>>(request);
             return response;
         }
+
+        public async Task<IRestResponse<FundraisingPageDonations>> GetFundraisingPageDonations(string pageShortName)
+        {
+            const string resource = "/v1/fundraising/pages/{pageShortName}/donations";
+            var request = new RestRequest(resource, Method.GET);
+            request.AddUrlSegment("pageShortName", pageShortName);
+            var response = await Execute<FundraisingPageDonations>(request);
+            return response;
+        }
     }
 }

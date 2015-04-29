@@ -139,6 +139,16 @@ namespace JustGiving.Api.Sdk2.Test.Integration.Fundraising
             Assert.That(response.Data.Any(frp => frp.PageShortName == pageName1));
             Assert.That(response.Data.Any(frp => frp.PageShortName == pageName2));
         }
+
+        [Test]
+        public async void CanGetDonationsForPage()
+        {
+            var client = TestContext.CreateAnonymousClient();
+            var response = await client.Fundraising.GetFundraisingPageDonations(TestContext.PageWithDonations);
+            Assert.That(response.StatusCode, Is.EqualTo(HttpStatusCode.OK));
+            Assert.That(response.Data.Donations.Count, Is.GreaterThan(0));
+            Assert.That(response.Data.Pagination.TotalResults, Is.GreaterThan(0));
+        }
     }    
 
 }

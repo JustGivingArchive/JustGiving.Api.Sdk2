@@ -887,3 +887,35 @@ System.InvalidCastException: Unable to cast object of type 'RestSharp.JsonArray'
 [HttpHeader] X-Powered-By: ASP.NET
 [ResponseBody] [{"pageId":3735974,"pageTitle":"Sdk2 Test Page","pageStatus":"Active","pageShortName":"Sdk2-test-88b3ebffaffd4493913d293bda7a94a6","raisedAmount":0.0,"designId":282,"companyAppealId":0,"targetAmount":0.0000,"offlineDonations":0.0000,"totalRaisedOnline":0.0,"giftAidPlusSupplement":0.0,"pageImages":["Stock/trainer-no-branding_web.jpg"],"images":[{"caption":"","url":"//images.sandbox.justgiving.com/image/trainer-no-branding_web.jpg?imagetype=frpphoto&trymigrate=true&sourcepath=Stock","absoluteUrl":"http://images.sandbox.justgiving.com/image/trainer-no-branding_web.jpg?imagetype=frpphoto&trymigrate=true&sourcepath=Stock"}],"eventName":"Bubble-Bobble Run 1","eventId":756550,"domain":"v3-sandbox.justgiving.com","inMemoryPerson":null,"currencyCode":"GBP","currencySymbol":"£","smsCode":"RSRT80","charityId":2050},{"pageId":3735973,"pageTitle":"Sdk2 Test Page","pageStatus":"Active","pageShortName":"Sdk2-test-8120c75de236490dbc7ad967361444b5","raisedAmount":0.0,"designId":282,"companyAppealId":0,"targetAmount":0.0000,"offlineDonations":0.0000,"totalRaisedOnline":0.0,"giftAidPlusSupplement":0.0,"pageImages":["Stock/trainer-no-branding_web.jpg"],"images":[{"caption":"","url":"//images.sandbox.justgiving.com/image/trainer-no-branding_web.jpg?imagetype=frpphoto&trymigrate=true&sourcepath=Stock","absoluteUrl":"http://images.sandbox.justgiving.com/image/trainer-no-branding_web.jpg?imagetype=frpphoto&trymigrate=true&sourcepath=Stock"}],"eventName":"Bubble-Bobble Run 1","eventId":756550,"domain":"v3-sandbox.justgiving.com","inMemoryPerson":null,"currencyCode":"GBP","currencySymbol":"£","smsCode":"KAUB49","charityId":2050}]
 
+2015-04-29 10:56:39,044 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] GET https://api-sandbox.justgiving.com/v1/fundraising/pages/{pageShortName}/donations
+[AuthorizationMode] Anonymous
+[AppId] 6c37285f
+[ApplicationKey?] No
+[UrlSegment] pageShortName: trocboxtest4
+[HttpHeader] Accept: application/json
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 OK
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 3161ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/29/2015 09:56:35
+[HttpHeader] X-JustGiving-Operation: FundraisingApi:GetFundraisingPageDonations
+[HttpHeader] Content-Length: 588
+[HttpHeader] Cache-Control: private, s-maxage=0
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Wed, 29 Apr 2015 09:56:38 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"donations":[{"amount":"10.0000","currencyCode":"GBP","donationDate":"\/Date(1421798400000+0000)\/","donationRef":null,"donorDisplayName":"Jamie (new card)","donorLocalAmount":"10.000000","donorLocalCurrencyCode":"GBP","estimatedTaxReclaim":2.5000,"id":35516361,"image":"https:\/\/www.justgiving.com\/content\/images\/graphics\/icons\/avatars\/facebook-avatar.gif","message":"Jamie","source":"SponsorshipDonations","thirdPartyReference":null,"charityId":2050}],"id":"trocboxtest4","pagination":{"pageNumber":1,"pageSizeRequested":25,"pageSizeReturned":1,"totalPages":1,"totalResults":1}}
+
