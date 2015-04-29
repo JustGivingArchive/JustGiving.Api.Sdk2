@@ -85,6 +85,60 @@ namespace JustGiving.Api.Sdk2.Test.Integration.Fundraising
             var response = await client.Fundraising.RegisterFundraisingPage(requst);
             Assert.That(response.StatusCode, Is.EqualTo(HttpStatusCode.Created));
         }
+
+        [Test]
+        public async void CanGetFundraisingPageDetails()
+        {
+            const int eventId = 756550;
+            var pageName = "Sdk2-test-" + Guid.NewGuid().ToString("N");
+            var client = await TestContext.CreateBasicAuthClientAndUser();
+            var requst = new FundraisingPageRegistration
+            {
+                CharityId = TestContext.DemoCharityId,
+                PageShortName = pageName,
+                PageTitle = "Sdk2 Test Page",
+                EventId = eventId
+            };
+
+            await client.Fundraising.RegisterFundraisingPage(requst);
+            var response = await client.Fundraising.GetFundraisingPageDetails(pageName);
+            Assert.That(response.StatusCode, Is.EqualTo(HttpStatusCode.OK));
+            Assert.That(response.Data.PageShortName, Is.EqualTo(pageName));
+        }
+
+        [Test]
+        public async void CanGetFundraisingPagesForUser()
+        {
+            const int eventId = 756550;
+            var pageName1 = "Sdk2-test-" + Guid.NewGuid().ToString("N");
+            var client = await TestContext.CreateBasicAuthClientAndUser();
+            var request = new FundraisingPageRegistration
+            {
+                CharityId = TestContext.DemoCharityId,
+                PageShortName = pageName1,
+                PageTitle = "Sdk2 Test Page",
+                EventId = eventId
+            };
+
+            await client.Fundraising.RegisterFundraisingPage(request);
+            var pageName2 = "Sdk2-test-" + Guid.NewGuid().ToString("N");
+
+            request = new FundraisingPageRegistration
+            {
+                CharityId = TestContext.DemoCharityId,
+                PageShortName = pageName2,
+                PageTitle = "Sdk2 Test Page",
+                EventId = eventId
+            };
+
+            await client.Fundraising.RegisterFundraisingPage(request);
+
+            var response = await client.Fundraising.GetFundraisingPages();
+            Assert.That(response.StatusCode, Is.EqualTo(HttpStatusCode.OK));
+            Assert.That(response.Data.Count, Is.EqualTo(2));
+            Assert.That(response.Data.Any(frp => frp.PageShortName == pageName1));
+            Assert.That(response.Data.Any(frp => frp.PageShortName == pageName2));
+        }
     }    
 
 }

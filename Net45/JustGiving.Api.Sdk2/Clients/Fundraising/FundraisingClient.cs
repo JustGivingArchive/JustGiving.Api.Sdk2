@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using JustGiving.Api.Sdk2.Logging;
 using JustGiving.Api.Sdk2.Model.Fundraising.Request;
 using JustGiving.Api.Sdk2.Model.Fundraising.Response;
@@ -36,6 +37,23 @@ namespace JustGiving.Api.Sdk2.Clients.Fundraising
             var request = new RestRequest(resource, Method.PUT);
             request.AddJsonBody(pageRegistration);
             return await Execute<FundraisingPageRegistrationResponse>(request);
+        }
+
+        public async Task<IRestResponse<FundraisingPageDetails>> GetFundraisingPageDetails(string pageShortName)
+        {
+            const string resource = "/v1/fundraising/pages/{pageShortName}";
+            var request = new RestRequest(resource, Method.GET);
+            request.AddUrlSegment("pageShortName", pageShortName);
+            var response = await Execute <FundraisingPageDetails>(request);
+            return response;
+        }
+
+        public async Task<IRestResponse<List<FundraisingPageDetails>>> GetFundraisingPages()
+        {
+            const string resource = "/v1/fundraising/pages";
+            var request = new RestRequest(resource, Method.GET);
+            var response = await Execute<List<FundraisingPageDetails>>(request);
+            return response;
         }
     }
 }

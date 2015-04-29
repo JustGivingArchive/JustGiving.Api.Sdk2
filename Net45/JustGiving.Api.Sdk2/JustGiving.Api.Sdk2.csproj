@@ -119,7 +119,16 @@
     <Compile Include="Model\Fundraising\Request\RememberedPersonReference.cs" />
     <Compile Include="Model\Fundraising\Request\VideoInfo.cs" />
     <Compile Include="Model\Fundraising\Response\ErrorResponse.cs" />
+    <Compile Include="Model\Fundraising\Response\FundraisingPageBranding.cs" />
+    <Compile Include="Model\Fundraising\Response\FundraisingPageCharity.cs" />
+    <Compile Include="Model\Fundraising\Response\FundraisingPageDetails.cs" />
+    <Compile Include="Model\Fundraising\Response\FundraisingPageImage.cs" />
+    <Compile Include="Model\Fundraising\Response\FundraisingPageMedia.cs" />
     <Compile Include="Model\Fundraising\Response\FundraisingPageRegistrationResponse.cs" />
+    <Compile Include="Model\Fundraising\Response\FundraisingPageTeam.cs" />
+    <Compile Include="Model\Fundraising\Response\FundraisingPageVideo.cs" />
+    <Compile Include="Model\Fundraising\Response\PageCustomCodes.cs" />
+    <Compile Include="Model\Fundraising\Response\RememberedPersonSummary.cs" />
     <Compile Include="Model\Fundraising\Response\RestResponseNavigationElement.cs" />
     <Compile Include="Model\Fundraising\Response\SuggestedNames.cs" />
     <Compile Include="Security\AuthorizationMode.cs" />
