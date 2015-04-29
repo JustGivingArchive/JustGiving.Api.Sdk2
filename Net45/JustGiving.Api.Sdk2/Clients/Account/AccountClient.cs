@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Net.Http;
 using System.Threading.Tasks;
 using JustGiving.Api.Sdk2.Logging;
 using JustGiving.Api.Sdk2.Model.Account.Request;
@@ -10,8 +11,8 @@ namespace JustGiving.Api.Sdk2.Clients.Account
 {
     public class AccountClient : ClientBase, IAccountClient
     {
-        internal AccountClient(IRestClient client, ApiRequestLogger logger)
-            : base(client, logger)
+        internal AccountClient(IRestClient restClient, HttpClient httpClient, ApiRequestLogger logger)
+            : base(restClient, httpClient, logger)
         {
         }
 

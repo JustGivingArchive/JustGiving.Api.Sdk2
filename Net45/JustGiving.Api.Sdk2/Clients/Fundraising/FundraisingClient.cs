@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Net.Http;
 using System.Threading.Tasks;
 using JustGiving.Api.Sdk2.Logging;
 using JustGiving.Api.Sdk2.Model.Fundraising.Request;
@@ -12,7 +14,7 @@ namespace JustGiving.Api.Sdk2.Clients.Fundraising
 {
     public class FundraisingClient : ClientBase, IFundraisingClient
     {
-        internal FundraisingClient(IRestClient client, ApiRequestLogger logger) : base(client, logger)
+        internal FundraisingClient(IRestClient restClient, System.Net.Http.HttpClient httpClient, ApiRequestLogger logger) : base(restClient, httpClient, logger)
         {
         }
 
@@ -158,6 +160,17 @@ namespace JustGiving.Api.Sdk2.Clients.Fundraising
             var request = new RestRequest(resource, Method.DELETE);
             request.AddUrlSegment("pageShortName", pageShortName);
             return await Execute(request);
+        }
+
+        public async Task<HttpResponseMessage> UploadImage(string pageShortName, byte[] imageData, string contentType, string caption = "")
+        {
+            var resource = string.Format("/v1/fundraising/pages/{0}/images", pageShortName);
+            if (!string.IsNullOrWhiteSpace(caption))
+            {
+                resource += "?caption=" + Uri.EscapeUriString(caption);
+            }
+
+            return await ExecuteRaw(resource, HttpMethod.Post, imageData, contentType);
         }
     }
 }

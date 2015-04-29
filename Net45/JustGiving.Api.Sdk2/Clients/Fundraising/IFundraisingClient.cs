@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Net.Http;
 using System.Threading.Tasks;
 using JustGiving.Api.Sdk2.Model.Fundraising.Request;
 using JustGiving.Api.Sdk2.Model.Fundraising.Response;
@@ -24,5 +25,6 @@ namespace JustGiving.Api.Sdk2.Clients.Fundraising
         Task<IRestResponse> UpdateFundraisingPageAttribution(string pageShortName, Model.Fundraising.Request.FundraisingPageAttribution attribution);
         Task<IRestResponse<Model.Fundraising.Response.FundraisingPageAttribution>> GetFundraisingPageAttribution(string pageShortName);
         Task<IRestResponse> DeleteFundraisingPageAttribution(string pageShortName);
+        Task<HttpResponseMessage> UploadImage(string pageShortName, byte[] imageData, string contentType, string caption = "");
     }
 }

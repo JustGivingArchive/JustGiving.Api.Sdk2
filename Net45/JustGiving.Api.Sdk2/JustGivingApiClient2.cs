@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Net.Http;
 using JustGiving.Api.Sdk2.Clients.Account;
 using JustGiving.Api.Sdk2.Clients.Charity;
 using JustGiving.Api.Sdk2.Clients.Countries;
@@ -30,6 +31,7 @@ namespace JustGiving.Api.Sdk2
         private FundraisingClient _fundraising;
         private EventClient _event;
         private IRestClient _restClient;
+        private HttpClient _httpClient;
         private ApiRequestLogger _logger;
         private readonly ClientOptions _options;
         private ILogProvider _logProvider;
@@ -208,7 +210,7 @@ namespace JustGiving.Api.Sdk2
             {
                 if (_accounts == null)
                 {
-                    _accounts = new AccountClient(RestClient, Logger);
+                    _accounts = new AccountClient(RestClient, HttpClient, Logger);
                 }
 
                 return _accounts;
@@ -224,7 +226,7 @@ namespace JustGiving.Api.Sdk2
             {
                 if (_charities == null)
                 {
-                    _charities = new CharityClient(RestClient, Logger);
+                    _charities = new CharityClient(RestClient, HttpClient, Logger);
                 }
 
                 return _charities;
@@ -240,7 +242,7 @@ namespace JustGiving.Api.Sdk2
             {
                 if (_countries == null)
                 {
-                    _countries = new CountryClient(RestClient, Logger);
+                    _countries = new CountryClient(RestClient, HttpClient, Logger);
                 }
 
                 return _countries;
@@ -256,7 +258,7 @@ namespace JustGiving.Api.Sdk2
             {
                 if (_currency == null)
                 {
-                    _currency = new CurrencyClient(RestClient, Logger);
+                    _currency = new CurrencyClient(RestClient, HttpClient, Logger);
                 }
 
                 return _currency;
@@ -272,7 +274,7 @@ namespace JustGiving.Api.Sdk2
             {
                 if (_donation == null)
                 {
-                    _donation = new DonationClient(RestClient, Logger);
+                    _donation = new DonationClient(RestClient, HttpClient, Logger);
                 }
 
                 return _donation;
@@ -288,7 +290,7 @@ namespace JustGiving.Api.Sdk2
             {
                 if (_event == null)
                 {
-                    _event = new EventClient(RestClient, Logger);
+                    _event = new EventClient(RestClient, HttpClient, Logger);
                 }
 
                 return _event;
@@ -304,7 +306,7 @@ namespace JustGiving.Api.Sdk2
             {
                 if (_fundraising == null)
                 {
-                    _fundraising = new FundraisingClient(RestClient, Logger);
+                    _fundraising = new FundraisingClient(RestClient, HttpClient, Logger);
                 }
 
                 return _fundraising;
@@ -354,6 +356,20 @@ namespace JustGiving.Api.Sdk2
 
                 return _restClient;
             }
-        }       
+        }
+
+        private HttpClient HttpClient
+        {
+            get
+            {
+                if (_httpClient == null)
+                {
+                    var factory = new HttpClientFactory();
+                    _httpClient = factory.CreateClient(_options);
+                }
+
+                return _httpClient;
+            }
+        }
     }
 }

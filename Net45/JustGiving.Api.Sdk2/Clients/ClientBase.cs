@@ -1,4 +1,6 @@
 using System;
+using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using JustGiving.Api.Sdk2.Logging;
 using RestSharp;
@@ -8,12 +10,14 @@ namespace JustGiving.Api.Sdk2.Clients
     public abstract class ClientBase
     {
         private readonly IRestClient _restClient;
+        private readonly HttpClient _httpClient;
         private readonly ApiRequestLogger _logger;
 
-        internal ClientBase(IRestClient client, ApiRequestLogger logger)
+        internal ClientBase(IRestClient restClient, HttpClient httpClient, ApiRequestLogger logger)
         {
-            _restClient = client;
+            _restClient = restClient;
             _logger = logger;
+            _httpClient = httpClient;
         }
 
         protected async Task<IRestResponse<T>> Execute<T>(JustGiving.Api.Sdk2.Http.RestRequest request) where T : new()
@@ -60,6 +64,20 @@ namespace JustGiving.Api.Sdk2.Clients
             }
 
             return response;
+        }
+
+        protected async Task<HttpResponseMessage> ExecuteRaw(string resource, HttpMethod method, byte[] data, string contentType)
+        {
+            var message = new System.Net.Http.HttpRequestMessage(method, resource)
+            {
+                Content = new ByteArrayContent(data)
+            };
+
+            message.Content.Headers.ContentType= new MediaTypeHeaderValue(contentType);
+
+            var result = await _httpClient.SendAsync(message);
+
+            return result;
         }
     }
 }

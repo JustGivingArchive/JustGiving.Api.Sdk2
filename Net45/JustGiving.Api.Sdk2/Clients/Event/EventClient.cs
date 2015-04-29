@@ -8,7 +8,7 @@ namespace JustGiving.Api.Sdk2.Clients.Event
 {
     public class EventClient : ClientBase, IEventClient
     {
-        internal EventClient(IRestClient client, ApiRequestLogger logger) : base(client, logger)
+        internal EventClient(IRestClient restClient, System.Net.Http.HttpClient httpClient, ApiRequestLogger logger) : base(restClient, httpClient, logger)
         {
         }
 

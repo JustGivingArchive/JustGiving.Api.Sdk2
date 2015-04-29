@@ -8,7 +8,7 @@ namespace JustGiving.Api.Sdk2.Clients.Currency
 {
     public class CurrencyClient : ClientBase, ICurrencyClient
     {
-        internal CurrencyClient(IRestClient client, ApiRequestLogger logger) : base(client, logger)
+        internal CurrencyClient(IRestClient restClient, System.Net.Http.HttpClient httpClient, ApiRequestLogger logger) : base(restClient, httpClient, logger)
         {
         }
 

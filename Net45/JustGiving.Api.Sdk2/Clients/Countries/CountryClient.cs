@@ -9,7 +9,7 @@ namespace JustGiving.Api.Sdk2.Clients.Countries
 {
     public class CountryClient : ClientBase, ICountryClient
     {
-        internal CountryClient(IRestClient client, ApiRequestLogger logger) : base(client, logger)
+        internal CountryClient(IRestClient restClient, System.Net.Http.HttpClient httpClient, ApiRequestLogger logger) : base(restClient, httpClient, logger)
         {
         }
 

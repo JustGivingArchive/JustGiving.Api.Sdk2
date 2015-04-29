@@ -43,6 +43,7 @@
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -60,6 +61,7 @@
     <Compile Include="Clients\Event\IEventClient.cs" />
     <Compile Include="Clients\Fundraising\FundraisingClient.cs" />
     <Compile Include="Clients\Fundraising\IFundraisingClient.cs" />
+    <Compile Include="Http\HttpClientFactory.cs" />
     <Compile Include="JustGivingApiClient2.cs" />
     <Compile Include="Clients\Account\IAccountClient.cs" />
     <Compile Include="Clients\Charity\CharityClient.cs" />

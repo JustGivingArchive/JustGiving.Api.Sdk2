@@ -10,7 +10,7 @@ namespace JustGiving.Api.Sdk2.Clients.Charity
 {
     public class CharityClient : ClientBase, ICharityClient
     {
-        internal CharityClient(IRestClient client, ApiRequestLogger logger) : base(client, logger)
+        internal CharityClient(IRestClient restClient, System.Net.Http.HttpClient httpClient, ApiRequestLogger logger) : base(restClient, httpClient, logger)
         {
         }
 

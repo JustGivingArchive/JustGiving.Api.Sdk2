@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Linq;
 using System.Net;
+using System.Reflection;
 using JustGiving.Api.Sdk2.Model.Fundraising.Request;
 using NUnit.Framework;
+using RestSharp.Extensions;
 
 namespace JustGiving.Api.Sdk2.Test.Integration.Fundraising
 {
@@ -405,6 +407,41 @@ namespace JustGiving.Api.Sdk2.Test.Integration.Fundraising
 
             Assert.That(response.StatusCode, Is.EqualTo(HttpStatusCode.OK));
             Assert.That(response.Data.Attribution, Is.Not.EqualTo(attrib.Attribution));
+        }
+
+        [Test]
+        public async void CanUploadImage()
+        {
+            const int eventId = 756550;
+            var pageName = "Sdk2-test-" + Guid.NewGuid().ToString("N");
+            var client = await TestContext.CreateBasicAuthClientAndUser();
+            var frpRequest = new FundraisingPageRegistration
+            {
+                CharityId = TestContext.DemoCharityId,
+                PageShortName = pageName,
+                PageTitle = "Sdk2 Test Page",
+                EventId = eventId
+            };
+
+            await client.Fundraising.RegisterFundraisingPage(frpRequest);
+
+            var image = GetEmbeddedTestImage();
+            var result = await client.Fundraising.UploadImage(pageName, image, "image/png", "My caption");
+
+            Assert.That(result.StatusCode, Is.EqualTo(HttpStatusCode.OK));
+        }
+
+        [Test]
+        public void CanLoadEmbeddedTestImage()
+        {
+            var image = GetEmbeddedTestImage();
+            Assert.That(image, Is.Not.Null);
+            Assert.That(image.Length, Is.GreaterThan(0));
+        }
+
+        private byte[] GetEmbeddedTestImage()
+        {
+            return Assembly.GetExecutingAssembly().GetManifestResourceStream("JustGiving.Api.Sdk2.Test.Integration.Resources.slim-it-cube.png").ReadAsBytes();
         }
     }    
 

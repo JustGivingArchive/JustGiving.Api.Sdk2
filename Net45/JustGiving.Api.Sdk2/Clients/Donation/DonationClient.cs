@@ -7,7 +7,7 @@ namespace JustGiving.Api.Sdk2.Clients.Donation
 {
     public class DonationClient : ClientBase, IDonationClient
     {
-        internal DonationClient(IRestClient client, ApiRequestLogger logger) : base(client, logger)
+        internal DonationClient(IRestClient restClient, System.Net.Http.HttpClient httpClient, ApiRequestLogger logger) : base(restClient, httpClient, logger)
         {
         }
 

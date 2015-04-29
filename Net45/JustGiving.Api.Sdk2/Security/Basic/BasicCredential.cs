@@ -32,5 +32,12 @@ namespace JustGiving.Api.Sdk2.Security.Basic
         {
             get { return _password; }
         }
+
+        public string Base64Encode()
+        {
+            var plainText = Username + ":" + Password;
+            var plainTextBytes = System.Text.Encoding.UTF8.GetBytes(plainText);
+            return Convert.ToBase64String(plainTextBytes);
+        }
     }
 }
