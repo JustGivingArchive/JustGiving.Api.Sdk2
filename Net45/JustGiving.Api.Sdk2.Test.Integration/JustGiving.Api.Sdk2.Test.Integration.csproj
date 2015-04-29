@@ -58,6 +58,7 @@
     <Compile Include="Currency\CurrencyTests.cs" />
     <Compile Include="Donation\DonationTests.cs" />
     <Compile Include="Event\EventTests.cs" />
+    <Compile Include="Fundraising\FundraisingTests.cs" />
     <Compile Include="TestContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

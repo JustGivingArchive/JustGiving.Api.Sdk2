@@ -58,6 +58,8 @@
     <Compile Include="Clients\Event\EventClient.cs" />
     <Compile Include="Clients\Event\EventTypes.cs" />
     <Compile Include="Clients\Event\IEventClient.cs" />
+    <Compile Include="Clients\Fundraising\FundraisingClient.cs" />
+    <Compile Include="Clients\Fundraising\IFundraisingClient.cs" />
     <Compile Include="JustGivingApiClient2.cs" />
     <Compile Include="Clients\Account\IAccountClient.cs" />
     <Compile Include="Clients\Charity\CharityClient.cs" />
@@ -108,6 +110,18 @@
     <Compile Include="Model\Event\Response\InMemoryPerson.cs" />
     <Compile Include="Model\Event\Response\PagesForEvent.cs" />
     <Compile Include="Model\Event\Response\RestResponseNavigationElement.cs" />
+    <Compile Include="Model\Fundraising\Request\ActivityType.cs" />
+    <Compile Include="Model\Fundraising\Request\FundraisingPageRegistration.cs" />
+    <Compile Include="Model\Fundraising\Request\ImageInfo.cs" />
+    <Compile Include="Model\Fundraising\Request\PageCustomCodes.cs" />
+    <Compile Include="Model\Fundraising\Request\PageTheme.cs" />
+    <Compile Include="Model\Fundraising\Request\RememberedPerson.cs" />
+    <Compile Include="Model\Fundraising\Request\RememberedPersonReference.cs" />
+    <Compile Include="Model\Fundraising\Request\VideoInfo.cs" />
+    <Compile Include="Model\Fundraising\Response\ErrorResponse.cs" />
+    <Compile Include="Model\Fundraising\Response\FundraisingPageRegistrationResponse.cs" />
+    <Compile Include="Model\Fundraising\Response\RestResponseNavigationElement.cs" />
+    <Compile Include="Model\Fundraising\Response\SuggestedNames.cs" />
     <Compile Include="Security\AuthorizationMode.cs" />
     <Compile Include="Security\Basic\BasicCredential.cs" />
     <Compile Include="Configuration\ClientOptions.cs" />

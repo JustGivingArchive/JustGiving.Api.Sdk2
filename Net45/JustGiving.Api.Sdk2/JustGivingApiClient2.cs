@@ -5,6 +5,7 @@ using JustGiving.Api.Sdk2.Clients.Countries;
 using JustGiving.Api.Sdk2.Clients.Currency;
 using JustGiving.Api.Sdk2.Clients.Donation;
 using JustGiving.Api.Sdk2.Clients.Event;
+using JustGiving.Api.Sdk2.Clients.Fundraising;
 using JustGiving.Api.Sdk2.Configuration;
 using JustGiving.Api.Sdk2.Configuration.Logging;
 using JustGiving.Api.Sdk2.Http;
@@ -26,6 +27,7 @@ namespace JustGiving.Api.Sdk2
         private CountryClient _countries;
         private CurrencyClient _currency;
         private DonationClient _donation;
+        private FundraisingClient _fundraising;
         private EventClient _event;
         private IRestClient _restClient;
         private ApiRequestLogger _logger;
@@ -290,6 +292,22 @@ namespace JustGiving.Api.Sdk2
                 }
 
                 return _event;
+            }
+        }
+
+        /// <summary>
+        /// API resources for working with fundraising pages.
+        /// </summary>
+        public FundraisingClient Fundraising
+        {
+            get
+            {
+                if (_fundraising == null)
+                {
+                    _fundraising = new FundraisingClient(RestClient, Logger);
+                }
+
+                return _fundraising;
             }
         }
 
