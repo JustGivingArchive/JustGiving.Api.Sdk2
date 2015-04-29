@@ -113,10 +113,12 @@
     <Compile Include="Model\Fundraising\Request\ActivityType.cs" />
     <Compile Include="Model\Fundraising\Request\FundraisingPageRegistration.cs" />
     <Compile Include="Model\Fundraising\Request\ImageInfo.cs" />
+    <Compile Include="Model\Fundraising\Request\MicroblogUpdate.cs" />
     <Compile Include="Model\Fundraising\Request\PageCustomCodes.cs" />
     <Compile Include="Model\Fundraising\Request\PageTheme.cs" />
     <Compile Include="Model\Fundraising\Request\RememberedPerson.cs" />
     <Compile Include="Model\Fundraising\Request\RememberedPersonReference.cs" />
+    <Compile Include="Model\Fundraising\Request\StorySupplement.cs" />
     <Compile Include="Model\Fundraising\Request\VideoInfo.cs" />
     <Compile Include="Model\Fundraising\Response\ErrorResponse.cs" />
     <Compile Include="Model\Fundraising\Response\FundraisingPageBranding.cs" />
@@ -128,6 +130,7 @@
     <Compile Include="Model\Fundraising\Response\FundraisingPageMedia.cs" />
     <Compile Include="Model\Fundraising\Response\FundraisingPageRegistrationResponse.cs" />
     <Compile Include="Model\Fundraising\Response\FundraisingPageTeam.cs" />
+    <Compile Include="Model\Fundraising\Response\MicroblogUpdate.cs" />
     <Compile Include="Model\Fundraising\Response\FundraisingPageVideo.cs" />
     <Compile Include="Model\Fundraising\Response\PageCustomCodes.cs" />
     <Compile Include="Model\Fundraising\Response\Pagination.cs" />

@@ -149,6 +149,116 @@ namespace JustGiving.Api.Sdk2.Test.Integration.Fundraising
             Assert.That(response.Data.Donations.Count, Is.GreaterThan(0));
             Assert.That(response.Data.Pagination.TotalResults, Is.GreaterThan(0));
         }
+
+        [Test]
+        public async void CanUpdateFundraisingPage()
+        {
+            const int eventId = 756550;
+            var pageName = "Sdk2-test-" + Guid.NewGuid().ToString("N");
+            var client = await TestContext.CreateBasicAuthClientAndUser();
+            var frpRequest = new FundraisingPageRegistration
+            {
+                CharityId = TestContext.DemoCharityId,
+                PageShortName = pageName,
+                PageTitle = "Sdk2 Test Page",
+                EventId = eventId
+            };
+
+            await client.Fundraising.RegisterFundraisingPage(frpRequest);
+
+            var storySupplement = "Hello, world " + DateTime.Now;
+            var update = new FundraisingPageUpdate() {StorySupplement = storySupplement};
+            var response = await client.Fundraising.UpdateFundraisingPage(pageName, update);
+            Assert.That(response.StatusCode, Is.EqualTo(HttpStatusCode.OK));
+        }
+
+        [Test]
+        public async void CanPostMicroblogUpdates()
+        {
+            const int eventId = 756550;
+            var pageName = "Sdk2-test-" + Guid.NewGuid().ToString("N");
+            var client = await TestContext.CreateBasicAuthClientAndUser();
+            var frpRequest = new FundraisingPageRegistration
+            {
+                CharityId = TestContext.DemoCharityId,
+                PageShortName = pageName,
+                PageTitle = "Sdk2 Test Page",
+                EventId = eventId
+            };
+
+            await client.Fundraising.RegisterFundraisingPage(frpRequest);
+
+            var update = new Model.Fundraising.Request.MicroblogUpdate()
+            {
+                CreatedDate = DateTime.Now,
+                Message = "Hello world " + DateTime.Now
+            };
+
+            var response = await client.Fundraising.PageUpdatesAddPost(pageName, update);
+
+            Assert.That(response.StatusCode, Is.EqualTo(HttpStatusCode.Created));
+        }
+
+        [Test]
+        public async void CanGetMicroblogUpdates()
+        {
+            const int eventId = 756550;
+            var pageName = "Sdk2-test-" + Guid.NewGuid().ToString("N");
+            var client = await TestContext.CreateBasicAuthClientAndUser();
+            var frpRequest = new FundraisingPageRegistration
+            {
+                CharityId = TestContext.DemoCharityId,
+                PageShortName = pageName,
+                PageTitle = "Sdk2 Test Page",
+                EventId = eventId
+            };
+
+            await client.Fundraising.RegisterFundraisingPage(frpRequest);
+
+            var update = new Model.Fundraising.Request.MicroblogUpdate()
+            {
+                CreatedDate = DateTime.Now,
+                Message = "Hello world " + DateTime.Now
+            };
+
+            await client.Fundraising.PageUpdatesAddPost(pageName, update);
+
+            var response = await client.Fundraising.PageUpdates(pageName);
+            Assert.That(response.StatusCode, Is.EqualTo(HttpStatusCode.OK));
+            Assert.That(response.Data.Count, Is.EqualTo(1));
+        }
+
+        [Test]
+        public async void CanGetMicroblogUpdatesById()
+        {
+            const int eventId = 756550;
+            var pageName = "Sdk2-test-" + Guid.NewGuid().ToString("N");
+            var client = await TestContext.CreateBasicAuthClientAndUser();
+            var frpRequest = new FundraisingPageRegistration
+            {
+                CharityId = TestContext.DemoCharityId,
+                PageShortName = pageName,
+                PageTitle = "Sdk2 Test Page",
+                EventId = eventId
+            };
+
+            await client.Fundraising.RegisterFundraisingPage(frpRequest);
+
+            var update = new Model.Fundraising.Request.MicroblogUpdate()
+            {
+                CreatedDate = DateTime.Now,
+                Message = "Hello world " + DateTime.Now
+            };
+
+            await client.Fundraising.PageUpdatesAddPost(pageName, update);
+
+            var getAllResponse = await client.Fundraising.PageUpdates(pageName);
+            var postId = getAllResponse.Data.First().Id;
+
+            var response = await client.Fundraising.PageUpdateById(pageName, postId);
+            Assert.That(response.StatusCode, Is.EqualTo(HttpStatusCode.OK));
+            Assert.That(response.Data.Id, Is.EqualTo(postId));
+        }
     }    
 
 }
