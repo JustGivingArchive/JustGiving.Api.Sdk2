@@ -19,5 +19,10 @@ namespace JustGiving.Api.Sdk2.Clients.Fundraising
         Task<IRestResponse<List<Model.Fundraising.Response.MicroblogUpdate>>> PageUpdates(string pageShortName);
         Task<IRestResponse<RestResponseNavigationElement>> PageUpdatesAddPost(string pageShortName, Model.Fundraising.Request.MicroblogUpdate update);
         Task<IRestResponse<Model.Fundraising.Response.MicroblogUpdate>> PageUpdateById(string pageShortName, int postId);
+        Task<IRestResponse> DeleteFundraisingPageUpdate(string pageShortName, int postId);
+        Task<IRestResponse> AppendToFundraisingPageAttribution(string pageShortName, Model.Fundraising.Request.FundraisingPageAttribution attribution);
+        Task<IRestResponse> UpdateFundraisingPageAttribution(string pageShortName, Model.Fundraising.Request.FundraisingPageAttribution attribution);
+        Task<IRestResponse<Model.Fundraising.Response.FundraisingPageAttribution>> GetFundraisingPageAttribution(string pageShortName);
+        Task<IRestResponse> DeleteFundraisingPageAttribution(string pageShortName);
     }
 }

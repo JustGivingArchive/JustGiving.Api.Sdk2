@@ -5,6 +5,7 @@ using JustGiving.Api.Sdk2.Model.Fundraising.Request;
 using JustGiving.Api.Sdk2.Model.Fundraising.Response;
 using RestRequest = JustGiving.Api.Sdk2.Http.RestRequest;
 using RestSharp;
+using FundraisingPageAttribution = JustGiving.Api.Sdk2.Model.Fundraising.Response.FundraisingPageAttribution;
 using MicroblogUpdate = JustGiving.Api.Sdk2.Model.Fundraising.Request.MicroblogUpdate;
 
 namespace JustGiving.Api.Sdk2.Clients.Fundraising
@@ -113,6 +114,50 @@ namespace JustGiving.Api.Sdk2.Clients.Fundraising
             request.AddUrlSegment("id", postId.ToString());
             var response = await Execute<Model.Fundraising.Response.MicroblogUpdate>(request);
             return response;
+        }
+
+        public async Task<IRestResponse> DeleteFundraisingPageUpdate(string pageShortName, int postId)
+        {
+            const string resource = "/v1/fundraising/pages/{pageShortName}/updates/{id}";
+            var request = new RestRequest(resource, Method.DELETE);
+            request.AddUrlSegment("pageShortName", pageShortName);
+            request.AddUrlSegment("id", postId.ToString());
+            var response = await Execute(request);
+            return response;
+        }
+
+        public async Task<IRestResponse> AppendToFundraisingPageAttribution(string pageShortName, Model.Fundraising.Request.FundraisingPageAttribution attribution)
+        {
+            const string resource = "/v1/fundraising/pages/{pageShortName}/attribution";
+            var request = new RestRequest(resource, Method.POST);
+            request.AddUrlSegment("pageShortName", pageShortName);
+            request.AddJsonBody(attribution);
+            return await Execute(request);
+        }
+
+        public async Task<IRestResponse> UpdateFundraisingPageAttribution(string pageShortName, Model.Fundraising.Request.FundraisingPageAttribution attribution)
+        {
+            const string resource = "/v1/fundraising/pages/{pageShortName}/attribution";
+            var request = new RestRequest(resource, Method.PUT);
+            request.AddUrlSegment("pageShortName", pageShortName);
+            request.AddJsonBody(attribution);
+            return await Execute(request);
+        }
+
+        public async Task<IRestResponse<FundraisingPageAttribution>> GetFundraisingPageAttribution(string pageShortName)
+        {
+            const string resource = "/v1/fundraising/pages/{pageShortName}/attribution";
+            var request = new RestRequest(resource, Method.GET);
+            request.AddUrlSegment("pageShortName", pageShortName);
+            return await Execute<FundraisingPageAttribution>(request);
+        }
+
+        public async Task<IRestResponse> DeleteFundraisingPageAttribution(string pageShortName)
+        {
+            const string resource = "/v1/fundraising/pages/{pageShortName}/attribution";
+            var request = new RestRequest(resource, Method.DELETE);
+            request.AddUrlSegment("pageShortName", pageShortName);
+            return await Execute(request);
         }
     }
 }

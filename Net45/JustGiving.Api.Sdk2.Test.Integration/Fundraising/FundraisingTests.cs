@@ -259,6 +259,153 @@ namespace JustGiving.Api.Sdk2.Test.Integration.Fundraising
             Assert.That(response.StatusCode, Is.EqualTo(HttpStatusCode.OK));
             Assert.That(response.Data.Id, Is.EqualTo(postId));
         }
+
+        [Test]
+        public async void CanDeleteMicroblogUpdatesById()
+        {
+            const int eventId = 756550;
+            var pageName = "Sdk2-test-" + Guid.NewGuid().ToString("N");
+            var client = await TestContext.CreateBasicAuthClientAndUser();
+            var frpRequest = new FundraisingPageRegistration
+            {
+                CharityId = TestContext.DemoCharityId,
+                PageShortName = pageName,
+                PageTitle = "Sdk2 Test Page",
+                EventId = eventId
+            };
+
+            await client.Fundraising.RegisterFundraisingPage(frpRequest);
+
+            var update = new Model.Fundraising.Request.MicroblogUpdate()
+            {
+                CreatedDate = DateTime.Now,
+                Message = "Hello world " + DateTime.Now
+            };
+
+            await client.Fundraising.PageUpdatesAddPost(pageName, update);
+
+            var getAllResponse = await client.Fundraising.PageUpdates(pageName);
+            var postId = getAllResponse.Data.First().Id;
+
+            var deleteResponse = await client.Fundraising.DeleteFundraisingPageUpdate(pageName, postId);
+            Assert.That(deleteResponse.StatusCode, Is.EqualTo(HttpStatusCode.OK));
+
+            // TODO: Fix bug in API (error 500 instead of 404)
+            /*
+            var response = await client.Fundraising.PageUpdateById(pageName, postId);
+            Assert.That(response.StatusCode, Is.EqualTo(HttpStatusCode.NotFound));
+            Assert.That(response.Data.Id, Is.EqualTo(postId));
+            */
+        }
+
+        [Test]
+        public async void CanAppendFundraisingPageAttribution()
+        {
+            const int eventId = 756550;
+            var pageName = "Sdk2-test-" + Guid.NewGuid().ToString("N");
+            var client = await TestContext.CreateBasicAuthClientAndUser();
+            var frpRequest = new FundraisingPageRegistration
+            {
+                CharityId = TestContext.DemoCharityId,
+                PageShortName = pageName,
+                PageTitle = "Sdk2 Test Page",
+                EventId = eventId
+            };
+
+            await client.Fundraising.RegisterFundraisingPage(frpRequest);
+
+            var attrib = new FundraisingPageAttribution()
+            {
+                Attribution = Guid.NewGuid().ToString()
+            };
+
+            var response = await client.Fundraising.AppendToFundraisingPageAttribution(pageName, attrib);
+            Assert.That(response.StatusCode, Is.EqualTo(HttpStatusCode.OK));
+        }
+
+        [Test]
+        public async void CanReplaceFundraisingPageAttribution()
+        {
+            const int eventId = 756550;
+            var pageName = "Sdk2-test-" + Guid.NewGuid().ToString("N");
+            var client = await TestContext.CreateBasicAuthClientAndUser();
+            var frpRequest = new FundraisingPageRegistration
+            {
+                CharityId = TestContext.DemoCharityId,
+                PageShortName = pageName,
+                PageTitle = "Sdk2 Test Page",
+                EventId = eventId
+            };
+
+            await client.Fundraising.RegisterFundraisingPage(frpRequest);
+
+            var attrib = new FundraisingPageAttribution()
+            {
+                Attribution = Guid.NewGuid().ToString()
+            };
+
+            var response = await client.Fundraising.UpdateFundraisingPageAttribution(pageName, attrib);
+            Assert.That(response.StatusCode, Is.EqualTo(HttpStatusCode.OK));
+        }
+
+        [Test]
+        public async void CanGetFundraisingPageAttribution()
+        {
+            const int eventId = 756550;
+            var pageName = "Sdk2-test-" + Guid.NewGuid().ToString("N");
+            var client = await TestContext.CreateBasicAuthClientAndUser();
+            var frpRequest = new FundraisingPageRegistration
+            {
+                CharityId = TestContext.DemoCharityId,
+                PageShortName = pageName,
+                PageTitle = "Sdk2 Test Page",
+                EventId = eventId
+            };
+
+            await client.Fundraising.RegisterFundraisingPage(frpRequest);
+
+            var attrib = new FundraisingPageAttribution()
+            {
+                Attribution = Guid.NewGuid().ToString()
+            };
+
+            await client.Fundraising.UpdateFundraisingPageAttribution(pageName, attrib);
+
+            var response = await client.Fundraising.GetFundraisingPageAttribution(pageName);
+
+            Assert.That(response.StatusCode, Is.EqualTo(HttpStatusCode.OK));
+            Assert.That(response.Data.Attribution, Is.EqualTo(attrib.Attribution));
+        }
+
+        [Test]
+        public async void CanDeleteFundraisingPageAttribution()
+        {
+            const int eventId = 756550;
+            var pageName = "Sdk2-test-" + Guid.NewGuid().ToString("N");
+            var client = await TestContext.CreateBasicAuthClientAndUser();
+            var frpRequest = new FundraisingPageRegistration
+            {
+                CharityId = TestContext.DemoCharityId,
+                PageShortName = pageName,
+                PageTitle = "Sdk2 Test Page",
+                EventId = eventId
+            };
+
+            await client.Fundraising.RegisterFundraisingPage(frpRequest);
+
+            var attrib = new FundraisingPageAttribution()
+            {
+                Attribution = Guid.NewGuid().ToString()
+            };
+
+            await client.Fundraising.UpdateFundraisingPageAttribution(pageName, attrib);
+            await client.Fundraising.DeleteFundraisingPageAttribution(pageName);
+
+            var response = await client.Fundraising.GetFundraisingPageAttribution(pageName);
+
+            Assert.That(response.StatusCode, Is.EqualTo(HttpStatusCode.OK));
+            Assert.That(response.Data.Attribution, Is.Not.EqualTo(attrib.Attribution));
+        }
     }    
 
 }

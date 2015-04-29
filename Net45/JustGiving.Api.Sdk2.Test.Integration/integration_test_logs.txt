@@ -2072,3 +2072,1526 @@ System.InvalidCastException: Unable to cast object of type 'RestSharp.JsonArray'
 [HttpHeader] X-Powered-By: ASP.NET
 [ResponseBody] {"CreatedDate":"\/Date(1430314800000+0100)\/","Id":100167,"Message":"Hello world 29\/04\/2015 14:40:28","Video":null}
 
+2015-04-29 14:49:03,901 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] PUT https://api-sandbox.justgiving.com/v1/account
+[AuthorizationMode] Anonymous
+[AppId] 6c37285f
+[ApplicationKey?] No
+[RequestBody] application/json: {"reference":"MY-REF","title":"Ms","firstName":"Integration","lastName":"Tester","address":{"line1":"Blue Fin Building","line2":"Southwark Street","townOrCity":"London","countyOrState":"London","country":"United Kingdom","postcodeOrZipcode":"SE1 0TU"},"email":"integration-test-2015429144859@justgiving.com","password":"ff9b2a20-8077-41ea-923b-b92d750a943a","acceptTermsAndConditions":true}
+[HttpHeader] Accept: application/json
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 Account created successfully
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 1829ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/29/2015 13:49:01
+[HttpHeader] X-JustGiving-Operation: AccountApi:AccountRegistration
+[HttpHeader] Content-Length: 97
+[HttpHeader] Cache-Control: private
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Wed, 29 Apr 2015 13:49:03 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"country":"United Kingdom","email":"integration-test-2015429144859@justgiving.com","error":null}
+
+2015-04-29 14:49:08,417 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] PUT https://api-sandbox.justgiving.com/v1/fundraising/pages
+[AuthorizationMode] Basic
+[AppId] 6c37285f
+[ApplicationKey?] No
+[RequestBody] application/json: {"reference":null,"charityId":2050,"eventId":756550,"eventRef":null,"pageShortName":"Sdk2-test-c86c19fb3beb4583a3c8a870e01be468","pageTitle":"Sdk2 Test Page","activityType":null,"targetAmount":null,"justGivingOptIn":false,"charityOptIn":false,"eventDate":null,"eventName":null,"attribution":null,"charityFunded":false,"causeId":null,"companyAppealId":null,"expiryDate":null,"pageStory":null,"pageSummaryWhat":null,"pageSummaryWhy":null,"customCodes":null,"theme":null,"images":null,"videos":null,"rememberedPersonReference":null}
+[HttpHeader] Accept: application/json
+[HttpHeader] Authorization: Basic aW50ZWdyYXRpb24tdGVzdC0yMDE1NDI5MTQ0ODU5QGp1c3RnaXZpbmcuY29tOmZmOWIyYTIwLTgwNzctNDFlYS05MjNiLWI5MmQ3NTBhOTQzYQ==
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 201 Created
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 4343ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/29/2015 13:49:04
+[HttpHeader] X-JustGiving-Operation: FundraisingApi:RegisterFundraisingPage
+[HttpHeader] Content-Length: 332
+[HttpHeader] Cache-Control: private, s-maxage=0
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Wed, 29 Apr 2015 13:49:08 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"error":null,"next":{"rel":"https:\/\/api-sandbox.justgiving.com\/\/v1\/fundraising\/pages","uri":"http:\/\/v3-sandbox.justgiving.com\/Sdk2-test-c86c19fb3beb4583a3c8a870e01be468","type":"application\/html"},"pageId":3736102,"signOnUrl":"http:\/\/v3-sandbox.justgiving.com\/auth\/faaf3045-f7cb-4e27-96d6-7bf47a3d6743","warnings":[]}
+
+2015-04-29 14:49:09,023 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] POST https://api-sandbox.justgiving.com/v1/fundraising/pages/{pageShortName}/updates
+[AuthorizationMode] Basic
+[AppId] 6c37285f
+[ApplicationKey?] No
+[UrlSegment] pageShortName: Sdk2-test-c86c19fb3beb4583a3c8a870e01be468
+[RequestBody] application/json: {"createdDate":"2015-04-29T13:49:08.4182945Z","message":"Hello world 29/04/2015 14:49:08","video":null}
+[HttpHeader] Accept: application/json
+[HttpHeader] Authorization: Basic aW50ZWdyYXRpb24tdGVzdC0yMDE1NDI5MTQ0ODU5QGp1c3RnaXZpbmcuY29tOmZmOWIyYTIwLTgwNzctNDFlYS05MjNiLWI5MmQ3NTBhOTQzYQ==
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 201 
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 443ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/29/2015 13:49:08
+[HttpHeader] X-JustGiving-Operation: FundraisingApi:PageUpdatesAddPost
+[HttpHeader] Content-Length: 135
+[HttpHeader] Cache-Control: private, s-maxage=0
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Wed, 29 Apr 2015 13:49:09 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"Created":{"rel":"UpdateUri","uri":"v1\/fundraising\/pages\/Sdk2-test-c86c19fb3beb4583a3c8a870e01be468\/updates\/100168","type":null}}
+
+2015-04-29 14:49:09,386 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] GET https://api-sandbox.justgiving.com/v1/fundraising/pages/{pageShortName}/updates
+[AuthorizationMode] Basic
+[AppId] 6c37285f
+[ApplicationKey?] No
+[UrlSegment] pageShortName: Sdk2-test-c86c19fb3beb4583a3c8a870e01be468
+[HttpHeader] Accept: application/json
+[HttpHeader] Authorization: Basic aW50ZWdyYXRpb24tdGVzdC0yMDE1NDI5MTQ0ODU5QGp1c3RnaXZpbmcuY29tOmZmOWIyYTIwLTgwNzctNDFlYS05MjNiLWI5MmQ3NTBhOTQzYQ==
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 260ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/29/2015 13:49:09
+[HttpHeader] X-JustGiving-Operation: FundraisingApi:PageUpdates
+[HttpHeader] Content-Length: 119
+[HttpHeader] Cache-Control: private
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Wed, 29 Apr 2015 13:49:09 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] [{"CreatedDate":"\/Date(1430315340000+0100)\/","Id":100168,"Message":"Hello world 29\/04\/2015 14:49:08","Video":null}]
+
+2015-04-29 14:49:09,932 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] DELETE https://api-sandbox.justgiving.com/v1/fundraising/pages/{pageShortName}/updates/{id}
+[AuthorizationMode] Basic
+[AppId] 6c37285f
+[ApplicationKey?] No
+[UrlSegment] pageShortName: Sdk2-test-c86c19fb3beb4583a3c8a870e01be468
+[UrlSegment] id: 100168
+[HttpHeader] Accept: application/json
+[HttpHeader] Authorization: Basic aW50ZWdyYXRpb24tdGVzdC0yMDE1NDI5MTQ0ODU5QGp1c3RnaXZpbmcuY29tOmZmOWIyYTIwLTgwNzctNDFlYS05MjNiLWI5MmQ3NTBhOTQzYQ==
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 OK
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 490ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/29/2015 13:49:09
+[HttpHeader] X-JustGiving-Operation: FundraisingApi:DeleteFundraisingPageUpdates
+[HttpHeader] Content-Length: 0
+[HttpHeader] Cache-Control: private, s-maxage=0
+[HttpHeader] Date: Wed, 29 Apr 2015 13:49:09 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+
+2015-04-29 14:49:10,336 [Runner thread] ERROR JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - An error occurred while executing an HTTP request
+System.InvalidCastException: Unable to cast object of type 'RestSharp.JsonArray' to type 'System.Collections.Generic.IDictionary`2[System.String,System.Object]'.
+   at RestSharp.Deserializers.JsonDeserializer.FindRoot(String content)
+   at RestSharp.Deserializers.JsonDeserializer.Deserialize[T](IRestResponse response)
+   at RestSharp.RestClient.Deserialize[T](IRestRequest request, IRestResponse raw)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at JustGiving.Api.Sdk2.Clients.ClientBase.<Execute>d__0`1.MoveNext() in d:\JustGiving.Api.Sdk2\Net45\JustGiving.Api.Sdk2\Clients\ClientBase.cs:line 27
+2015-04-29 14:49:10,356 [Runner thread] WARN  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] GET https://api-sandbox.justgiving.com/v1/fundraising/pages/{pageShortName}/updates/{id}
+[AuthorizationMode] Basic
+[AppId] 6c37285f
+[ApplicationKey?] No
+[UrlSegment] pageShortName: Sdk2-test-c86c19fb3beb4583a3c8a870e01be468
+[UrlSegment] id: 100168
+[HttpHeader] Accept: application/json
+[HttpHeader] Authorization: Basic aW50ZWdyYXRpb24tdGVzdC0yMDE1NDI5MTQ0ODU5QGp1c3RnaXZpbmcuY29tOmZmOWIyYTIwLTgwNzctNDFlYS05MjNiLWI5MmQ3NTBhOTQzYQ==
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse] No response
+
+2015-04-29 14:49:46,663 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] PUT https://api-sandbox.justgiving.com/v1/account
+[AuthorizationMode] Anonymous
+[AppId] 6c37285f
+[ApplicationKey?] No
+[RequestBody] application/json: {"reference":"MY-REF","title":"Ms","firstName":"Integration","lastName":"Tester","address":{"line1":"Blue Fin Building","line2":"Southwark Street","townOrCity":"London","countyOrState":"London","country":"United Kingdom","postcodeOrZipcode":"SE1 0TU"},"email":"integration-test-2015429144941@justgiving.com","password":"3d900ff0-5492-4256-a022-e1995c28a612","acceptTermsAndConditions":true}
+[HttpHeader] Accept: application/json
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 Account created successfully
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 1762ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/29/2015 13:49:44
+[HttpHeader] X-JustGiving-Operation: AccountApi:AccountRegistration
+[HttpHeader] Content-Length: 97
+[HttpHeader] Cache-Control: private
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Wed, 29 Apr 2015 13:49:46 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"country":"United Kingdom","email":"integration-test-2015429144941@justgiving.com","error":null}
+
+2015-04-29 14:49:49,556 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] PUT https://api-sandbox.justgiving.com/v1/fundraising/pages
+[AuthorizationMode] Basic
+[AppId] 6c37285f
+[ApplicationKey?] No
+[RequestBody] application/json: {"reference":null,"charityId":2050,"eventId":756550,"eventRef":null,"pageShortName":"Sdk2-test-8e6e3c2f790843fcbf0bde24a371b008","pageTitle":"Sdk2 Test Page","activityType":null,"targetAmount":null,"justGivingOptIn":false,"charityOptIn":false,"eventDate":null,"eventName":null,"attribution":null,"charityFunded":false,"causeId":null,"companyAppealId":null,"expiryDate":null,"pageStory":null,"pageSummaryWhat":null,"pageSummaryWhy":null,"customCodes":null,"theme":null,"images":null,"videos":null,"rememberedPersonReference":null}
+[HttpHeader] Accept: application/json
+[HttpHeader] Authorization: Basic aW50ZWdyYXRpb24tdGVzdC0yMDE1NDI5MTQ0OTQxQGp1c3RnaXZpbmcuY29tOjNkOTAwZmYwLTU0OTItNDI1Ni1hMDIyLWUxOTk1YzI4YTYxMg==
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 201 Created
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 2692ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/29/2015 13:49:47
+[HttpHeader] X-JustGiving-Operation: FundraisingApi:RegisterFundraisingPage
+[HttpHeader] Content-Length: 332
+[HttpHeader] Cache-Control: private, s-maxage=0
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Wed, 29 Apr 2015 13:49:49 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"error":null,"next":{"rel":"https:\/\/api-sandbox.justgiving.com\/\/v1\/fundraising\/pages","uri":"http:\/\/v3-sandbox.justgiving.com\/Sdk2-test-8e6e3c2f790843fcbf0bde24a371b008","type":"application\/html"},"pageId":3736103,"signOnUrl":"http:\/\/v3-sandbox.justgiving.com\/auth\/a966bdf3-633c-4061-ad5f-3e33b5bec2b0","warnings":[]}
+
+2015-04-29 14:49:50,243 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] POST https://api-sandbox.justgiving.com/v1/fundraising/pages/{pageShortName}/updates
+[AuthorizationMode] Basic
+[AppId] 6c37285f
+[ApplicationKey?] No
+[UrlSegment] pageShortName: Sdk2-test-8e6e3c2f790843fcbf0bde24a371b008
+[RequestBody] application/json: {"createdDate":"2015-04-29T13:49:49.5579475Z","message":"Hello world 29/04/2015 14:49:49","video":null}
+[HttpHeader] Accept: application/json
+[HttpHeader] Authorization: Basic aW50ZWdyYXRpb24tdGVzdC0yMDE1NDI5MTQ0OTQxQGp1c3RnaXZpbmcuY29tOjNkOTAwZmYwLTU0OTItNDI1Ni1hMDIyLWUxOTk1YzI4YTYxMg==
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 201 
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 528ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/29/2015 13:49:49
+[HttpHeader] X-JustGiving-Operation: FundraisingApi:PageUpdatesAddPost
+[HttpHeader] Content-Length: 135
+[HttpHeader] Cache-Control: private, s-maxage=0
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Wed, 29 Apr 2015 13:49:50 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"Created":{"rel":"UpdateUri","uri":"v1\/fundraising\/pages\/Sdk2-test-8e6e3c2f790843fcbf0bde24a371b008\/updates\/100169","type":null}}
+
+2015-04-29 14:49:50,602 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] GET https://api-sandbox.justgiving.com/v1/fundraising/pages/{pageShortName}/updates
+[AuthorizationMode] Basic
+[AppId] 6c37285f
+[ApplicationKey?] No
+[UrlSegment] pageShortName: Sdk2-test-8e6e3c2f790843fcbf0bde24a371b008
+[HttpHeader] Accept: application/json
+[HttpHeader] Authorization: Basic aW50ZWdyYXRpb24tdGVzdC0yMDE1NDI5MTQ0OTQxQGp1c3RnaXZpbmcuY29tOjNkOTAwZmYwLTU0OTItNDI1Ni1hMDIyLWUxOTk1YzI4YTYxMg==
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 262ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/29/2015 13:49:50
+[HttpHeader] X-JustGiving-Operation: FundraisingApi:PageUpdates
+[HttpHeader] Content-Length: 119
+[HttpHeader] Cache-Control: private
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Wed, 29 Apr 2015 13:49:50 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] [{"CreatedDate":"\/Date(1430315400000+0100)\/","Id":100169,"Message":"Hello world 29\/04\/2015 14:49:49","Video":null}]
+
+2015-04-29 14:49:51,072 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] DELETE https://api-sandbox.justgiving.com/v1/fundraising/pages/{pageShortName}/updates/{id}
+[AuthorizationMode] Basic
+[AppId] 6c37285f
+[ApplicationKey?] No
+[UrlSegment] pageShortName: Sdk2-test-8e6e3c2f790843fcbf0bde24a371b008
+[UrlSegment] id: 100169
+[HttpHeader] Accept: application/json
+[HttpHeader] Authorization: Basic aW50ZWdyYXRpb24tdGVzdC0yMDE1NDI5MTQ0OTQxQGp1c3RnaXZpbmcuY29tOjNkOTAwZmYwLTU0OTItNDI1Ni1hMDIyLWUxOTk1YzI4YTYxMg==
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 OK
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 417ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/29/2015 13:49:50
+[HttpHeader] X-JustGiving-Operation: FundraisingApi:DeleteFundraisingPageUpdates
+[HttpHeader] Content-Length: 0
+[HttpHeader] Cache-Control: private, s-maxage=0
+[HttpHeader] Date: Wed, 29 Apr 2015 13:49:50 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+
+2015-04-29 14:49:51,461 [Runner thread] ERROR JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - An error occurred while executing an HTTP request
+System.InvalidCastException: Unable to cast object of type 'RestSharp.JsonArray' to type 'System.Collections.Generic.IDictionary`2[System.String,System.Object]'.
+   at RestSharp.Deserializers.JsonDeserializer.FindRoot(String content)
+   at RestSharp.Deserializers.JsonDeserializer.Deserialize[T](IRestResponse response)
+   at RestSharp.RestClient.Deserialize[T](IRestRequest request, IRestResponse raw)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at JustGiving.Api.Sdk2.Clients.ClientBase.<Execute>d__0`1.MoveNext() in d:\JustGiving.Api.Sdk2\Net45\JustGiving.Api.Sdk2\Clients\ClientBase.cs:line 27
+2015-04-29 14:49:51,487 [Runner thread] WARN  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] GET https://api-sandbox.justgiving.com/v1/fundraising/pages/{pageShortName}/updates/{id}
+[AuthorizationMode] Basic
+[AppId] 6c37285f
+[ApplicationKey?] No
+[UrlSegment] pageShortName: Sdk2-test-8e6e3c2f790843fcbf0bde24a371b008
+[UrlSegment] id: 100169
+[HttpHeader] Accept: application/json
+[HttpHeader] Authorization: Basic aW50ZWdyYXRpb24tdGVzdC0yMDE1NDI5MTQ0OTQxQGp1c3RnaXZpbmcuY29tOjNkOTAwZmYwLTU0OTItNDI1Ni1hMDIyLWUxOTk1YzI4YTYxMg==
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse] No response
+
+2015-04-29 15:02:57,825 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] PUT https://api-sandbox.justgiving.com/v1/account
+[AuthorizationMode] Anonymous
+[AppId] 6c37285f
+[ApplicationKey?] No
+[RequestBody] application/json: {"reference":"MY-REF","title":"Ms","firstName":"Integration","lastName":"Tester","address":{"line1":"Blue Fin Building","line2":"Southwark Street","townOrCity":"London","countyOrState":"London","country":"United Kingdom","postcodeOrZipcode":"SE1 0TU"},"email":"integration-test-201542915253@justgiving.com","password":"01566e12-7803-4d34-bd0a-a7bc1e0ac877","acceptTermsAndConditions":true}
+[HttpHeader] Accept: application/json
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 Account created successfully
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 2815ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/29/2015 14:02:55
+[HttpHeader] X-JustGiving-Operation: AccountApi:AccountRegistration
+[HttpHeader] Content-Length: 96
+[HttpHeader] Cache-Control: private
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Wed, 29 Apr 2015 14:02:58 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"country":"United Kingdom","email":"integration-test-201542915253@justgiving.com","error":null}
+
+2015-04-29 15:03:00,989 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] PUT https://api-sandbox.justgiving.com/v1/fundraising/pages
+[AuthorizationMode] Basic
+[AppId] 6c37285f
+[ApplicationKey?] No
+[RequestBody] application/json: {"reference":null,"charityId":2050,"eventId":756550,"eventRef":null,"pageShortName":"Sdk2-test-e7a494675d7d417790ed47c11bc5ece1","pageTitle":"Sdk2 Test Page","activityType":null,"targetAmount":null,"justGivingOptIn":false,"charityOptIn":false,"eventDate":null,"eventName":null,"attribution":null,"charityFunded":false,"causeId":null,"companyAppealId":null,"expiryDate":null,"pageStory":null,"pageSummaryWhat":null,"pageSummaryWhy":null,"customCodes":null,"theme":null,"images":null,"videos":null,"rememberedPersonReference":null}
+[HttpHeader] Accept: application/json
+[HttpHeader] Authorization: Basic aW50ZWdyYXRpb24tdGVzdC0yMDE1NDI5MTUyNTNAanVzdGdpdmluZy5jb206MDE1NjZlMTItNzgwMy00ZDM0LWJkMGEtYTdiYzFlMGFjODc3
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 201 Created
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 3045ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/29/2015 14:02:58
+[HttpHeader] X-JustGiving-Operation: FundraisingApi:RegisterFundraisingPage
+[HttpHeader] Content-Length: 332
+[HttpHeader] Cache-Control: private, s-maxage=0
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Wed, 29 Apr 2015 14:03:01 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"error":null,"next":{"rel":"https:\/\/api-sandbox.justgiving.com\/\/v1\/fundraising\/pages","uri":"http:\/\/v3-sandbox.justgiving.com\/Sdk2-test-e7a494675d7d417790ed47c11bc5ece1","type":"application\/html"},"pageId":3736104,"signOnUrl":"http:\/\/v3-sandbox.justgiving.com\/auth\/e6a02a88-0c6a-4fa2-bf08-32631a3798cc","warnings":[]}
+
+2015-04-29 15:03:01,563 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] POST https://api-sandbox.justgiving.com/v1/fundraising/pages/{pageShortName}/updates
+[AuthorizationMode] Basic
+[AppId] 6c37285f
+[ApplicationKey?] No
+[UrlSegment] pageShortName: Sdk2-test-e7a494675d7d417790ed47c11bc5ece1
+[RequestBody] application/json: {"createdDate":"2015-04-29T14:03:00.9898692Z","message":"Hello world 29/04/2015 15:03:00","video":null}
+[HttpHeader] Accept: application/json
+[HttpHeader] Authorization: Basic aW50ZWdyYXRpb24tdGVzdC0yMDE1NDI5MTUyNTNAanVzdGdpdmluZy5jb206MDE1NjZlMTItNzgwMy00ZDM0LWJkMGEtYTdiYzFlMGFjODc3
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 201 
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 432ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/29/2015 14:03:01
+[HttpHeader] X-JustGiving-Operation: FundraisingApi:PageUpdatesAddPost
+[HttpHeader] Content-Length: 135
+[HttpHeader] Cache-Control: private, s-maxage=0
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Wed, 29 Apr 2015 14:03:01 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"Created":{"rel":"UpdateUri","uri":"v1\/fundraising\/pages\/Sdk2-test-e7a494675d7d417790ed47c11bc5ece1\/updates\/100170","type":null}}
+
+2015-04-29 15:03:01,896 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] GET https://api-sandbox.justgiving.com/v1/fundraising/pages/{pageShortName}/updates
+[AuthorizationMode] Basic
+[AppId] 6c37285f
+[ApplicationKey?] No
+[UrlSegment] pageShortName: Sdk2-test-e7a494675d7d417790ed47c11bc5ece1
+[HttpHeader] Accept: application/json
+[HttpHeader] Authorization: Basic aW50ZWdyYXRpb24tdGVzdC0yMDE1NDI5MTUyNTNAanVzdGdpdmluZy5jb206MDE1NjZlMTItNzgwMy00ZDM0LWJkMGEtYTdiYzFlMGFjODc3
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 258ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/29/2015 14:03:01
+[HttpHeader] X-JustGiving-Operation: FundraisingApi:PageUpdates
+[HttpHeader] Content-Length: 119
+[HttpHeader] Cache-Control: private
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Wed, 29 Apr 2015 14:03:02 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] [{"CreatedDate":"\/Date(1430316180000+0100)\/","Id":100170,"Message":"Hello world 29\/04\/2015 15:03:00","Video":null}]
+
+2015-04-29 15:03:03,241 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] DELETE https://api-sandbox.justgiving.com/v1/fundraising/pages/{pageShortName}/updates/{id}
+[AuthorizationMode] Basic
+[AppId] 6c37285f
+[ApplicationKey?] No
+[UrlSegment] pageShortName: Sdk2-test-e7a494675d7d417790ed47c11bc5ece1
+[UrlSegment] id: 100170
+[HttpHeader] Accept: application/json
+[HttpHeader] Authorization: Basic aW50ZWdyYXRpb24tdGVzdC0yMDE1NDI5MTUyNTNAanVzdGdpdmluZy5jb206MDE1NjZlMTItNzgwMy00ZDM0LWJkMGEtYTdiYzFlMGFjODc3
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 OK
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 1293ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/29/2015 14:03:02
+[HttpHeader] X-JustGiving-Operation: FundraisingApi:DeleteFundraisingPageUpdates
+[HttpHeader] Content-Length: 0
+[HttpHeader] Cache-Control: private, s-maxage=0
+[HttpHeader] Date: Wed, 29 Apr 2015 14:03:03 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+
+2015-04-29 15:03:03,595 [Runner thread] ERROR JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - An error occurred while executing an HTTP request
+System.InvalidCastException: Unable to cast object of type 'RestSharp.JsonArray' to type 'System.Collections.Generic.IDictionary`2[System.String,System.Object]'.
+   at RestSharp.Deserializers.JsonDeserializer.FindRoot(String content)
+   at RestSharp.Deserializers.JsonDeserializer.Deserialize[T](IRestResponse response)
+   at RestSharp.RestClient.Deserialize[T](IRestRequest request, IRestResponse raw)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at JustGiving.Api.Sdk2.Clients.ClientBase.<Execute>d__0`1.MoveNext() in d:\JustGiving.Api.Sdk2\Net45\JustGiving.Api.Sdk2\Clients\ClientBase.cs:line 27
+2015-04-29 15:03:03,614 [Runner thread] WARN  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] GET https://api-sandbox.justgiving.com/v1/fundraising/pages/{pageShortName}/updates/{id}
+[AuthorizationMode] Basic
+[AppId] 6c37285f
+[ApplicationKey?] No
+[UrlSegment] pageShortName: Sdk2-test-e7a494675d7d417790ed47c11bc5ece1
+[UrlSegment] id: 100170
+[HttpHeader] Accept: application/json
+[HttpHeader] Authorization: Basic aW50ZWdyYXRpb24tdGVzdC0yMDE1NDI5MTUyNTNAanVzdGdpdmluZy5jb206MDE1NjZlMTItNzgwMy00ZDM0LWJkMGEtYTdiYzFlMGFjODc3
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse] No response
+
+2015-04-29 15:04:12,405 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] PUT https://api-sandbox.justgiving.com/v1/account
+[AuthorizationMode] Anonymous
+[AppId] 6c37285f
+[ApplicationKey?] No
+[RequestBody] application/json: {"reference":"MY-REF","title":"Ms","firstName":"Integration","lastName":"Tester","address":{"line1":"Blue Fin Building","line2":"Southwark Street","townOrCity":"London","countyOrState":"London","country":"United Kingdom","postcodeOrZipcode":"SE1 0TU"},"email":"integration-test-20154291548@justgiving.com","password":"4787ce37-7ea0-4863-857d-78c7dc75d0df","acceptTermsAndConditions":true}
+[HttpHeader] Accept: application/json
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 Account created successfully
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 2853ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/29/2015 14:04:09
+[HttpHeader] X-JustGiving-Operation: AccountApi:AccountRegistration
+[HttpHeader] Content-Length: 95
+[HttpHeader] Cache-Control: private
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Wed, 29 Apr 2015 14:04:12 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"country":"United Kingdom","email":"integration-test-20154291548@justgiving.com","error":null}
+
+2015-04-29 15:04:15,780 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] PUT https://api-sandbox.justgiving.com/v1/fundraising/pages
+[AuthorizationMode] Basic
+[AppId] 6c37285f
+[ApplicationKey?] No
+[RequestBody] application/json: {"reference":null,"charityId":2050,"eventId":756550,"eventRef":null,"pageShortName":"Sdk2-test-72a0807c52814ab586b0c042c199bca5","pageTitle":"Sdk2 Test Page","activityType":null,"targetAmount":null,"justGivingOptIn":false,"charityOptIn":false,"eventDate":null,"eventName":null,"attribution":null,"charityFunded":false,"causeId":null,"companyAppealId":null,"expiryDate":null,"pageStory":null,"pageSummaryWhat":null,"pageSummaryWhy":null,"customCodes":null,"theme":null,"images":null,"videos":null,"rememberedPersonReference":null}
+[HttpHeader] Accept: application/json
+[HttpHeader] Authorization: Basic aW50ZWdyYXRpb24tdGVzdC0yMDE1NDI5MTU0OEBqdXN0Z2l2aW5nLmNvbTo0Nzg3Y2UzNy03ZWEwLTQ4NjMtODU3ZC03OGM3ZGM3NWQwZGY=
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 201 Created
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 3274ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/29/2015 14:04:12
+[HttpHeader] X-JustGiving-Operation: FundraisingApi:RegisterFundraisingPage
+[HttpHeader] Content-Length: 332
+[HttpHeader] Cache-Control: private, s-maxage=0
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Wed, 29 Apr 2015 14:04:16 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"error":null,"next":{"rel":"https:\/\/api-sandbox.justgiving.com\/\/v1\/fundraising\/pages","uri":"http:\/\/v3-sandbox.justgiving.com\/Sdk2-test-72a0807c52814ab586b0c042c199bca5","type":"application\/html"},"pageId":3736105,"signOnUrl":"http:\/\/v3-sandbox.justgiving.com\/auth\/98dfb190-ed88-40cb-9a01-172d78402eec","warnings":[]}
+
+2015-04-29 15:04:16,581 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] POST https://api-sandbox.justgiving.com/v1/fundraising/pages/{pageShortName}/updates
+[AuthorizationMode] Basic
+[AppId] 6c37285f
+[ApplicationKey?] No
+[UrlSegment] pageShortName: Sdk2-test-72a0807c52814ab586b0c042c199bca5
+[RequestBody] application/json: {"createdDate":"2015-04-29T14:04:15.7802629Z","message":"Hello world 29/04/2015 15:04:15","video":null}
+[HttpHeader] Accept: application/json
+[HttpHeader] Authorization: Basic aW50ZWdyYXRpb24tdGVzdC0yMDE1NDI5MTU0OEBqdXN0Z2l2aW5nLmNvbTo0Nzg3Y2UzNy03ZWEwLTQ4NjMtODU3ZC03OGM3ZGM3NWQwZGY=
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 201 
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 692ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/29/2015 14:04:16
+[HttpHeader] X-JustGiving-Operation: FundraisingApi:PageUpdatesAddPost
+[HttpHeader] Content-Length: 135
+[HttpHeader] Cache-Control: private, s-maxage=0
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Wed, 29 Apr 2015 14:04:16 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"Created":{"rel":"UpdateUri","uri":"v1\/fundraising\/pages\/Sdk2-test-72a0807c52814ab586b0c042c199bca5\/updates\/100171","type":null}}
+
+2015-04-29 15:04:16,900 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] GET https://api-sandbox.justgiving.com/v1/fundraising/pages/{pageShortName}/updates
+[AuthorizationMode] Basic
+[AppId] 6c37285f
+[ApplicationKey?] No
+[UrlSegment] pageShortName: Sdk2-test-72a0807c52814ab586b0c042c199bca5
+[HttpHeader] Accept: application/json
+[HttpHeader] Authorization: Basic aW50ZWdyYXRpb24tdGVzdC0yMDE1NDI5MTU0OEBqdXN0Z2l2aW5nLmNvbTo0Nzg3Y2UzNy03ZWEwLTQ4NjMtODU3ZC03OGM3ZGM3NWQwZGY=
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 262ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/29/2015 14:04:16
+[HttpHeader] X-JustGiving-Operation: FundraisingApi:PageUpdates
+[HttpHeader] Content-Length: 119
+[HttpHeader] Cache-Control: private
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Wed, 29 Apr 2015 14:04:17 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] [{"CreatedDate":"\/Date(1430316240000+0100)\/","Id":100171,"Message":"Hello world 29\/04\/2015 15:04:15","Video":null}]
+
+2015-04-29 15:04:17,890 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] DELETE https://api-sandbox.justgiving.com/v1/fundraising/pages/{pageShortName}/updates/{id}
+[AuthorizationMode] Basic
+[AppId] 6c37285f
+[ApplicationKey?] No
+[UrlSegment] pageShortName: Sdk2-test-72a0807c52814ab586b0c042c199bca5
+[UrlSegment] id: 100171
+[HttpHeader] Accept: application/json
+[HttpHeader] Authorization: Basic aW50ZWdyYXRpb24tdGVzdC0yMDE1NDI5MTU0OEBqdXN0Z2l2aW5nLmNvbTo0Nzg3Y2UzNy03ZWEwLTQ4NjMtODU3ZC03OGM3ZGM3NWQwZGY=
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 OK
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 945ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/29/2015 14:04:17
+[HttpHeader] X-JustGiving-Operation: FundraisingApi:DeleteFundraisingPageUpdates
+[HttpHeader] Content-Length: 0
+[HttpHeader] Cache-Control: private, s-maxage=0
+[HttpHeader] Date: Wed, 29 Apr 2015 14:04:18 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+
+2015-04-29 15:11:26,548 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] PUT https://api-sandbox.justgiving.com/v1/account
+[AuthorizationMode] Anonymous
+[AppId] 6c37285f
+[ApplicationKey?] No
+[RequestBody] application/json: {"reference":"MY-REF","title":"Ms","firstName":"Integration","lastName":"Tester","address":{"line1":"Blue Fin Building","line2":"Southwark Street","townOrCity":"London","countyOrState":"London","country":"United Kingdom","postcodeOrZipcode":"SE1 0TU"},"email":"integration-test-2015429151123@justgiving.com","password":"b9d05734-80a5-4528-a6b5-43d1213294d7","acceptTermsAndConditions":true}
+[HttpHeader] Accept: application/json
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 Account created successfully
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 1627ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/29/2015 14:11:25
+[HttpHeader] X-JustGiving-Operation: AccountApi:AccountRegistration
+[HttpHeader] Content-Length: 97
+[HttpHeader] Cache-Control: private
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Wed, 29 Apr 2015 14:11:26 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"country":"United Kingdom","email":"integration-test-2015429151123@justgiving.com","error":null}
+
+2015-04-29 15:11:29,388 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] PUT https://api-sandbox.justgiving.com/v1/fundraising/pages
+[AuthorizationMode] Basic
+[AppId] 6c37285f
+[ApplicationKey?] No
+[RequestBody] application/json: {"reference":null,"charityId":2050,"eventId":756550,"eventRef":null,"pageShortName":"Sdk2-test-d215e3af80fa4fd89f529ab108f40c4b","pageTitle":"Sdk2 Test Page","activityType":null,"targetAmount":null,"justGivingOptIn":false,"charityOptIn":false,"eventDate":null,"eventName":null,"attribution":null,"charityFunded":false,"causeId":null,"companyAppealId":null,"expiryDate":null,"pageStory":null,"pageSummaryWhat":null,"pageSummaryWhy":null,"customCodes":null,"theme":null,"images":null,"videos":null,"rememberedPersonReference":null}
+[HttpHeader] Accept: application/json
+[HttpHeader] Authorization: Basic aW50ZWdyYXRpb24tdGVzdC0yMDE1NDI5MTUxMTIzQGp1c3RnaXZpbmcuY29tOmI5ZDA1NzM0LTgwYTUtNDUyOC1hNmI1LTQzZDEyMTMyOTRkNw==
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 201 Created
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 2734ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/29/2015 14:11:26
+[HttpHeader] X-JustGiving-Operation: FundraisingApi:RegisterFundraisingPage
+[HttpHeader] Content-Length: 332
+[HttpHeader] Cache-Control: private, s-maxage=0
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Wed, 29 Apr 2015 14:11:29 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"error":null,"next":{"rel":"https:\/\/api-sandbox.justgiving.com\/\/v1\/fundraising\/pages","uri":"http:\/\/v3-sandbox.justgiving.com\/Sdk2-test-d215e3af80fa4fd89f529ab108f40c4b","type":"application\/html"},"pageId":3736107,"signOnUrl":"http:\/\/v3-sandbox.justgiving.com\/auth\/4b02bc25-09af-46c0-9154-480fa06fe657","warnings":[]}
+
+2015-04-29 15:11:29,887 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] POST https://api-sandbox.justgiving.com/v1/fundraising/pages/{pageShortName}/attribution
+[AuthorizationMode] Basic
+[AppId] 6c37285f
+[ApplicationKey?] No
+[UrlSegment] pageShortName: Sdk2-test-d215e3af80fa4fd89f529ab108f40c4b
+[RequestBody] application/json: {"attribution":"0f329fbc-31e7-4e4a-b733-20ea832a2313"}
+[HttpHeader] Accept: application/json
+[HttpHeader] Authorization: Basic aW50ZWdyYXRpb24tdGVzdC0yMDE1NDI5MTUxMTIzQGp1c3RnaXZpbmcuY29tOmI5ZDA1NzM0LTgwYTUtNDUyOC1hNmI1LTQzZDEyMTMyOTRkNw==
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 OK
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 411ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/29/2015 14:11:29
+[HttpHeader] X-JustGiving-Operation: FundraisingApi:AppendToFundraisingPageAttribution
+[HttpHeader] Content-Length: 2
+[HttpHeader] Cache-Control: private, s-maxage=0
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Wed, 29 Apr 2015 14:11:30 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {}
+
+2015-04-29 15:28:10,875 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] PUT https://api-sandbox.justgiving.com/v1/account
+[AuthorizationMode] Anonymous
+[AppId] 6c37285f
+[ApplicationKey?] No
+[RequestBody] application/json: {"reference":"MY-REF","title":"Ms","firstName":"Integration","lastName":"Tester","address":{"line1":"Blue Fin Building","line2":"Southwark Street","townOrCity":"London","countyOrState":"London","country":"United Kingdom","postcodeOrZipcode":"SE1 0TU"},"email":"integration-test-201542915287@justgiving.com","password":"6da18902-dae9-463d-83fd-61cd0dba9504","acceptTermsAndConditions":true}
+[HttpHeader] Accept: application/json
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 Account created successfully
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 1827ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/29/2015 14:28:09
+[HttpHeader] X-JustGiving-Operation: AccountApi:AccountRegistration
+[HttpHeader] Content-Length: 96
+[HttpHeader] Cache-Control: private
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Wed, 29 Apr 2015 14:28:10 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"country":"United Kingdom","email":"integration-test-201542915287@justgiving.com","error":null}
+
+2015-04-29 15:28:13,813 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] PUT https://api-sandbox.justgiving.com/v1/fundraising/pages
+[AuthorizationMode] Basic
+[AppId] 6c37285f
+[ApplicationKey?] No
+[RequestBody] application/json: {"reference":null,"charityId":2050,"eventId":756550,"eventRef":null,"pageShortName":"Sdk2-test-7f421a608e44473cba36e3294cfbc597","pageTitle":"Sdk2 Test Page","activityType":null,"targetAmount":null,"justGivingOptIn":false,"charityOptIn":false,"eventDate":null,"eventName":null,"attribution":null,"charityFunded":false,"causeId":null,"companyAppealId":null,"expiryDate":null,"pageStory":null,"pageSummaryWhat":null,"pageSummaryWhy":null,"customCodes":null,"theme":null,"images":null,"videos":null,"rememberedPersonReference":null}
+[HttpHeader] Accept: application/json
+[HttpHeader] Authorization: Basic aW50ZWdyYXRpb24tdGVzdC0yMDE1NDI5MTUyODdAanVzdGdpdmluZy5jb206NmRhMTg5MDItZGFlOS00NjNkLTgzZmQtNjFjZDBkYmE5NTA0
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 201 Created
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 2818ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/29/2015 14:28:11
+[HttpHeader] X-JustGiving-Operation: FundraisingApi:RegisterFundraisingPage
+[HttpHeader] Content-Length: 332
+[HttpHeader] Cache-Control: private, s-maxage=0
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Wed, 29 Apr 2015 14:28:14 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"error":null,"next":{"rel":"https:\/\/api-sandbox.justgiving.com\/\/v1\/fundraising\/pages","uri":"http:\/\/v3-sandbox.justgiving.com\/Sdk2-test-7f421a608e44473cba36e3294cfbc597","type":"application\/html"},"pageId":3736110,"signOnUrl":"http:\/\/v3-sandbox.justgiving.com\/auth\/242832ae-1bc2-4987-a279-8e73d8df8c49","warnings":[]}
+
+2015-04-29 15:28:14,301 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] POST https://api-sandbox.justgiving.com/v1/fundraising/pages/{pageShortName}/attribution
+[AuthorizationMode] Basic
+[AppId] 6c37285f
+[ApplicationKey?] No
+[UrlSegment] pageShortName: Sdk2-test-7f421a608e44473cba36e3294cfbc597
+[RequestBody] application/json: {"attribution":"9d519f71-155f-4f93-97d6-f11e651337c0"}
+[HttpHeader] Accept: application/json
+[HttpHeader] Authorization: Basic aW50ZWdyYXRpb24tdGVzdC0yMDE1NDI5MTUyODdAanVzdGdpdmluZy5jb206NmRhMTg5MDItZGFlOS00NjNkLTgzZmQtNjFjZDBkYmE5NTA0
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 OK
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 371ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/29/2015 14:28:14
+[HttpHeader] X-JustGiving-Operation: FundraisingApi:AppendToFundraisingPageAttribution
+[HttpHeader] Content-Length: 2
+[HttpHeader] Cache-Control: private, s-maxage=0
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Wed, 29 Apr 2015 14:28:14 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {}
+
+2015-04-29 15:28:14,709 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] GET https://api-sandbox.justgiving.com/v1/fundraising/pages/{pageShortName}/attribution
+[AuthorizationMode] Basic
+[AppId] 6c37285f
+[ApplicationKey?] No
+[UrlSegment] pageShortName: Sdk2-test-7f421a608e44473cba36e3294cfbc597
+[HttpHeader] Accept: application/json
+[HttpHeader] Authorization: Basic aW50ZWdyYXRpb24tdGVzdC0yMDE1NDI5MTUyODdAanVzdGdpdmluZy5jb206NmRhMTg5MDItZGFlOS00NjNkLTgzZmQtNjFjZDBkYmE5NTA0
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 OK
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 358ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/29/2015 14:28:14
+[HttpHeader] X-JustGiving-Operation: FundraisingApi:GetFundraisingPageAttribution
+[HttpHeader] Content-Length: 88
+[HttpHeader] Cache-Control: private, s-maxage=0
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Wed, 29 Apr 2015 14:28:14 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"attribution":"9d519f71-155f-4f93-97d6-f11e651337c0","attributionLabel":"Team Members"}
+
+2015-04-29 15:30:54,980 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] PUT https://api-sandbox.justgiving.com/v1/account
+[AuthorizationMode] Anonymous
+[AppId] 6c37285f
+[ApplicationKey?] No
+[RequestBody] application/json: {"reference":"MY-REF","title":"Ms","firstName":"Integration","lastName":"Tester","address":{"line1":"Blue Fin Building","line2":"Southwark Street","townOrCity":"London","countyOrState":"London","country":"United Kingdom","postcodeOrZipcode":"SE1 0TU"},"email":"integration-test-2015429153050@justgiving.com","password":"aaa508a2-87f9-4a5a-ac56-a15749d5fb78","acceptTermsAndConditions":true}
+[HttpHeader] Accept: application/json
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 Account created successfully
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 2976ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/29/2015 14:30:52
+[HttpHeader] X-JustGiving-Operation: AccountApi:AccountRegistration
+[HttpHeader] Content-Length: 97
+[HttpHeader] Cache-Control: private
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Wed, 29 Apr 2015 14:30:55 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"country":"United Kingdom","email":"integration-test-2015429153050@justgiving.com","error":null}
+
+2015-04-29 15:30:59,112 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] PUT https://api-sandbox.justgiving.com/v1/fundraising/pages
+[AuthorizationMode] Basic
+[AppId] 6c37285f
+[ApplicationKey?] No
+[RequestBody] application/json: {"reference":null,"charityId":2050,"eventId":756550,"eventRef":null,"pageShortName":"Sdk2-test-78d5c8cd7bfc43d49d9e093f05154733","pageTitle":"Sdk2 Test Page","activityType":null,"targetAmount":null,"justGivingOptIn":false,"charityOptIn":false,"eventDate":null,"eventName":null,"attribution":null,"charityFunded":false,"causeId":null,"companyAppealId":null,"expiryDate":null,"pageStory":null,"pageSummaryWhat":null,"pageSummaryWhy":null,"customCodes":null,"theme":null,"images":null,"videos":null,"rememberedPersonReference":null}
+[HttpHeader] Accept: application/json
+[HttpHeader] Authorization: Basic aW50ZWdyYXRpb24tdGVzdC0yMDE1NDI5MTUzMDUwQGp1c3RnaXZpbmcuY29tOmFhYTUwOGEyLTg3ZjktNGE1YS1hYzU2LWExNTc0OWQ1ZmI3OA==
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 201 Created
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 4020ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/29/2015 14:30:55
+[HttpHeader] X-JustGiving-Operation: FundraisingApi:RegisterFundraisingPage
+[HttpHeader] Content-Length: 332
+[HttpHeader] Cache-Control: private, s-maxage=0
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Wed, 29 Apr 2015 14:30:59 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"error":null,"next":{"rel":"https:\/\/api-sandbox.justgiving.com\/\/v1\/fundraising\/pages","uri":"http:\/\/v3-sandbox.justgiving.com\/Sdk2-test-78d5c8cd7bfc43d49d9e093f05154733","type":"application\/html"},"pageId":3736111,"signOnUrl":"http:\/\/v3-sandbox.justgiving.com\/auth\/9e9aaebe-f117-49c8-88cf-9159c0efdeb2","warnings":[]}
+
+2015-04-29 15:30:59,515 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] PUT https://api-sandbox.justgiving.com/v1/fundraising/pages/{pageShortName}/attribution
+[AuthorizationMode] Basic
+[AppId] 6c37285f
+[ApplicationKey?] No
+[UrlSegment] pageShortName: Sdk2-test-78d5c8cd7bfc43d49d9e093f05154733
+[RequestBody] application/json: {"attribution":"fdb29377-8267-4c56-a52c-c6f0c57c13ac"}
+[HttpHeader] Accept: application/json
+[HttpHeader] Authorization: Basic aW50ZWdyYXRpb24tdGVzdC0yMDE1NDI5MTUzMDUwQGp1c3RnaXZpbmcuY29tOmFhYTUwOGEyLTg3ZjktNGE1YS1hYzU2LWExNTc0OWQ1ZmI3OA==
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 OK
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 342ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/29/2015 14:30:59
+[HttpHeader] X-JustGiving-Operation: FundraisingApi:UpdateFundraisingPageAttribution
+[HttpHeader] Content-Length: 2
+[HttpHeader] Cache-Control: private, s-maxage=0
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Wed, 29 Apr 2015 14:30:59 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {}
+
+2015-04-29 15:31:22,392 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] PUT https://api-sandbox.justgiving.com/v1/account
+[AuthorizationMode] Anonymous
+[AppId] 6c37285f
+[ApplicationKey?] No
+[RequestBody] application/json: {"reference":"MY-REF","title":"Ms","firstName":"Integration","lastName":"Tester","address":{"line1":"Blue Fin Building","line2":"Southwark Street","townOrCity":"London","countyOrState":"London","country":"United Kingdom","postcodeOrZipcode":"SE1 0TU"},"email":"integration-test-2015429153116@justgiving.com","password":"7d5482b0-770e-42b8-b416-f8958a6201ef","acceptTermsAndConditions":true}
+[HttpHeader] Accept: application/json
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 Account created successfully
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 4510ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/29/2015 14:31:17
+[HttpHeader] X-JustGiving-Operation: AccountApi:AccountRegistration
+[HttpHeader] Content-Length: 97
+[HttpHeader] Cache-Control: private
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Wed, 29 Apr 2015 14:31:22 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"country":"United Kingdom","email":"integration-test-2015429153116@justgiving.com","error":null}
+
+2015-04-29 15:31:26,379 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] PUT https://api-sandbox.justgiving.com/v1/fundraising/pages
+[AuthorizationMode] Basic
+[AppId] 6c37285f
+[ApplicationKey?] No
+[RequestBody] application/json: {"reference":null,"charityId":2050,"eventId":756550,"eventRef":null,"pageShortName":"Sdk2-test-dff5931c5b904a2e9f43d4c4c38f73be","pageTitle":"Sdk2 Test Page","activityType":null,"targetAmount":null,"justGivingOptIn":false,"charityOptIn":false,"eventDate":null,"eventName":null,"attribution":null,"charityFunded":false,"causeId":null,"companyAppealId":null,"expiryDate":null,"pageStory":null,"pageSummaryWhat":null,"pageSummaryWhy":null,"customCodes":null,"theme":null,"images":null,"videos":null,"rememberedPersonReference":null}
+[HttpHeader] Accept: application/json
+[HttpHeader] Authorization: Basic aW50ZWdyYXRpb24tdGVzdC0yMDE1NDI5MTUzMTE2QGp1c3RnaXZpbmcuY29tOjdkNTQ4MmIwLTc3MGUtNDJiOC1iNDE2LWY4OTU4YTYyMDFlZg==
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 201 Created
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 3875ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/29/2015 14:31:22
+[HttpHeader] X-JustGiving-Operation: FundraisingApi:RegisterFundraisingPage
+[HttpHeader] Content-Length: 332
+[HttpHeader] Cache-Control: private, s-maxage=0
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Wed, 29 Apr 2015 14:31:26 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"error":null,"next":{"rel":"https:\/\/api-sandbox.justgiving.com\/\/v1\/fundraising\/pages","uri":"http:\/\/v3-sandbox.justgiving.com\/Sdk2-test-dff5931c5b904a2e9f43d4c4c38f73be","type":"application\/html"},"pageId":3736112,"signOnUrl":"http:\/\/v3-sandbox.justgiving.com\/auth\/22dd7029-22fc-4263-b59c-f35d0868a0fa","warnings":[]}
+
+2015-04-29 15:31:26,776 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] PUT https://api-sandbox.justgiving.com/v1/fundraising/pages/{pageShortName}/attribution
+[AuthorizationMode] Basic
+[AppId] 6c37285f
+[ApplicationKey?] No
+[UrlSegment] pageShortName: Sdk2-test-dff5931c5b904a2e9f43d4c4c38f73be
+[RequestBody] application/json: {"attribution":"af378712-add2-4d9f-b465-8fb107bf4977"}
+[HttpHeader] Accept: application/json
+[HttpHeader] Authorization: Basic aW50ZWdyYXRpb24tdGVzdC0yMDE1NDI5MTUzMTE2QGp1c3RnaXZpbmcuY29tOjdkNTQ4MmIwLTc3MGUtNDJiOC1iNDE2LWY4OTU4YTYyMDFlZg==
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 OK
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 342ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/29/2015 14:31:26
+[HttpHeader] X-JustGiving-Operation: FundraisingApi:UpdateFundraisingPageAttribution
+[HttpHeader] Content-Length: 2
+[HttpHeader] Cache-Control: private, s-maxage=0
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Wed, 29 Apr 2015 14:31:27 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {}
+
+2015-04-29 15:31:27,190 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] GET https://api-sandbox.justgiving.com/v1/fundraising/pages/{pageShortName}/attribution
+[AuthorizationMode] Basic
+[AppId] 6c37285f
+[ApplicationKey?] No
+[UrlSegment] pageShortName: Sdk2-test-dff5931c5b904a2e9f43d4c4c38f73be
+[HttpHeader] Accept: application/json
+[HttpHeader] Authorization: Basic aW50ZWdyYXRpb24tdGVzdC0yMDE1NDI5MTUzMTE2QGp1c3RnaXZpbmcuY29tOjdkNTQ4MmIwLTc3MGUtNDJiOC1iNDE2LWY4OTU4YTYyMDFlZg==
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 OK
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 350ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/29/2015 14:31:27
+[HttpHeader] X-JustGiving-Operation: FundraisingApi:GetFundraisingPageAttribution
+[HttpHeader] Content-Length: 88
+[HttpHeader] Cache-Control: private, s-maxage=0
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Wed, 29 Apr 2015 14:31:27 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"attribution":"af378712-add2-4d9f-b465-8fb107bf4977","attributionLabel":"Team Members"}
+
+2015-04-29 15:33:15,843 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] PUT https://api-sandbox.justgiving.com/v1/account
+[AuthorizationMode] Anonymous
+[AppId] 6c37285f
+[ApplicationKey?] No
+[RequestBody] application/json: {"reference":"MY-REF","title":"Ms","firstName":"Integration","lastName":"Tester","address":{"line1":"Blue Fin Building","line2":"Southwark Street","townOrCity":"London","countyOrState":"London","country":"United Kingdom","postcodeOrZipcode":"SE1 0TU"},"email":"integration-test-2015429153312@justgiving.com","password":"292451a5-2d09-451b-9d5e-ec2d89f6dbe4","acceptTermsAndConditions":true}
+[HttpHeader] Accept: application/json
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 Account created successfully
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 1654ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/29/2015 14:33:14
+[HttpHeader] X-JustGiving-Operation: AccountApi:AccountRegistration
+[HttpHeader] Content-Length: 97
+[HttpHeader] Cache-Control: private
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Wed, 29 Apr 2015 14:33:15 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"country":"United Kingdom","email":"integration-test-2015429153312@justgiving.com","error":null}
+
+2015-04-29 15:33:20,482 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] PUT https://api-sandbox.justgiving.com/v1/fundraising/pages
+[AuthorizationMode] Basic
+[AppId] 6c37285f
+[ApplicationKey?] No
+[RequestBody] application/json: {"reference":null,"charityId":2050,"eventId":756550,"eventRef":null,"pageShortName":"Sdk2-test-3e4597a23d3f445cae5cd0a7c937e1b1","pageTitle":"Sdk2 Test Page","activityType":null,"targetAmount":null,"justGivingOptIn":false,"charityOptIn":false,"eventDate":null,"eventName":null,"attribution":null,"charityFunded":false,"causeId":null,"companyAppealId":null,"expiryDate":null,"pageStory":null,"pageSummaryWhat":null,"pageSummaryWhy":null,"customCodes":null,"theme":null,"images":null,"videos":null,"rememberedPersonReference":null}
+[HttpHeader] Accept: application/json
+[HttpHeader] Authorization: Basic aW50ZWdyYXRpb24tdGVzdC0yMDE1NDI5MTUzMzEyQGp1c3RnaXZpbmcuY29tOjI5MjQ1MWE1LTJkMDktNDUxYi05ZDVlLWVjMmQ4OWY2ZGJlNA==
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 201 Created
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 4511ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/29/2015 14:33:16
+[HttpHeader] X-JustGiving-Operation: FundraisingApi:RegisterFundraisingPage
+[HttpHeader] Content-Length: 332
+[HttpHeader] Cache-Control: private, s-maxage=0
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Wed, 29 Apr 2015 14:33:20 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"error":null,"next":{"rel":"https:\/\/api-sandbox.justgiving.com\/\/v1\/fundraising\/pages","uri":"http:\/\/v3-sandbox.justgiving.com\/Sdk2-test-3e4597a23d3f445cae5cd0a7c937e1b1","type":"application\/html"},"pageId":3736113,"signOnUrl":"http:\/\/v3-sandbox.justgiving.com\/auth\/47f03915-17e7-4bfb-8124-bc289f8e431f","warnings":[]}
+
+2015-04-29 15:33:20,906 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] PUT https://api-sandbox.justgiving.com/v1/fundraising/pages/{pageShortName}/attribution
+[AuthorizationMode] Basic
+[AppId] 6c37285f
+[ApplicationKey?] No
+[UrlSegment] pageShortName: Sdk2-test-3e4597a23d3f445cae5cd0a7c937e1b1
+[RequestBody] application/json: {"attribution":"2840ccfa-60c3-489c-a85f-170b6dac84cb"}
+[HttpHeader] Accept: application/json
+[HttpHeader] Authorization: Basic aW50ZWdyYXRpb24tdGVzdC0yMDE1NDI5MTUzMzEyQGp1c3RnaXZpbmcuY29tOjI5MjQ1MWE1LTJkMDktNDUxYi05ZDVlLWVjMmQ4OWY2ZGJlNA==
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 OK
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 356ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/29/2015 14:33:20
+[HttpHeader] X-JustGiving-Operation: FundraisingApi:UpdateFundraisingPageAttribution
+[HttpHeader] Content-Length: 2
+[HttpHeader] Cache-Control: private, s-maxage=0
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Wed, 29 Apr 2015 14:33:21 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {}
+
+2015-04-29 15:33:21,587 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] DELETE https://api-sandbox.justgiving.com/v1/fundraising/pages/{pageShortName}/attribution
+[AuthorizationMode] Basic
+[AppId] 6c37285f
+[ApplicationKey?] No
+[UrlSegment] pageShortName: Sdk2-test-3e4597a23d3f445cae5cd0a7c937e1b1
+[HttpHeader] Accept: application/json
+[HttpHeader] Authorization: Basic aW50ZWdyYXRpb24tdGVzdC0yMDE1NDI5MTUzMzEyQGp1c3RnaXZpbmcuY29tOjI5MjQ1MWE1LTJkMDktNDUxYi05ZDVlLWVjMmQ4OWY2ZGJlNA==
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 OK
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 661ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/29/2015 14:33:21
+[HttpHeader] X-JustGiving-Operation: FundraisingApi:DeleteFundraisingPageAttribution
+[HttpHeader] Content-Length: 2
+[HttpHeader] Cache-Control: private, s-maxage=0
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Wed, 29 Apr 2015 14:33:21 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {}
+
+2015-04-29 15:33:22,067 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] GET https://api-sandbox.justgiving.com/v1/fundraising/pages/{pageShortName}/attribution
+[AuthorizationMode] Basic
+[AppId] 6c37285f
+[ApplicationKey?] No
+[UrlSegment] pageShortName: Sdk2-test-3e4597a23d3f445cae5cd0a7c937e1b1
+[HttpHeader] Accept: application/json
+[HttpHeader] Authorization: Basic aW50ZWdyYXRpb24tdGVzdC0yMDE1NDI5MTUzMzEyQGp1c3RnaXZpbmcuY29tOjI5MjQ1MWE1LTJkMDktNDUxYi05ZDVlLWVjMmQ4OWY2ZGJlNA==
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 OK
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 412ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/29/2015 14:33:22
+[HttpHeader] X-JustGiving-Operation: FundraisingApi:GetFundraisingPageAttribution
+[HttpHeader] Content-Length: 42
+[HttpHeader] Cache-Control: private, s-maxage=0
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Wed, 29 Apr 2015 14:33:22 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"attribution":"","attributionLabel":null}
+
+2015-04-29 15:33:43,959 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] PUT https://api-sandbox.justgiving.com/v1/account
+[AuthorizationMode] Anonymous
+[AppId] 6c37285f
+[ApplicationKey?] No
+[RequestBody] application/json: {"reference":"MY-REF","title":"Ms","firstName":"Integration","lastName":"Tester","address":{"line1":"Blue Fin Building","line2":"Southwark Street","townOrCity":"London","countyOrState":"London","country":"United Kingdom","postcodeOrZipcode":"SE1 0TU"},"email":"integration-test-2015429153339@justgiving.com","password":"830c7fb2-6c75-404b-bfea-668f448212f1","acceptTermsAndConditions":true}
+[HttpHeader] Accept: application/json
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 Account created successfully
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 2521ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/29/2015 14:33:41
+[HttpHeader] X-JustGiving-Operation: AccountApi:AccountRegistration
+[HttpHeader] Content-Length: 97
+[HttpHeader] Cache-Control: private
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Wed, 29 Apr 2015 14:33:43 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"country":"United Kingdom","email":"integration-test-2015429153339@justgiving.com","error":null}
+
+2015-04-29 15:33:48,229 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] PUT https://api-sandbox.justgiving.com/v1/fundraising/pages
+[AuthorizationMode] Basic
+[AppId] 6c37285f
+[ApplicationKey?] No
+[RequestBody] application/json: {"reference":null,"charityId":2050,"eventId":756550,"eventRef":null,"pageShortName":"Sdk2-test-54c6b863f80241e9a7f11cd066832927","pageTitle":"Sdk2 Test Page","activityType":null,"targetAmount":null,"justGivingOptIn":false,"charityOptIn":false,"eventDate":null,"eventName":null,"attribution":null,"charityFunded":false,"causeId":null,"companyAppealId":null,"expiryDate":null,"pageStory":null,"pageSummaryWhat":null,"pageSummaryWhy":null,"customCodes":null,"theme":null,"images":null,"videos":null,"rememberedPersonReference":null}
+[HttpHeader] Accept: application/json
+[HttpHeader] Authorization: Basic aW50ZWdyYXRpb24tdGVzdC0yMDE1NDI5MTUzMzM5QGp1c3RnaXZpbmcuY29tOjgzMGM3ZmIyLTZjNzUtNDA0Yi1iZmVhLTY2OGY0NDgyMTJmMQ==
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 201 Created
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 4167ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/29/2015 14:33:44
+[HttpHeader] X-JustGiving-Operation: FundraisingApi:RegisterFundraisingPage
+[HttpHeader] Content-Length: 332
+[HttpHeader] Cache-Control: private, s-maxage=0
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Wed, 29 Apr 2015 14:33:48 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"error":null,"next":{"rel":"https:\/\/api-sandbox.justgiving.com\/\/v1\/fundraising\/pages","uri":"http:\/\/v3-sandbox.justgiving.com\/Sdk2-test-54c6b863f80241e9a7f11cd066832927","type":"application\/html"},"pageId":3736114,"signOnUrl":"http:\/\/v3-sandbox.justgiving.com\/auth\/c1ea5701-0dfb-4dc3-bcd4-3a6296a282ee","warnings":[]}
+
+2015-04-29 15:33:48,625 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] PUT https://api-sandbox.justgiving.com/v1/fundraising/pages/{pageShortName}/attribution
+[AuthorizationMode] Basic
+[AppId] 6c37285f
+[ApplicationKey?] No
+[UrlSegment] pageShortName: Sdk2-test-54c6b863f80241e9a7f11cd066832927
+[RequestBody] application/json: {"attribution":"68db0960-51ff-46ac-a025-f4f365c3a97c"}
+[HttpHeader] Accept: application/json
+[HttpHeader] Authorization: Basic aW50ZWdyYXRpb24tdGVzdC0yMDE1NDI5MTUzMzM5QGp1c3RnaXZpbmcuY29tOjgzMGM3ZmIyLTZjNzUtNDA0Yi1iZmVhLTY2OGY0NDgyMTJmMQ==
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 OK
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 336ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/29/2015 14:33:48
+[HttpHeader] X-JustGiving-Operation: FundraisingApi:UpdateFundraisingPageAttribution
+[HttpHeader] Content-Length: 2
+[HttpHeader] Cache-Control: private, s-maxage=0
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Wed, 29 Apr 2015 14:33:48 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {}
+
+2015-04-29 15:33:48,968 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] DELETE https://api-sandbox.justgiving.com/v1/fundraising/pages/{pageShortName}/attribution
+[AuthorizationMode] Basic
+[AppId] 6c37285f
+[ApplicationKey?] No
+[UrlSegment] pageShortName: Sdk2-test-54c6b863f80241e9a7f11cd066832927
+[HttpHeader] Accept: application/json
+[HttpHeader] Authorization: Basic aW50ZWdyYXRpb24tdGVzdC0yMDE1NDI5MTUzMzM5QGp1c3RnaXZpbmcuY29tOjgzMGM3ZmIyLTZjNzUtNDA0Yi1iZmVhLTY2OGY0NDgyMTJmMQ==
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 OK
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 312ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/29/2015 14:33:48
+[HttpHeader] X-JustGiving-Operation: FundraisingApi:DeleteFundraisingPageAttribution
+[HttpHeader] Content-Length: 2
+[HttpHeader] Cache-Control: private, s-maxage=0
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Wed, 29 Apr 2015 14:33:48 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {}
+
+2015-04-29 15:33:49,382 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] GET https://api-sandbox.justgiving.com/v1/fundraising/pages/{pageShortName}/attribution
+[AuthorizationMode] Basic
+[AppId] 6c37285f
+[ApplicationKey?] No
+[UrlSegment] pageShortName: Sdk2-test-54c6b863f80241e9a7f11cd066832927
+[HttpHeader] Accept: application/json
+[HttpHeader] Authorization: Basic aW50ZWdyYXRpb24tdGVzdC0yMDE1NDI5MTUzMzM5QGp1c3RnaXZpbmcuY29tOjgzMGM3ZmIyLTZjNzUtNDA0Yi1iZmVhLTY2OGY0NDgyMTJmMQ==
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 OK
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 350ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/29/2015 14:33:49
+[HttpHeader] X-JustGiving-Operation: FundraisingApi:GetFundraisingPageAttribution
+[HttpHeader] Content-Length: 42
+[HttpHeader] Cache-Control: private, s-maxage=0
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Wed, 29 Apr 2015 14:33:48 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"attribution":"","attributionLabel":null}
+
