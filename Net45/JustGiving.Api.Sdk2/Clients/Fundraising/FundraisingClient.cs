@@ -183,5 +183,34 @@ namespace JustGiving.Api.Sdk2.Clients.Fundraising
 
             return await ExecuteRaw(resource, HttpMethod.Post, imageData, contentType);
         }
+
+        public async Task<IRestResponse<AddImageToFundraisingPageResponse>> AddImageToFundraisingPage(string pageShortName, AddImageToFundraisingPageRequest image)
+        {
+            const string resource = "/v1/fundraising/pages/{pageShortName}/images";
+            var request = new RestRequest(resource, Method.PUT);
+            request.AddUrlSegment("pageShortName", pageShortName);
+            request.AddJsonBody(image);
+            var response = await Execute<AddImageToFundraisingPageResponse>(request);
+            return response;
+        }
+
+        public Task<IRestResponse> DeleteFundraisingPageImage(string pageShortName, string imageFileName, bool isStockImage)
+        {
+            const string resource = "/v1/fundraising/pages/{pageShortName}/images/{imageName}";
+            var request = new RestRequest(resource, Method.DELETE);
+            request.AddUrlSegment("pageShortName", pageShortName);
+            request.AddUrlSegment("imageName", isStockImage ? "stock_" + imageFileName.Replace('.', '_') : imageFileName.Replace('.', '_'));
+            var response = Execute(request);
+            return response;
+        }
+
+        public Task<IRestResponse<List<FundraisingPageImage>>> GetImagesForFundraisingPage(string pageShortName)
+        {
+            const string resource = "/v1/fundraising/pages/{pageShortName}/images";
+            var request = new RestRequest(resource, Method.GET);
+            request.AddUrlSegment("pageShortName", pageShortName);
+            var response = Execute<List<FundraisingPageImage>>(request);
+            return response;
+        }
     }
 }

@@ -467,6 +467,142 @@ namespace JustGiving.Api.Sdk2.Test.Integration.Fundraising
             Assert.That(image.Length, Is.GreaterThan(0));
         }
 
+        [Test]
+        public async void CanAddImageToFundraisingPage()
+        {
+            const int eventId = 756550;
+            var pageName = "Sdk2-test-" + Guid.NewGuid().ToString("N");
+            var client = await TestContext.CreateBasicAuthClientAndUser();
+            var frpRequest = new FundraisingPageRegistration
+            {
+                CharityId = TestContext.DemoCharityId,
+                PageShortName = pageName,
+                PageTitle = "Sdk2 Test Page",
+                EventId = eventId
+            };
+
+            await client.Fundraising.RegisterFundraisingPage(frpRequest);
+
+            const string imageUrl = "https://images.justgiving.com/image/b02dcadb-2897-4083-855d-c43b4fa18256.jpg?template=size200x200";
+            var caption = "Test caption " + Guid.NewGuid();
+            var result = await client.Fundraising.AddImageToFundraisingPage(pageName, new AddImageToFundraisingPageRequest{Caption = caption, IsDefault=false, Url = imageUrl});
+            var frpInfo = await client.Fundraising.GetFundraisingPageDetails(pageName);
+            
+            Assert.That(result.StatusCode, Is.EqualTo(HttpStatusCode.OK));
+            Assert.That(frpInfo.Data.Media.Images.Any(im => im.Caption == caption));
+        }
+
+        [Test]
+        public async void CanAddDefaultImageToFundraisingPage()
+        {
+            const int eventId = 756550;
+            var pageName = "Sdk2-test-" + Guid.NewGuid().ToString("N");
+            var client = await TestContext.CreateBasicAuthClientAndUser();
+            var frpRequest = new FundraisingPageRegistration
+            {
+                CharityId = TestContext.DemoCharityId,
+                PageShortName = pageName,
+                PageTitle = "Sdk2 Test Page",
+                EventId = eventId
+            };
+
+            await client.Fundraising.RegisterFundraisingPage(frpRequest);
+
+            const string imageUrl = "https://images.justgiving.com/image/b02dcadb-2897-4083-855d-c43b4fa18256.jpg?template=size200x200";
+            var caption = "Test caption " + Guid.NewGuid();
+            var result = await client.Fundraising.AddImageToFundraisingPage(pageName, new AddImageToFundraisingPageRequest { Caption = caption, IsDefault = true, Url = imageUrl });
+            var frpInfo = await client.Fundraising.GetFundraisingPageDetails(pageName);
+
+            Assert.That(result.StatusCode, Is.EqualTo(HttpStatusCode.OK));
+            Assert.That(frpInfo.Data.Image.Caption, Is.EqualTo(caption));
+        }
+
+        [Test]
+        public async void CanDeleteFundraisingPageImage()
+        {
+            const int eventId = 756550;
+            var pageName = "Sdk2-test-" + Guid.NewGuid().ToString("N");
+            var client = await TestContext.CreateBasicAuthClientAndUser();
+            var frpRequest = new FundraisingPageRegistration
+            {
+                CharityId = TestContext.DemoCharityId,
+                PageShortName = pageName,
+                PageTitle = "Sdk2 Test Page",
+                EventId = eventId
+            };
+
+            await client.Fundraising.RegisterFundraisingPage(frpRequest);
+
+            const string imageUrl = "https://images.justgiving.com/image/b02dcadb-2897-4083-855d-c43b4fa18256.jpg?template=size200x200";
+            var caption = "Test caption " + Guid.NewGuid();
+            await client.Fundraising.AddImageToFundraisingPage(pageName, new AddImageToFundraisingPageRequest { Caption = caption, IsDefault = false, Url = imageUrl });
+            var frpInfo = await client.Fundraising.GetFundraisingPageDetails(pageName);
+            var imageUri = new Uri(frpInfo.Data.Media.Images.First(im => im.Caption == caption).Url);
+            var imageName = imageUri.Segments[imageUri.Segments.Length - 1];
+            var response = await client.Fundraising.DeleteFundraisingPageImage(pageName, imageName, false);
+            frpInfo = await client.Fundraising.GetFundraisingPageDetails(pageName);
+
+            Assert.That(response.StatusCode, Is.EqualTo(HttpStatusCode.OK));
+            Assert.That(frpInfo.Data.Media.Images.Any(im => im.Caption == caption), Is.False);
+        }
+
+        [Test]
+        public async void CanDeleteFundraisingPageStockImage()
+        {
+            const int eventId = 756550;
+            var pageName = "Sdk2-test-" + Guid.NewGuid().ToString("N");
+            var client = await TestContext.CreateBasicAuthClientAndUser();
+            var frpRequest = new FundraisingPageRegistration
+            {
+                CharityId = TestContext.DemoCharityId,
+                PageShortName = pageName,
+                PageTitle = "Sdk2 Test Page",
+                EventId = eventId
+            };
+
+            await client.Fundraising.RegisterFundraisingPage(frpRequest);
+            var frpInfo = await client.Fundraising.GetFundraisingPageDetails(pageName);
+            var otherCaption = "Test caption " + Guid.NewGuid();
+            const string otherImageUrl = "https://images.justgiving.com/image/b02dcadb-2897-4083-855d-c43b4fa18256.jpg?template=size200x200";
+            await client.Fundraising.AddImageToFundraisingPage(pageName, new AddImageToFundraisingPageRequest { Caption = otherCaption, IsDefault = false, Url = otherImageUrl });
+
+            var caption = frpInfo.Data.Image.Caption;
+            var imageUri = new Uri(frpInfo.Data.Image.Url);
+            var imageName = imageUri.Segments[imageUri.Segments.Length - 1];
+            var response = await client.Fundraising.DeleteFundraisingPageImage(pageName, imageName, true);
+            frpInfo = await client.Fundraising.GetFundraisingPageDetails(pageName);
+
+            Assert.That(response.StatusCode, Is.EqualTo(HttpStatusCode.OK));
+            Assert.That(frpInfo.Data.Media.Images.Any(im => im.Caption == caption), Is.False);
+        }
+
+        [Test]
+        public async void CanGetFundraisingPageImages()
+        {
+            const int eventId = 756550;
+            var pageName = "Sdk2-test-" + Guid.NewGuid().ToString("N");
+            var client = await TestContext.CreateBasicAuthClientAndUser();
+            var frpRequest = new FundraisingPageRegistration
+            {
+                CharityId = TestContext.DemoCharityId,
+                PageShortName = pageName,
+                PageTitle = "Sdk2 Test Page",
+                EventId = eventId
+            };
+
+            await client.Fundraising.RegisterFundraisingPage(frpRequest);
+
+            const string imageUrl = "https://images.justgiving.com/image/b02dcadb-2897-4083-855d-c43b4fa18256.jpg?template=size200x200";
+            var caption = "Test caption " + Guid.NewGuid();
+            await client.Fundraising.AddImageToFundraisingPage(pageName, new AddImageToFundraisingPageRequest { Caption = caption, IsDefault = false, Url = imageUrl });
+            var result = await client.Fundraising.GetImagesForFundraisingPage(pageName);
+
+            Assert.That(result.StatusCode, Is.EqualTo(HttpStatusCode.OK));
+            Assert.That(result.Data.Any(im => im.Caption == caption));
+            Assert.That(result.Data.Count, Is.EqualTo(2));
+        }
+
+
         private byte[] GetEmbeddedTestImage()
         {
             return Assembly.GetExecutingAssembly().GetManifestResourceStream("JustGiving.Api.Sdk2.Test.Integration.Resources.slim-it-cube.png").ReadAsBytes();

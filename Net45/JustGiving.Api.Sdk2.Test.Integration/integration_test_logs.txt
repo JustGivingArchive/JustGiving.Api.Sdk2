@@ -194,3 +194,1972 @@
 [HttpHeader] X-Powered-By: ASP.NET
 [ResponseBody] {"pageId":"3736123","activityCharityCreated":true,"activityType":"Running_Marathons","activityId":"756550","attribution":"","eventName":"Bubble-Bobble Run 1","eventId":756550,"currencySymbol":"£","currencyCode":"GBP","pageShortName":"Sdk2-test-f40cb98178c446c3a1ad0f7c0c62302b","image":{"caption":"Test caption 8bbb1034-1a27-4b16-bc4b-e435b990bb99","url":"http://images.sandbox.justgiving.com/image/15856ab8-ff9f-4a0a-87ba-43dfa95d3c0c.jpg?imagetype=frpphoto&trymigrate=true","absoluteUrl":"http://images.sandbox.justgiving.com/image/15856ab8-ff9f-4a0a-87ba-43dfa95d3c0c.jpg?imagetype=frpphoto&trymigrate=true"},"imageCount":"2","status":"Active","owner":"Integration Tester","ownerProfileImageUrls":{"OriginalSize":"","Size150x150Face":""},"consumerId":30635150,"title":"Sdk2 Test Page","showEventDate":"True","eventDate":"\/Date(1451520000000+0000)\/","showExpiryDate":"False","expiryDate":"\/Date(1459378800000+0100)\/","fundraisingTarget":"0.00","totalRaisedPercentageOfFundraisingTarget":"0","totalRaisedOffline":"0","totalRaisedOnline":"0","totalRaisedSms":"0","grandTotalRaisedExcludingGiftAid":"0","totalEstimatedGiftAid":"0","branding":{"buttonColour":"0915F9","buttonTextColour":"F9F9FC","headerTextColour":"230D17","thermometerBackgroundColour":"230D17","thermometerFillColour":"0915F9","thermometerTextColour":"F9F9FC"},"charity":{"id":2050,"name":"The Demo Charity","description":"We raise money to support the work of Great Ormond Street Hospital so that it can help more children who need its specialist expertise.","logoUrl":"http://images.sandbox.justgiving.com/image/52525737-74a6-4d8e-a7c0-519887f6f2d3.jpg","logoAbsoluteUrl":"http://images.sandbox.justgiving.com/image/52525737-74a6-4d8e-a7c0-519887f6f2d3.jpg","profilePageUrl":null,"registrationNumber":"123456"},"media":{"images":[{"caption":"Test caption 8bbb1034-1a27-4b16-bc4b-e435b990bb99","url":"http://images.sandbox.justgiving.com/image/15856ab8-ff9f-4a0a-87ba-43dfa95d3c0c.jpg?imagetype=frpphoto&trymigrate=true","absoluteUrl":"http://images.sandbox.justgiving.com/image/15856ab8-ff9f-4a0a-87ba-43dfa95d3c0c.jpg?imagetype=frpphoto&trymigrate=true"},{"caption":"","url":"http://images.sandbox.justgiving.com/image/trainer-no-branding_web.jpg?imagetype=frpphoto&trymigrate=true&sourcepath=Stock","absoluteUrl":"http://images.sandbox.justgiving.com/image/trainer-no-branding_web.jpg?imagetype=frpphoto&trymigrate=true&sourcepath=Stock"}]},"story":"<p>Thanks for taking the time to visit my JustGiving page.</p><p>Donating through JustGiving is simple, fast and totally secure. Your details are safe with JustGiving – they’ll never sell them on or send unwanted emails. Once you donate, they’ll send your money directly to the charity. So it’s the most efficient way to donate – saving time and cutting costs for the charity.</p>","domain":"v3-sandbox.justgiving.com","smsCode":"LBXM55","companyAppealId":0,"rememberedPersonSummary":null,"pageSummaryWhat":null,"pageSummaryWhy":null,"teams":null,"pageSummary":""}
 
+2015-04-30 10:28:51,584 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] PUT https://api-sandbox.justgiving.com/v1/account
+[AuthorizationMode] Anonymous
+[AppId] 6c37285f
+[ApplicationKey?] No
+[RequestBody] application/json: {"reference":"MY-REF","title":"Ms","firstName":"Integration","lastName":"Tester","address":{"line1":"Blue Fin Building","line2":"Southwark Street","townOrCity":"London","countyOrState":"London","country":"United Kingdom","postcodeOrZipcode":"SE1 0TU"},"email":"integration-test-2015430102848@justgiving.com","password":"7796c881-c3f6-4a85-898d-3ede2805ea10","acceptTermsAndConditions":true}
+[HttpHeader] Accept: application/json
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 Account created successfully
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 1957ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/30/2015 09:28:49
+[HttpHeader] X-JustGiving-Operation: AccountApi:AccountRegistration
+[HttpHeader] Content-Length: 97
+[HttpHeader] Cache-Control: private
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Thu, 30 Apr 2015 09:28:51 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"country":"United Kingdom","email":"integration-test-2015430102848@justgiving.com","error":null}
+
+2015-04-30 10:28:54,506 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] PUT https://api-sandbox.justgiving.com/v1/fundraising/pages
+[AuthorizationMode] Basic
+[AppId] 6c37285f
+[ApplicationKey?] No
+[RequestBody] application/json: {"reference":null,"charityId":2050,"eventId":756550,"eventRef":null,"pageShortName":"Sdk2-test-c836cff5d8134eed9264b6c60ee6cd51","pageTitle":"Sdk2 Test Page","activityType":null,"targetAmount":null,"justGivingOptIn":false,"charityOptIn":false,"eventDate":null,"eventName":null,"attribution":null,"charityFunded":false,"causeId":null,"companyAppealId":null,"expiryDate":null,"pageStory":null,"pageSummaryWhat":null,"pageSummaryWhy":null,"customCodes":null,"theme":null,"images":null,"videos":null,"rememberedPersonReference":null}
+[HttpHeader] Accept: application/json
+[HttpHeader] Authorization: Basic aW50ZWdyYXRpb24tdGVzdC0yMDE1NDMwMTAyODQ4QGp1c3RnaXZpbmcuY29tOjc3OTZjODgxLWMzZjYtNGE4NS04OThkLTNlZGUyODA1ZWExMA==
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 201 Created
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 2800ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/30/2015 09:28:52
+[HttpHeader] X-JustGiving-Operation: FundraisingApi:RegisterFundraisingPage
+[HttpHeader] Content-Length: 332
+[HttpHeader] Cache-Control: private, s-maxage=0
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Thu, 30 Apr 2015 09:28:54 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"error":null,"next":{"rel":"https:\/\/api-sandbox.justgiving.com\/\/v1\/fundraising\/pages","uri":"http:\/\/v3-sandbox.justgiving.com\/Sdk2-test-c836cff5d8134eed9264b6c60ee6cd51","type":"application\/html"},"pageId":3736124,"signOnUrl":"http:\/\/v3-sandbox.justgiving.com\/auth\/4b3287dd-fb0a-4a2e-ba7d-8932a14777b1","warnings":[]}
+
+2015-04-30 10:28:55,233 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] PUT https://api-sandbox.justgiving.com/v1/fundraising/pages/{pageShortName}/images
+[AuthorizationMode] Basic
+[AppId] 6c37285f
+[ApplicationKey?] No
+[UrlSegment] pageShortName: Sdk2-test-c836cff5d8134eed9264b6c60ee6cd51
+[RequestBody] application/json: {"url":"https://images.justgiving.com/image/b02dcadb-2897-4083-855d-c43b4fa18256.jpg?template=size200x200","caption":"Test caption 6acfc2ca-cd8b-4387-aaba-fc720462d32d","isDefault":false}
+[HttpHeader] Accept: application/json
+[HttpHeader] Authorization: Basic aW50ZWdyYXRpb24tdGVzdC0yMDE1NDMwMTAyODQ4QGp1c3RnaXZpbmcuY29tOjc3OTZjODgxLWMzZjYtNGE4NS04OThkLTNlZGUyODA1ZWExMA==
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 OK
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 653ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/30/2015 09:28:54
+[HttpHeader] X-JustGiving-Operation: FundraisingApi:AddImageToFundraisingPage
+[HttpHeader] Content-Length: 239
+[HttpHeader] Cache-Control: private, s-maxage=0
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Thu, 30 Apr 2015 09:28:55 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"next":{"rel":"https:\/\/api-sandbox.justgiving.com\/\/v1\/fundraising\/pages\/Sdk2-test-c836cff5d8134eed9264b6c60ee6cd51\/images","uri":"http:\/\/www.justgiving.com\/Sdk2-test-c836cff5d8134eed9264b6c60ee6cd51","type":"application\/xml"}}
+
+2015-04-30 10:28:55,804 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] GET https://api-sandbox.justgiving.com/v1/fundraising/pages/{pageShortName}
+[AuthorizationMode] Basic
+[AppId] 6c37285f
+[ApplicationKey?] No
+[UrlSegment] pageShortName: Sdk2-test-c836cff5d8134eed9264b6c60ee6cd51
+[HttpHeader] Accept: application/json
+[HttpHeader] Authorization: Basic aW50ZWdyYXRpb24tdGVzdC0yMDE1NDMwMTAyODQ4QGp1c3RnaXZpbmcuY29tOjc3OTZjODgxLWMzZjYtNGE4NS04OThkLTNlZGUyODA1ZWExMA==
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 OK
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 499ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/30/2015 09:28:55
+[HttpHeader] X-JustGiving-Operation: FundraisingApi:GetFundraisingPageDetails
+[HttpHeader] Content-Length: 2959
+[HttpHeader] Cache-Control: private
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Thu, 30 Apr 2015 09:28:55 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"pageId":"3736124","activityCharityCreated":true,"activityType":"Running_Marathons","activityId":"756550","attribution":"","eventName":"Bubble-Bobble Run 1","eventId":756550,"currencySymbol":"£","currencyCode":"GBP","pageShortName":"Sdk2-test-c836cff5d8134eed9264b6c60ee6cd51","image":{"caption":"","url":"http://images.sandbox.justgiving.com/image/trainer-no-branding_web.jpg?imagetype=frpphoto&trymigrate=true&sourcepath=Stock","absoluteUrl":"http://images.sandbox.justgiving.com/image/trainer-no-branding_web.jpg?imagetype=frpphoto&trymigrate=true&sourcepath=Stock"},"imageCount":"2","status":"Active","owner":"Integration Tester","ownerProfileImageUrls":{"OriginalSize":"","Size150x150Face":""},"consumerId":30635153,"title":"Sdk2 Test Page","showEventDate":"True","eventDate":"\/Date(1451520000000+0000)\/","showExpiryDate":"False","expiryDate":"\/Date(1459378800000+0100)\/","fundraisingTarget":"0.00","totalRaisedPercentageOfFundraisingTarget":"0","totalRaisedOffline":"0","totalRaisedOnline":"0","totalRaisedSms":"0","grandTotalRaisedExcludingGiftAid":"0","totalEstimatedGiftAid":"0","branding":{"buttonColour":"0915F9","buttonTextColour":"F9F9FC","headerTextColour":"230D17","thermometerBackgroundColour":"230D17","thermometerFillColour":"0915F9","thermometerTextColour":"F9F9FC"},"charity":{"id":2050,"name":"The Demo Charity","description":"We raise money to support the work of Great Ormond Street Hospital so that it can help more children who need its specialist expertise.","logoUrl":"http://images.sandbox.justgiving.com/image/52525737-74a6-4d8e-a7c0-519887f6f2d3.jpg","logoAbsoluteUrl":"http://images.sandbox.justgiving.com/image/52525737-74a6-4d8e-a7c0-519887f6f2d3.jpg","profilePageUrl":null,"registrationNumber":"123456"},"media":{"images":[{"caption":"","url":"http://images.sandbox.justgiving.com/image/trainer-no-branding_web.jpg?imagetype=frpphoto&trymigrate=true&sourcepath=Stock","absoluteUrl":"http://images.sandbox.justgiving.com/image/trainer-no-branding_web.jpg?imagetype=frpphoto&trymigrate=true&sourcepath=Stock"},{"caption":"Test caption 6acfc2ca-cd8b-4387-aaba-fc720462d32d","url":"http://images.sandbox.justgiving.com/image/cd4350b5-5cd6-4c26-89cc-021650e869b2.jpg?imagetype=frpphoto&trymigrate=true","absoluteUrl":"http://images.sandbox.justgiving.com/image/cd4350b5-5cd6-4c26-89cc-021650e869b2.jpg?imagetype=frpphoto&trymigrate=true"}]},"story":"<p>Thanks for taking the time to visit my JustGiving page.</p><p>Donating through JustGiving is simple, fast and totally secure. Your details are safe with JustGiving – they’ll never sell them on or send unwanted emails. Once you donate, they’ll send your money directly to the charity. So it’s the most efficient way to donate – saving time and cutting costs for the charity.</p>","domain":"v3-sandbox.justgiving.com","smsCode":"FAIN69","companyAppealId":0,"rememberedPersonSummary":null,"pageSummaryWhat":null,"pageSummaryWhy":null,"teams":null,"pageSummary":""}
+
+2015-04-30 10:29:24,844 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] PUT https://api-sandbox.justgiving.com/v1/account
+[AuthorizationMode] Anonymous
+[AppId] 6c37285f
+[ApplicationKey?] No
+[RequestBody] application/json: {"reference":"MY-REF","title":"Ms","firstName":"Integration","lastName":"Tester","address":{"line1":"Blue Fin Building","line2":"Southwark Street","townOrCity":"London","countyOrState":"London","country":"United Kingdom","postcodeOrZipcode":"SE1 0TU"},"email":"integration-test-2015430102921@justgiving.com","password":"b49396c9-6a5f-4316-a3ba-6b0067a95ea0","acceptTermsAndConditions":true}
+[HttpHeader] Accept: application/json
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 Account created successfully
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 1481ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/30/2015 09:29:23
+[HttpHeader] X-JustGiving-Operation: AccountApi:AccountRegistration
+[HttpHeader] Content-Length: 97
+[HttpHeader] Cache-Control: private
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Thu, 30 Apr 2015 09:29:24 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"country":"United Kingdom","email":"integration-test-2015430102921@justgiving.com","error":null}
+
+2015-04-30 10:29:27,510 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] PUT https://api-sandbox.justgiving.com/v1/fundraising/pages
+[AuthorizationMode] Basic
+[AppId] 6c37285f
+[ApplicationKey?] No
+[RequestBody] application/json: {"reference":null,"charityId":2050,"eventId":756550,"eventRef":null,"pageShortName":"Sdk2-test-ec6739236f784369a6d3c0d4b3469c9e","pageTitle":"Sdk2 Test Page","activityType":null,"targetAmount":null,"justGivingOptIn":false,"charityOptIn":false,"eventDate":null,"eventName":null,"attribution":null,"charityFunded":false,"causeId":null,"companyAppealId":null,"expiryDate":null,"pageStory":null,"pageSummaryWhat":null,"pageSummaryWhy":null,"customCodes":null,"theme":null,"images":null,"videos":null,"rememberedPersonReference":null}
+[HttpHeader] Accept: application/json
+[HttpHeader] Authorization: Basic aW50ZWdyYXRpb24tdGVzdC0yMDE1NDMwMTAyOTIxQGp1c3RnaXZpbmcuY29tOmI0OTM5NmM5LTZhNWYtNDMxNi1hM2JhLTZiMDA2N2E5NWVhMA==
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 201 Created
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 2564ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/30/2015 09:29:25
+[HttpHeader] X-JustGiving-Operation: FundraisingApi:RegisterFundraisingPage
+[HttpHeader] Content-Length: 332
+[HttpHeader] Cache-Control: private, s-maxage=0
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Thu, 30 Apr 2015 09:29:27 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"error":null,"next":{"rel":"https:\/\/api-sandbox.justgiving.com\/\/v1\/fundraising\/pages","uri":"http:\/\/v3-sandbox.justgiving.com\/Sdk2-test-ec6739236f784369a6d3c0d4b3469c9e","type":"application\/html"},"pageId":3736125,"signOnUrl":"http:\/\/v3-sandbox.justgiving.com\/auth\/2f4e6dce-8b6e-41bc-9b49-9c682ec572a1","warnings":[]}
+
+2015-04-30 10:29:28,121 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] PUT https://api-sandbox.justgiving.com/v1/fundraising/pages/{pageShortName}/images
+[AuthorizationMode] Basic
+[AppId] 6c37285f
+[ApplicationKey?] No
+[UrlSegment] pageShortName: Sdk2-test-ec6739236f784369a6d3c0d4b3469c9e
+[RequestBody] application/json: {"url":"https://images.justgiving.com/image/b02dcadb-2897-4083-855d-c43b4fa18256.jpg?template=size200x200","caption":"Test caption 3f6e831a-60c0-46e4-b2e2-58e3fcbd7e64","isDefault":true}
+[HttpHeader] Accept: application/json
+[HttpHeader] Authorization: Basic aW50ZWdyYXRpb24tdGVzdC0yMDE1NDMwMTAyOTIxQGp1c3RnaXZpbmcuY29tOmI0OTM5NmM5LTZhNWYtNDMxNi1hM2JhLTZiMDA2N2E5NWVhMA==
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 OK
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 542ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/30/2015 09:29:27
+[HttpHeader] X-JustGiving-Operation: FundraisingApi:AddImageToFundraisingPage
+[HttpHeader] Content-Length: 239
+[HttpHeader] Cache-Control: private, s-maxage=0
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Thu, 30 Apr 2015 09:29:28 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"next":{"rel":"https:\/\/api-sandbox.justgiving.com\/\/v1\/fundraising\/pages\/Sdk2-test-ec6739236f784369a6d3c0d4b3469c9e\/images","uri":"http:\/\/www.justgiving.com\/Sdk2-test-ec6739236f784369a6d3c0d4b3469c9e","type":"application\/xml"}}
+
+2015-04-30 10:29:28,683 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] GET https://api-sandbox.justgiving.com/v1/fundraising/pages/{pageShortName}
+[AuthorizationMode] Basic
+[AppId] 6c37285f
+[ApplicationKey?] No
+[UrlSegment] pageShortName: Sdk2-test-ec6739236f784369a6d3c0d4b3469c9e
+[HttpHeader] Accept: application/json
+[HttpHeader] Authorization: Basic aW50ZWdyYXRpb24tdGVzdC0yMDE1NDMwMTAyOTIxQGp1c3RnaXZpbmcuY29tOmI0OTM5NmM5LTZhNWYtNDMxNi1hM2JhLTZiMDA2N2E5NWVhMA==
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 OK
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 486ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/30/2015 09:29:28
+[HttpHeader] X-JustGiving-Operation: FundraisingApi:GetFundraisingPageDetails
+[HttpHeader] Content-Length: 3000
+[HttpHeader] Cache-Control: private
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Thu, 30 Apr 2015 09:29:28 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"pageId":"3736125","activityCharityCreated":true,"activityType":"Running_Marathons","activityId":"756550","attribution":"","eventName":"Bubble-Bobble Run 1","eventId":756550,"currencySymbol":"£","currencyCode":"GBP","pageShortName":"Sdk2-test-ec6739236f784369a6d3c0d4b3469c9e","image":{"caption":"Test caption 3f6e831a-60c0-46e4-b2e2-58e3fcbd7e64","url":"http://images.sandbox.justgiving.com/image/3b07477e-de4d-4b55-883a-c0eb43f308e6.jpg?imagetype=frpphoto&trymigrate=true","absoluteUrl":"http://images.sandbox.justgiving.com/image/3b07477e-de4d-4b55-883a-c0eb43f308e6.jpg?imagetype=frpphoto&trymigrate=true"},"imageCount":"2","status":"Active","owner":"Integration Tester","ownerProfileImageUrls":{"OriginalSize":"","Size150x150Face":""},"consumerId":30635154,"title":"Sdk2 Test Page","showEventDate":"True","eventDate":"\/Date(1451520000000+0000)\/","showExpiryDate":"False","expiryDate":"\/Date(1459378800000+0100)\/","fundraisingTarget":"0.00","totalRaisedPercentageOfFundraisingTarget":"0","totalRaisedOffline":"0","totalRaisedOnline":"0","totalRaisedSms":"0","grandTotalRaisedExcludingGiftAid":"0","totalEstimatedGiftAid":"0","branding":{"buttonColour":"0915F9","buttonTextColour":"F9F9FC","headerTextColour":"230D17","thermometerBackgroundColour":"230D17","thermometerFillColour":"0915F9","thermometerTextColour":"F9F9FC"},"charity":{"id":2050,"name":"The Demo Charity","description":"We raise money to support the work of Great Ormond Street Hospital so that it can help more children who need its specialist expertise.","logoUrl":"http://images.sandbox.justgiving.com/image/52525737-74a6-4d8e-a7c0-519887f6f2d3.jpg","logoAbsoluteUrl":"http://images.sandbox.justgiving.com/image/52525737-74a6-4d8e-a7c0-519887f6f2d3.jpg","profilePageUrl":null,"registrationNumber":"123456"},"media":{"images":[{"caption":"Test caption 3f6e831a-60c0-46e4-b2e2-58e3fcbd7e64","url":"http://images.sandbox.justgiving.com/image/3b07477e-de4d-4b55-883a-c0eb43f308e6.jpg?imagetype=frpphoto&trymigrate=true","absoluteUrl":"http://images.sandbox.justgiving.com/image/3b07477e-de4d-4b55-883a-c0eb43f308e6.jpg?imagetype=frpphoto&trymigrate=true"},{"caption":"","url":"http://images.sandbox.justgiving.com/image/trainer-no-branding_web.jpg?imagetype=frpphoto&trymigrate=true&sourcepath=Stock","absoluteUrl":"http://images.sandbox.justgiving.com/image/trainer-no-branding_web.jpg?imagetype=frpphoto&trymigrate=true&sourcepath=Stock"}]},"story":"<p>Thanks for taking the time to visit my JustGiving page.</p><p>Donating through JustGiving is simple, fast and totally secure. Your details are safe with JustGiving – they’ll never sell them on or send unwanted emails. Once you donate, they’ll send your money directly to the charity. So it’s the most efficient way to donate – saving time and cutting costs for the charity.</p>","domain":"v3-sandbox.justgiving.com","smsCode":"MXKM60","companyAppealId":0,"rememberedPersonSummary":null,"pageSummaryWhat":null,"pageSummaryWhy":null,"teams":null,"pageSummary":""}
+
+2015-04-30 10:30:34,175 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] PUT https://api-sandbox.justgiving.com/v1/account
+[AuthorizationMode] Anonymous
+[AppId] 6c37285f
+[ApplicationKey?] No
+[RequestBody] application/json: {"reference":"MY-REF","title":"Ms","firstName":"Integration","lastName":"Tester","address":{"line1":"Blue Fin Building","line2":"Southwark Street","townOrCity":"London","countyOrState":"London","country":"United Kingdom","postcodeOrZipcode":"SE1 0TU"},"email":"integration-test-2015430103031@justgiving.com","password":"69edee3f-14a7-4883-9f0b-5dc6a777ea47","acceptTermsAndConditions":true}
+[HttpHeader] Accept: application/json
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 Account created successfully
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 1670ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/30/2015 09:30:32
+[HttpHeader] X-JustGiving-Operation: AccountApi:AccountRegistration
+[HttpHeader] Content-Length: 97
+[HttpHeader] Cache-Control: private
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Thu, 30 Apr 2015 09:30:34 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"country":"United Kingdom","email":"integration-test-2015430103031@justgiving.com","error":null}
+
+2015-04-30 10:30:36,909 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] PUT https://api-sandbox.justgiving.com/v1/fundraising/pages
+[AuthorizationMode] Basic
+[AppId] 6c37285f
+[ApplicationKey?] No
+[RequestBody] application/json: {"reference":null,"charityId":2050,"eventId":756550,"eventRef":null,"pageShortName":"Sdk2-test-82c9ca48ec5b4cd5a43d9ca661d53e79","pageTitle":"Sdk2 Test Page","activityType":null,"targetAmount":null,"justGivingOptIn":false,"charityOptIn":false,"eventDate":null,"eventName":null,"attribution":null,"charityFunded":false,"causeId":null,"companyAppealId":null,"expiryDate":null,"pageStory":null,"pageSummaryWhat":null,"pageSummaryWhy":null,"customCodes":null,"theme":null,"images":null,"videos":null,"rememberedPersonReference":null}
+[HttpHeader] Accept: application/json
+[HttpHeader] Authorization: Basic aW50ZWdyYXRpb24tdGVzdC0yMDE1NDMwMTAzMDMxQGp1c3RnaXZpbmcuY29tOjY5ZWRlZTNmLTE0YTctNDg4My05ZjBiLTVkYzZhNzc3ZWE0Nw==
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 201 Created
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 2629ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/30/2015 09:30:34
+[HttpHeader] X-JustGiving-Operation: FundraisingApi:RegisterFundraisingPage
+[HttpHeader] Content-Length: 332
+[HttpHeader] Cache-Control: private, s-maxage=0
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Thu, 30 Apr 2015 09:30:37 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"error":null,"next":{"rel":"https:\/\/api-sandbox.justgiving.com\/\/v1\/fundraising\/pages","uri":"http:\/\/v3-sandbox.justgiving.com\/Sdk2-test-82c9ca48ec5b4cd5a43d9ca661d53e79","type":"application\/html"},"pageId":3736126,"signOnUrl":"http:\/\/v3-sandbox.justgiving.com\/auth\/8483a2f2-057b-431d-9be8-e93c4c46b9a5","warnings":[]}
+
+2015-04-30 10:30:37,453 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] PUT https://api-sandbox.justgiving.com/v1/fundraising/pages/{pageShortName}/images
+[AuthorizationMode] Basic
+[AppId] 6c37285f
+[ApplicationKey?] No
+[UrlSegment] pageShortName: Sdk2-test-82c9ca48ec5b4cd5a43d9ca661d53e79
+[RequestBody] application/json: {"url":"https://images.justgiving.com/image/this-image-does-not-exist.png","caption":"Test caption 97ccdf9e-5973-405c-a72a-5e59a5a4178c","isDefault":true}
+[HttpHeader] Accept: application/json
+[HttpHeader] Authorization: Basic aW50ZWdyYXRpb24tdGVzdC0yMDE1NDMwMTAzMDMxQGp1c3RnaXZpbmcuY29tOjY5ZWRlZTNmLTE0YTctNDg4My05ZjBiLTVkYzZhNzc3ZWE0Nw==
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 OK
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 471ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/30/2015 09:30:37
+[HttpHeader] X-JustGiving-Operation: FundraisingApi:AddImageToFundraisingPage
+[HttpHeader] Content-Length: 239
+[HttpHeader] Cache-Control: private, s-maxage=0
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Thu, 30 Apr 2015 09:30:36 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"next":{"rel":"https:\/\/api-sandbox.justgiving.com\/\/v1\/fundraising\/pages\/Sdk2-test-82c9ca48ec5b4cd5a43d9ca661d53e79\/images","uri":"http:\/\/www.justgiving.com\/Sdk2-test-82c9ca48ec5b4cd5a43d9ca661d53e79","type":"application\/xml"}}
+
+2015-04-30 10:30:38,318 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] GET https://api-sandbox.justgiving.com/v1/fundraising/pages/{pageShortName}
+[AuthorizationMode] Basic
+[AppId] 6c37285f
+[ApplicationKey?] No
+[UrlSegment] pageShortName: Sdk2-test-82c9ca48ec5b4cd5a43d9ca661d53e79
+[HttpHeader] Accept: application/json
+[HttpHeader] Authorization: Basic aW50ZWdyYXRpb24tdGVzdC0yMDE1NDMwMTAzMDMxQGp1c3RnaXZpbmcuY29tOjY5ZWRlZTNmLTE0YTctNDg4My05ZjBiLTVkYzZhNzc3ZWE0Nw==
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 OK
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 787ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/30/2015 09:30:37
+[HttpHeader] X-JustGiving-Operation: FundraisingApi:GetFundraisingPageDetails
+[HttpHeader] Content-Length: 2633
+[HttpHeader] Cache-Control: private
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Thu, 30 Apr 2015 09:30:38 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"pageId":"3736126","activityCharityCreated":true,"activityType":"Running_Marathons","activityId":"756550","attribution":"","eventName":"Bubble-Bobble Run 1","eventId":756550,"currencySymbol":"£","currencyCode":"GBP","pageShortName":"Sdk2-test-82c9ca48ec5b4cd5a43d9ca661d53e79","image":{"caption":"","url":"http://images.sandbox.justgiving.com/image/trainer-no-branding_web.jpg?imagetype=frpphoto&trymigrate=true&sourcepath=Stock","absoluteUrl":"http://images.sandbox.justgiving.com/image/trainer-no-branding_web.jpg?imagetype=frpphoto&trymigrate=true&sourcepath=Stock"},"imageCount":"1","status":"Active","owner":"Integration Tester","ownerProfileImageUrls":{"OriginalSize":"","Size150x150Face":""},"consumerId":30635155,"title":"Sdk2 Test Page","showEventDate":"True","eventDate":"\/Date(1451520000000+0000)\/","showExpiryDate":"False","expiryDate":"\/Date(1459378800000+0100)\/","fundraisingTarget":"0.00","totalRaisedPercentageOfFundraisingTarget":"0","totalRaisedOffline":"0","totalRaisedOnline":"0","totalRaisedSms":"0","grandTotalRaisedExcludingGiftAid":"0","totalEstimatedGiftAid":"0","branding":{"buttonColour":"0915F9","buttonTextColour":"F9F9FC","headerTextColour":"230D17","thermometerBackgroundColour":"230D17","thermometerFillColour":"0915F9","thermometerTextColour":"F9F9FC"},"charity":{"id":2050,"name":"The Demo Charity","description":"We raise money to support the work of Great Ormond Street Hospital so that it can help more children who need its specialist expertise.","logoUrl":"http://images.sandbox.justgiving.com/image/52525737-74a6-4d8e-a7c0-519887f6f2d3.jpg","logoAbsoluteUrl":"http://images.sandbox.justgiving.com/image/52525737-74a6-4d8e-a7c0-519887f6f2d3.jpg","profilePageUrl":null,"registrationNumber":"123456"},"media":{"images":[{"caption":"","url":"http://images.sandbox.justgiving.com/image/trainer-no-branding_web.jpg?imagetype=frpphoto&trymigrate=true&sourcepath=Stock","absoluteUrl":"http://images.sandbox.justgiving.com/image/trainer-no-branding_web.jpg?imagetype=frpphoto&trymigrate=true&sourcepath=Stock"}]},"story":"<p>Thanks for taking the time to visit my JustGiving page.</p><p>Donating through JustGiving is simple, fast and totally secure. Your details are safe with JustGiving – they’ll never sell them on or send unwanted emails. Once you donate, they’ll send your money directly to the charity. So it’s the most efficient way to donate – saving time and cutting costs for the charity.</p>","domain":"v3-sandbox.justgiving.com","smsCode":"XLFW62","companyAppealId":0,"rememberedPersonSummary":null,"pageSummaryWhat":null,"pageSummaryWhy":null,"teams":null,"pageSummary":""}
+
+2015-04-30 10:31:06,258 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] PUT https://api-sandbox.justgiving.com/v1/account
+[AuthorizationMode] Anonymous
+[AppId] 6c37285f
+[ApplicationKey?] No
+[RequestBody] application/json: {"reference":"MY-REF","title":"Ms","firstName":"Integration","lastName":"Tester","address":{"line1":"Blue Fin Building","line2":"Southwark Street","townOrCity":"London","countyOrState":"London","country":"United Kingdom","postcodeOrZipcode":"SE1 0TU"},"email":"integration-test-201543010313@justgiving.com","password":"671323c8-b225-4271-ad7c-220316247f86","acceptTermsAndConditions":true}
+[HttpHeader] Accept: application/json
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 Account created successfully
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 1450ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/30/2015 09:31:04
+[HttpHeader] X-JustGiving-Operation: AccountApi:AccountRegistration
+[HttpHeader] Content-Length: 96
+[HttpHeader] Cache-Control: private
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Thu, 30 Apr 2015 09:31:06 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"country":"United Kingdom","email":"integration-test-201543010313@justgiving.com","error":null}
+
+2015-04-30 10:31:09,077 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] PUT https://api-sandbox.justgiving.com/v1/fundraising/pages
+[AuthorizationMode] Basic
+[AppId] 6c37285f
+[ApplicationKey?] No
+[RequestBody] application/json: {"reference":null,"charityId":2050,"eventId":756550,"eventRef":null,"pageShortName":"Sdk2-test-ead285a4c388490998484f787b5e7aeb","pageTitle":"Sdk2 Test Page","activityType":null,"targetAmount":null,"justGivingOptIn":false,"charityOptIn":false,"eventDate":null,"eventName":null,"attribution":null,"charityFunded":false,"causeId":null,"companyAppealId":null,"expiryDate":null,"pageStory":null,"pageSummaryWhat":null,"pageSummaryWhy":null,"customCodes":null,"theme":null,"images":null,"videos":null,"rememberedPersonReference":null}
+[HttpHeader] Accept: application/json
+[HttpHeader] Authorization: Basic aW50ZWdyYXRpb24tdGVzdC0yMDE1NDMwMTAzMTNAanVzdGdpdmluZy5jb206NjcxMzIzYzgtYjIyNS00MjcxLWFkN2MtMjIwMzE2MjQ3Zjg2
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 201 Created
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 2725ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/30/2015 09:31:06
+[HttpHeader] X-JustGiving-Operation: FundraisingApi:RegisterFundraisingPage
+[HttpHeader] Content-Length: 332
+[HttpHeader] Cache-Control: private, s-maxage=0
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Thu, 30 Apr 2015 09:31:09 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"error":null,"next":{"rel":"https:\/\/api-sandbox.justgiving.com\/\/v1\/fundraising\/pages","uri":"http:\/\/v3-sandbox.justgiving.com\/Sdk2-test-ead285a4c388490998484f787b5e7aeb","type":"application\/html"},"pageId":3736127,"signOnUrl":"http:\/\/v3-sandbox.justgiving.com\/auth\/b01ee687-2bed-4469-83c3-4f5550676aa8","warnings":[]}
+
+2015-04-30 10:31:09,628 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] PUT https://api-sandbox.justgiving.com/v1/fundraising/pages/{pageShortName}/images
+[AuthorizationMode] Basic
+[AppId] 6c37285f
+[ApplicationKey?] No
+[UrlSegment] pageShortName: Sdk2-test-ead285a4c388490998484f787b5e7aeb
+[RequestBody] application/json: {"url":"https://images.justgiving.com/image/this-image-does-not-exist.png","caption":"Test caption 2309cb06-2ad6-4990-a79f-eab2395a935a","isDefault":true}
+[HttpHeader] Accept: application/json
+[HttpHeader] Authorization: Basic aW50ZWdyYXRpb24tdGVzdC0yMDE1NDMwMTAzMTNAanVzdGdpdmluZy5jb206NjcxMzIzYzgtYjIyNS00MjcxLWFkN2MtMjIwMzE2MjQ3Zjg2
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 OK
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 482ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/30/2015 09:31:09
+[HttpHeader] X-JustGiving-Operation: FundraisingApi:AddImageToFundraisingPage
+[HttpHeader] Content-Length: 239
+[HttpHeader] Cache-Control: private, s-maxage=0
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Thu, 30 Apr 2015 09:31:09 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"next":{"rel":"https:\/\/api-sandbox.justgiving.com\/\/v1\/fundraising\/pages\/Sdk2-test-ead285a4c388490998484f787b5e7aeb\/images","uri":"http:\/\/www.justgiving.com\/Sdk2-test-ead285a4c388490998484f787b5e7aeb","type":"application\/xml"}}
+
+2015-04-30 10:31:10,174 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] GET https://api-sandbox.justgiving.com/v1/fundraising/pages/{pageShortName}
+[AuthorizationMode] Basic
+[AppId] 6c37285f
+[ApplicationKey?] No
+[UrlSegment] pageShortName: Sdk2-test-ead285a4c388490998484f787b5e7aeb
+[HttpHeader] Accept: application/json
+[HttpHeader] Authorization: Basic aW50ZWdyYXRpb24tdGVzdC0yMDE1NDMwMTAzMTNAanVzdGdpdmluZy5jb206NjcxMzIzYzgtYjIyNS00MjcxLWFkN2MtMjIwMzE2MjQ3Zjg2
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 OK
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 486ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/30/2015 09:31:10
+[HttpHeader] X-JustGiving-Operation: FundraisingApi:GetFundraisingPageDetails
+[HttpHeader] Content-Length: 2633
+[HttpHeader] Cache-Control: private
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Thu, 30 Apr 2015 09:31:09 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"pageId":"3736127","activityCharityCreated":true,"activityType":"Running_Marathons","activityId":"756550","attribution":"","eventName":"Bubble-Bobble Run 1","eventId":756550,"currencySymbol":"£","currencyCode":"GBP","pageShortName":"Sdk2-test-ead285a4c388490998484f787b5e7aeb","image":{"caption":"","url":"http://images.sandbox.justgiving.com/image/trainer-no-branding_web.jpg?imagetype=frpphoto&trymigrate=true&sourcepath=Stock","absoluteUrl":"http://images.sandbox.justgiving.com/image/trainer-no-branding_web.jpg?imagetype=frpphoto&trymigrate=true&sourcepath=Stock"},"imageCount":"1","status":"Active","owner":"Integration Tester","ownerProfileImageUrls":{"OriginalSize":"","Size150x150Face":""},"consumerId":30635156,"title":"Sdk2 Test Page","showEventDate":"True","eventDate":"\/Date(1451520000000+0000)\/","showExpiryDate":"False","expiryDate":"\/Date(1459378800000+0100)\/","fundraisingTarget":"0.00","totalRaisedPercentageOfFundraisingTarget":"0","totalRaisedOffline":"0","totalRaisedOnline":"0","totalRaisedSms":"0","grandTotalRaisedExcludingGiftAid":"0","totalEstimatedGiftAid":"0","branding":{"buttonColour":"0915F9","buttonTextColour":"F9F9FC","headerTextColour":"230D17","thermometerBackgroundColour":"230D17","thermometerFillColour":"0915F9","thermometerTextColour":"F9F9FC"},"charity":{"id":2050,"name":"The Demo Charity","description":"We raise money to support the work of Great Ormond Street Hospital so that it can help more children who need its specialist expertise.","logoUrl":"http://images.sandbox.justgiving.com/image/52525737-74a6-4d8e-a7c0-519887f6f2d3.jpg","logoAbsoluteUrl":"http://images.sandbox.justgiving.com/image/52525737-74a6-4d8e-a7c0-519887f6f2d3.jpg","profilePageUrl":null,"registrationNumber":"123456"},"media":{"images":[{"caption":"","url":"http://images.sandbox.justgiving.com/image/trainer-no-branding_web.jpg?imagetype=frpphoto&trymigrate=true&sourcepath=Stock","absoluteUrl":"http://images.sandbox.justgiving.com/image/trainer-no-branding_web.jpg?imagetype=frpphoto&trymigrate=true&sourcepath=Stock"}]},"story":"<p>Thanks for taking the time to visit my JustGiving page.</p><p>Donating through JustGiving is simple, fast and totally secure. Your details are safe with JustGiving – they’ll never sell them on or send unwanted emails. Once you donate, they’ll send your money directly to the charity. So it’s the most efficient way to donate – saving time and cutting costs for the charity.</p>","domain":"v3-sandbox.justgiving.com","smsCode":"XAEI90","companyAppealId":0,"rememberedPersonSummary":null,"pageSummaryWhat":null,"pageSummaryWhy":null,"teams":null,"pageSummary":""}
+
+2015-04-30 10:41:05,049 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] PUT https://api-sandbox.justgiving.com/v1/account
+[AuthorizationMode] Anonymous
+[AppId] 6c37285f
+[ApplicationKey?] No
+[RequestBody] application/json: {"reference":"MY-REF","title":"Ms","firstName":"Integration","lastName":"Tester","address":{"line1":"Blue Fin Building","line2":"Southwark Street","townOrCity":"London","countyOrState":"London","country":"United Kingdom","postcodeOrZipcode":"SE1 0TU"},"email":"integration-test-201543010411@justgiving.com","password":"af7f50ed-7197-4550-b847-bdcb6a1f6871","acceptTermsAndConditions":true}
+[HttpHeader] Accept: application/json
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 Account created successfully
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 1626ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/30/2015 09:41:03
+[HttpHeader] X-JustGiving-Operation: AccountApi:AccountRegistration
+[HttpHeader] Content-Length: 96
+[HttpHeader] Cache-Control: private
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Thu, 30 Apr 2015 09:41:05 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"country":"United Kingdom","email":"integration-test-201543010411@justgiving.com","error":null}
+
+2015-04-30 10:41:08,106 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] PUT https://api-sandbox.justgiving.com/v1/fundraising/pages
+[AuthorizationMode] Basic
+[AppId] 6c37285f
+[ApplicationKey?] No
+[RequestBody] application/json: {"reference":null,"charityId":2050,"eventId":756550,"eventRef":null,"pageShortName":"Sdk2-test-e8e95313eb624e818ae86b76cf317f9f","pageTitle":"Sdk2 Test Page","activityType":null,"targetAmount":null,"justGivingOptIn":false,"charityOptIn":false,"eventDate":null,"eventName":null,"attribution":null,"charityFunded":false,"causeId":null,"companyAppealId":null,"expiryDate":null,"pageStory":null,"pageSummaryWhat":null,"pageSummaryWhy":null,"customCodes":null,"theme":null,"images":null,"videos":null,"rememberedPersonReference":null}
+[HttpHeader] Accept: application/json
+[HttpHeader] Authorization: Basic aW50ZWdyYXRpb24tdGVzdC0yMDE1NDMwMTA0MTFAanVzdGdpdmluZy5jb206YWY3ZjUwZWQtNzE5Ny00NTUwLWI4NDctYmRjYjZhMWY2ODcx
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 201 Created
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 2944ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/30/2015 09:41:05
+[HttpHeader] X-JustGiving-Operation: FundraisingApi:RegisterFundraisingPage
+[HttpHeader] Content-Length: 332
+[HttpHeader] Cache-Control: private, s-maxage=0
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Thu, 30 Apr 2015 09:41:08 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"error":null,"next":{"rel":"https:\/\/api-sandbox.justgiving.com\/\/v1\/fundraising\/pages","uri":"http:\/\/v3-sandbox.justgiving.com\/Sdk2-test-e8e95313eb624e818ae86b76cf317f9f","type":"application\/html"},"pageId":3736128,"signOnUrl":"http:\/\/v3-sandbox.justgiving.com\/auth\/99caa094-1eae-4930-8233-521d6334f1df","warnings":[]}
+
+2015-04-30 10:41:08,857 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] PUT https://api-sandbox.justgiving.com/v1/fundraising/pages/{pageShortName}/images
+[AuthorizationMode] Basic
+[AppId] 6c37285f
+[ApplicationKey?] No
+[UrlSegment] pageShortName: Sdk2-test-e8e95313eb624e818ae86b76cf317f9f
+[RequestBody] application/json: {"url":"https://images.justgiving.com/image/b02dcadb-2897-4083-855d-c43b4fa18256.jpg?template=size200x200","caption":"Test caption e31087d9-4272-40cd-b9a3-3dcd854fd69e","isDefault":false}
+[HttpHeader] Accept: application/json
+[HttpHeader] Authorization: Basic aW50ZWdyYXRpb24tdGVzdC0yMDE1NDMwMTA0MTFAanVzdGdpdmluZy5jb206YWY3ZjUwZWQtNzE5Ny00NTUwLWI4NDctYmRjYjZhMWY2ODcx
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 OK
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 678ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/30/2015 09:41:08
+[HttpHeader] X-JustGiving-Operation: FundraisingApi:AddImageToFundraisingPage
+[HttpHeader] Content-Length: 239
+[HttpHeader] Cache-Control: private, s-maxage=0
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Thu, 30 Apr 2015 09:41:09 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"next":{"rel":"https:\/\/api-sandbox.justgiving.com\/\/v1\/fundraising\/pages\/Sdk2-test-e8e95313eb624e818ae86b76cf317f9f\/images","uri":"http:\/\/www.justgiving.com\/Sdk2-test-e8e95313eb624e818ae86b76cf317f9f","type":"application\/xml"}}
+
+2015-04-30 10:41:09,420 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] GET https://api-sandbox.justgiving.com/v1/fundraising/pages/{pageShortName}
+[AuthorizationMode] Basic
+[AppId] 6c37285f
+[ApplicationKey?] No
+[UrlSegment] pageShortName: Sdk2-test-e8e95313eb624e818ae86b76cf317f9f
+[HttpHeader] Accept: application/json
+[HttpHeader] Authorization: Basic aW50ZWdyYXRpb24tdGVzdC0yMDE1NDMwMTA0MTFAanVzdGdpdmluZy5jb206YWY3ZjUwZWQtNzE5Ny00NTUwLWI4NDctYmRjYjZhMWY2ODcx
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 OK
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 483ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/30/2015 09:41:09
+[HttpHeader] X-JustGiving-Operation: FundraisingApi:GetFundraisingPageDetails
+[HttpHeader] Content-Length: 2959
+[HttpHeader] Cache-Control: private
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Thu, 30 Apr 2015 09:41:09 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"pageId":"3736128","activityCharityCreated":true,"activityType":"Running_Marathons","activityId":"756550","attribution":"","eventName":"Bubble-Bobble Run 1","eventId":756550,"currencySymbol":"£","currencyCode":"GBP","pageShortName":"Sdk2-test-e8e95313eb624e818ae86b76cf317f9f","image":{"caption":"","url":"http://images.sandbox.justgiving.com/image/trainer-no-branding_web.jpg?imagetype=frpphoto&trymigrate=true&sourcepath=Stock","absoluteUrl":"http://images.sandbox.justgiving.com/image/trainer-no-branding_web.jpg?imagetype=frpphoto&trymigrate=true&sourcepath=Stock"},"imageCount":"2","status":"Active","owner":"Integration Tester","ownerProfileImageUrls":{"OriginalSize":"","Size150x150Face":""},"consumerId":30635157,"title":"Sdk2 Test Page","showEventDate":"True","eventDate":"\/Date(1451520000000+0000)\/","showExpiryDate":"False","expiryDate":"\/Date(1459378800000+0100)\/","fundraisingTarget":"0.00","totalRaisedPercentageOfFundraisingTarget":"0","totalRaisedOffline":"0","totalRaisedOnline":"0","totalRaisedSms":"0","grandTotalRaisedExcludingGiftAid":"0","totalEstimatedGiftAid":"0","branding":{"buttonColour":"0915F9","buttonTextColour":"F9F9FC","headerTextColour":"230D17","thermometerBackgroundColour":"230D17","thermometerFillColour":"0915F9","thermometerTextColour":"F9F9FC"},"charity":{"id":2050,"name":"The Demo Charity","description":"We raise money to support the work of Great Ormond Street Hospital so that it can help more children who need its specialist expertise.","logoUrl":"http://images.sandbox.justgiving.com/image/52525737-74a6-4d8e-a7c0-519887f6f2d3.jpg","logoAbsoluteUrl":"http://images.sandbox.justgiving.com/image/52525737-74a6-4d8e-a7c0-519887f6f2d3.jpg","profilePageUrl":null,"registrationNumber":"123456"},"media":{"images":[{"caption":"","url":"http://images.sandbox.justgiving.com/image/trainer-no-branding_web.jpg?imagetype=frpphoto&trymigrate=true&sourcepath=Stock","absoluteUrl":"http://images.sandbox.justgiving.com/image/trainer-no-branding_web.jpg?imagetype=frpphoto&trymigrate=true&sourcepath=Stock"},{"caption":"Test caption e31087d9-4272-40cd-b9a3-3dcd854fd69e","url":"http://images.sandbox.justgiving.com/image/c404d7c2-3fa6-4e5e-9aad-902cb5123acd.jpg?imagetype=frpphoto&trymigrate=true","absoluteUrl":"http://images.sandbox.justgiving.com/image/c404d7c2-3fa6-4e5e-9aad-902cb5123acd.jpg?imagetype=frpphoto&trymigrate=true"}]},"story":"<p>Thanks for taking the time to visit my JustGiving page.</p><p>Donating through JustGiving is simple, fast and totally secure. Your details are safe with JustGiving – they’ll never sell them on or send unwanted emails. Once you donate, they’ll send your money directly to the charity. So it’s the most efficient way to donate – saving time and cutting costs for the charity.</p>","domain":"v3-sandbox.justgiving.com","smsCode":"BMDB48","companyAppealId":0,"rememberedPersonSummary":null,"pageSummaryWhat":null,"pageSummaryWhy":null,"teams":null,"pageSummary":""}
+
+2015-04-30 10:41:09,540 [Runner thread] WARN  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] DELETE https://api-sandbox.justgiving.com/v1/fundraising/pages/{pageShortName}/images/{imageName}
+[AuthorizationMode] Basic
+[AppId] 6c37285f
+[ApplicationKey?] No
+[UrlSegment] pageShortName: Sdk2-test-e8e95313eb624e818ae86b76cf317f9f
+[UrlSegment] imageName: http://images_sandbox_justgiving_com/image/c404d7c2-3fa6-4e5e-9aad-902cb5123acd_jpg?imagetype=frpphoto&trymigrate=true
+[HttpHeader] Accept: application/json
+[HttpHeader] Authorization: Basic aW50ZWdyYXRpb24tdGVzdC0yMDE1NDMwMTA0MTFAanVzdGdpdmluZy5jb206YWY3ZjUwZWQtNzE5Ny00NTUwLWI4NDctYmRjYjZhMWY2ODcx
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 400 Bad Request
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] Content-Length: 2
+[HttpHeader] Cache-Control: private
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Thu, 30 Apr 2015 09:41:09 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] []
+
+2015-04-30 10:41:10,083 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] GET https://api-sandbox.justgiving.com/v1/fundraising/pages/{pageShortName}
+[AuthorizationMode] Basic
+[AppId] 6c37285f
+[ApplicationKey?] No
+[UrlSegment] pageShortName: Sdk2-test-e8e95313eb624e818ae86b76cf317f9f
+[HttpHeader] Accept: application/json
+[HttpHeader] Authorization: Basic aW50ZWdyYXRpb24tdGVzdC0yMDE1NDMwMTA0MTFAanVzdGdpdmluZy5jb206YWY3ZjUwZWQtNzE5Ny00NTUwLWI4NDctYmRjYjZhMWY2ODcx
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 OK
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 516ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/30/2015 09:41:09
+[HttpHeader] X-JustGiving-Operation: FundraisingApi:GetFundraisingPageDetails
+[HttpHeader] Content-Length: 2959
+[HttpHeader] Cache-Control: private
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Thu, 30 Apr 2015 09:41:10 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"pageId":"3736128","activityCharityCreated":true,"activityType":"Running_Marathons","activityId":"756550","attribution":"","eventName":"Bubble-Bobble Run 1","eventId":756550,"currencySymbol":"£","currencyCode":"GBP","pageShortName":"Sdk2-test-e8e95313eb624e818ae86b76cf317f9f","image":{"caption":"","url":"http://images.sandbox.justgiving.com/image/trainer-no-branding_web.jpg?imagetype=frpphoto&trymigrate=true&sourcepath=Stock","absoluteUrl":"http://images.sandbox.justgiving.com/image/trainer-no-branding_web.jpg?imagetype=frpphoto&trymigrate=true&sourcepath=Stock"},"imageCount":"2","status":"Active","owner":"Integration Tester","ownerProfileImageUrls":{"OriginalSize":"","Size150x150Face":""},"consumerId":30635157,"title":"Sdk2 Test Page","showEventDate":"True","eventDate":"\/Date(1451520000000+0000)\/","showExpiryDate":"False","expiryDate":"\/Date(1459378800000+0100)\/","fundraisingTarget":"0.00","totalRaisedPercentageOfFundraisingTarget":"0","totalRaisedOffline":"0","totalRaisedOnline":"0","totalRaisedSms":"0","grandTotalRaisedExcludingGiftAid":"0","totalEstimatedGiftAid":"0","branding":{"buttonColour":"0915F9","buttonTextColour":"F9F9FC","headerTextColour":"230D17","thermometerBackgroundColour":"230D17","thermometerFillColour":"0915F9","thermometerTextColour":"F9F9FC"},"charity":{"id":2050,"name":"The Demo Charity","description":"We raise money to support the work of Great Ormond Street Hospital so that it can help more children who need its specialist expertise.","logoUrl":"http://images.sandbox.justgiving.com/image/52525737-74a6-4d8e-a7c0-519887f6f2d3.jpg","logoAbsoluteUrl":"http://images.sandbox.justgiving.com/image/52525737-74a6-4d8e-a7c0-519887f6f2d3.jpg","profilePageUrl":null,"registrationNumber":"123456"},"media":{"images":[{"caption":"","url":"http://images.sandbox.justgiving.com/image/trainer-no-branding_web.jpg?imagetype=frpphoto&trymigrate=true&sourcepath=Stock","absoluteUrl":"http://images.sandbox.justgiving.com/image/trainer-no-branding_web.jpg?imagetype=frpphoto&trymigrate=true&sourcepath=Stock"},{"caption":"Test caption e31087d9-4272-40cd-b9a3-3dcd854fd69e","url":"http://images.sandbox.justgiving.com/image/c404d7c2-3fa6-4e5e-9aad-902cb5123acd.jpg?imagetype=frpphoto&trymigrate=true","absoluteUrl":"http://images.sandbox.justgiving.com/image/c404d7c2-3fa6-4e5e-9aad-902cb5123acd.jpg?imagetype=frpphoto&trymigrate=true"}]},"story":"<p>Thanks for taking the time to visit my JustGiving page.</p><p>Donating through JustGiving is simple, fast and totally secure. Your details are safe with JustGiving – they’ll never sell them on or send unwanted emails. Once you donate, they’ll send your money directly to the charity. So it’s the most efficient way to donate – saving time and cutting costs for the charity.</p>","domain":"v3-sandbox.justgiving.com","smsCode":"BMDB48","companyAppealId":0,"rememberedPersonSummary":null,"pageSummaryWhat":null,"pageSummaryWhy":null,"teams":null,"pageSummary":""}
+
+2015-04-30 10:41:30,703 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] PUT https://api-sandbox.justgiving.com/v1/account
+[AuthorizationMode] Anonymous
+[AppId] 6c37285f
+[ApplicationKey?] No
+[RequestBody] application/json: {"reference":"MY-REF","title":"Ms","firstName":"Integration","lastName":"Tester","address":{"line1":"Blue Fin Building","line2":"Southwark Street","townOrCity":"London","countyOrState":"London","country":"United Kingdom","postcodeOrZipcode":"SE1 0TU"},"email":"integration-test-2015430104127@justgiving.com","password":"2c177317-82ab-4129-9680-2a94b96eeeca","acceptTermsAndConditions":true}
+[HttpHeader] Accept: application/json
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 Account created successfully
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 1651ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/30/2015 09:41:29
+[HttpHeader] X-JustGiving-Operation: AccountApi:AccountRegistration
+[HttpHeader] Content-Length: 97
+[HttpHeader] Cache-Control: private
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Thu, 30 Apr 2015 09:41:30 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"country":"United Kingdom","email":"integration-test-2015430104127@justgiving.com","error":null}
+
+2015-04-30 10:41:33,583 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] PUT https://api-sandbox.justgiving.com/v1/fundraising/pages
+[AuthorizationMode] Basic
+[AppId] 6c37285f
+[ApplicationKey?] No
+[RequestBody] application/json: {"reference":null,"charityId":2050,"eventId":756550,"eventRef":null,"pageShortName":"Sdk2-test-a1c4782050a54a4b825b8e5f79116f7d","pageTitle":"Sdk2 Test Page","activityType":null,"targetAmount":null,"justGivingOptIn":false,"charityOptIn":false,"eventDate":null,"eventName":null,"attribution":null,"charityFunded":false,"causeId":null,"companyAppealId":null,"expiryDate":null,"pageStory":null,"pageSummaryWhat":null,"pageSummaryWhy":null,"customCodes":null,"theme":null,"images":null,"videos":null,"rememberedPersonReference":null}
+[HttpHeader] Accept: application/json
+[HttpHeader] Authorization: Basic aW50ZWdyYXRpb24tdGVzdC0yMDE1NDMwMTA0MTI3QGp1c3RnaXZpbmcuY29tOjJjMTc3MzE3LTgyYWItNDEyOS05NjgwLTJhOTRiOTZlZWVjYQ==
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 201 Created
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 2788ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/30/2015 09:41:31
+[HttpHeader] X-JustGiving-Operation: FundraisingApi:RegisterFundraisingPage
+[HttpHeader] Content-Length: 332
+[HttpHeader] Cache-Control: private, s-maxage=0
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Thu, 30 Apr 2015 09:41:33 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"error":null,"next":{"rel":"https:\/\/api-sandbox.justgiving.com\/\/v1\/fundraising\/pages","uri":"http:\/\/v3-sandbox.justgiving.com\/Sdk2-test-a1c4782050a54a4b825b8e5f79116f7d","type":"application\/html"},"pageId":3736129,"signOnUrl":"http:\/\/v3-sandbox.justgiving.com\/auth\/5fbe3b95-f0e5-49d5-98a7-d9804a042c68","warnings":[]}
+
+2015-04-30 10:41:34,214 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] PUT https://api-sandbox.justgiving.com/v1/fundraising/pages/{pageShortName}/images
+[AuthorizationMode] Basic
+[AppId] 6c37285f
+[ApplicationKey?] No
+[UrlSegment] pageShortName: Sdk2-test-a1c4782050a54a4b825b8e5f79116f7d
+[RequestBody] application/json: {"url":"https://images.justgiving.com/image/b02dcadb-2897-4083-855d-c43b4fa18256.jpg?template=size200x200","caption":"Test caption 24fdb4b2-56f9-4ea9-b1f1-ff483726e071","isDefault":false}
+[HttpHeader] Accept: application/json
+[HttpHeader] Authorization: Basic aW50ZWdyYXRpb24tdGVzdC0yMDE1NDMwMTA0MTI3QGp1c3RnaXZpbmcuY29tOjJjMTc3MzE3LTgyYWItNDEyOS05NjgwLTJhOTRiOTZlZWVjYQ==
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 OK
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 542ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/30/2015 09:41:34
+[HttpHeader] X-JustGiving-Operation: FundraisingApi:AddImageToFundraisingPage
+[HttpHeader] Content-Length: 239
+[HttpHeader] Cache-Control: private, s-maxage=0
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Thu, 30 Apr 2015 09:41:34 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"next":{"rel":"https:\/\/api-sandbox.justgiving.com\/\/v1\/fundraising\/pages\/Sdk2-test-a1c4782050a54a4b825b8e5f79116f7d\/images","uri":"http:\/\/www.justgiving.com\/Sdk2-test-a1c4782050a54a4b825b8e5f79116f7d","type":"application\/xml"}}
+
+2015-04-30 10:41:34,789 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] GET https://api-sandbox.justgiving.com/v1/fundraising/pages/{pageShortName}
+[AuthorizationMode] Basic
+[AppId] 6c37285f
+[ApplicationKey?] No
+[UrlSegment] pageShortName: Sdk2-test-a1c4782050a54a4b825b8e5f79116f7d
+[HttpHeader] Accept: application/json
+[HttpHeader] Authorization: Basic aW50ZWdyYXRpb24tdGVzdC0yMDE1NDMwMTA0MTI3QGp1c3RnaXZpbmcuY29tOjJjMTc3MzE3LTgyYWItNDEyOS05NjgwLTJhOTRiOTZlZWVjYQ==
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 OK
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 480ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/30/2015 09:41:34
+[HttpHeader] X-JustGiving-Operation: FundraisingApi:GetFundraisingPageDetails
+[HttpHeader] Content-Length: 2959
+[HttpHeader] Cache-Control: private
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Thu, 30 Apr 2015 09:41:34 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"pageId":"3736129","activityCharityCreated":true,"activityType":"Running_Marathons","activityId":"756550","attribution":"","eventName":"Bubble-Bobble Run 1","eventId":756550,"currencySymbol":"£","currencyCode":"GBP","pageShortName":"Sdk2-test-a1c4782050a54a4b825b8e5f79116f7d","image":{"caption":"","url":"http://images.sandbox.justgiving.com/image/trainer-no-branding_web.jpg?imagetype=frpphoto&trymigrate=true&sourcepath=Stock","absoluteUrl":"http://images.sandbox.justgiving.com/image/trainer-no-branding_web.jpg?imagetype=frpphoto&trymigrate=true&sourcepath=Stock"},"imageCount":"2","status":"Active","owner":"Integration Tester","ownerProfileImageUrls":{"OriginalSize":"","Size150x150Face":""},"consumerId":30635158,"title":"Sdk2 Test Page","showEventDate":"True","eventDate":"\/Date(1451520000000+0000)\/","showExpiryDate":"False","expiryDate":"\/Date(1459378800000+0100)\/","fundraisingTarget":"0.00","totalRaisedPercentageOfFundraisingTarget":"0","totalRaisedOffline":"0","totalRaisedOnline":"0","totalRaisedSms":"0","grandTotalRaisedExcludingGiftAid":"0","totalEstimatedGiftAid":"0","branding":{"buttonColour":"0915F9","buttonTextColour":"F9F9FC","headerTextColour":"230D17","thermometerBackgroundColour":"230D17","thermometerFillColour":"0915F9","thermometerTextColour":"F9F9FC"},"charity":{"id":2050,"name":"The Demo Charity","description":"We raise money to support the work of Great Ormond Street Hospital so that it can help more children who need its specialist expertise.","logoUrl":"http://images.sandbox.justgiving.com/image/52525737-74a6-4d8e-a7c0-519887f6f2d3.jpg","logoAbsoluteUrl":"http://images.sandbox.justgiving.com/image/52525737-74a6-4d8e-a7c0-519887f6f2d3.jpg","profilePageUrl":null,"registrationNumber":"123456"},"media":{"images":[{"caption":"","url":"http://images.sandbox.justgiving.com/image/trainer-no-branding_web.jpg?imagetype=frpphoto&trymigrate=true&sourcepath=Stock","absoluteUrl":"http://images.sandbox.justgiving.com/image/trainer-no-branding_web.jpg?imagetype=frpphoto&trymigrate=true&sourcepath=Stock"},{"caption":"Test caption 24fdb4b2-56f9-4ea9-b1f1-ff483726e071","url":"http://images.sandbox.justgiving.com/image/fd128aff-a9ce-423b-b0ea-4de23a69d2c2.jpg?imagetype=frpphoto&trymigrate=true","absoluteUrl":"http://images.sandbox.justgiving.com/image/fd128aff-a9ce-423b-b0ea-4de23a69d2c2.jpg?imagetype=frpphoto&trymigrate=true"}]},"story":"<p>Thanks for taking the time to visit my JustGiving page.</p><p>Donating through JustGiving is simple, fast and totally secure. Your details are safe with JustGiving – they’ll never sell them on or send unwanted emails. Once you donate, they’ll send your money directly to the charity. So it’s the most efficient way to donate – saving time and cutting costs for the charity.</p>","domain":"v3-sandbox.justgiving.com","smsCode":"SBUB82","companyAppealId":0,"rememberedPersonSummary":null,"pageSummaryWhat":null,"pageSummaryWhy":null,"teams":null,"pageSummary":""}
+
+2015-04-30 10:41:35,010 [Runner thread] WARN  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] DELETE https://api-sandbox.justgiving.com/v1/fundraising/pages/{pageShortName}/images/{imageName}
+[AuthorizationMode] Basic
+[AppId] 6c37285f
+[ApplicationKey?] No
+[UrlSegment] pageShortName: Sdk2-test-a1c4782050a54a4b825b8e5f79116f7d
+[UrlSegment] imageName: http://images_sandbox_justgiving_com/image/fd128aff-a9ce-423b-b0ea-4de23a69d2c2_jpg?imagetype=frpphoto&trymigrate=true
+[HttpHeader] Accept: application/json
+[HttpHeader] Authorization: Basic aW50ZWdyYXRpb24tdGVzdC0yMDE1NDMwMTA0MTI3QGp1c3RnaXZpbmcuY29tOjJjMTc3MzE3LTgyYWItNDEyOS05NjgwLTJhOTRiOTZlZWVjYQ==
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 400 Bad Request
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] Content-Length: 2
+[HttpHeader] Cache-Control: private
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Thu, 30 Apr 2015 09:41:35 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] []
+
+2015-04-30 10:41:35,520 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] GET https://api-sandbox.justgiving.com/v1/fundraising/pages/{pageShortName}
+[AuthorizationMode] Basic
+[AppId] 6c37285f
+[ApplicationKey?] No
+[UrlSegment] pageShortName: Sdk2-test-a1c4782050a54a4b825b8e5f79116f7d
+[HttpHeader] Accept: application/json
+[HttpHeader] Authorization: Basic aW50ZWdyYXRpb24tdGVzdC0yMDE1NDMwMTA0MTI3QGp1c3RnaXZpbmcuY29tOjJjMTc3MzE3LTgyYWItNDEyOS05NjgwLTJhOTRiOTZlZWVjYQ==
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 OK
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 479ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/30/2015 09:41:35
+[HttpHeader] X-JustGiving-Operation: FundraisingApi:GetFundraisingPageDetails
+[HttpHeader] Content-Length: 2959
+[HttpHeader] Cache-Control: private
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Thu, 30 Apr 2015 09:41:35 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"pageId":"3736129","activityCharityCreated":true,"activityType":"Running_Marathons","activityId":"756550","attribution":"","eventName":"Bubble-Bobble Run 1","eventId":756550,"currencySymbol":"£","currencyCode":"GBP","pageShortName":"Sdk2-test-a1c4782050a54a4b825b8e5f79116f7d","image":{"caption":"","url":"http://images.sandbox.justgiving.com/image/trainer-no-branding_web.jpg?imagetype=frpphoto&trymigrate=true&sourcepath=Stock","absoluteUrl":"http://images.sandbox.justgiving.com/image/trainer-no-branding_web.jpg?imagetype=frpphoto&trymigrate=true&sourcepath=Stock"},"imageCount":"2","status":"Active","owner":"Integration Tester","ownerProfileImageUrls":{"OriginalSize":"","Size150x150Face":""},"consumerId":30635158,"title":"Sdk2 Test Page","showEventDate":"True","eventDate":"\/Date(1451520000000+0000)\/","showExpiryDate":"False","expiryDate":"\/Date(1459378800000+0100)\/","fundraisingTarget":"0.00","totalRaisedPercentageOfFundraisingTarget":"0","totalRaisedOffline":"0","totalRaisedOnline":"0","totalRaisedSms":"0","grandTotalRaisedExcludingGiftAid":"0","totalEstimatedGiftAid":"0","branding":{"buttonColour":"0915F9","buttonTextColour":"F9F9FC","headerTextColour":"230D17","thermometerBackgroundColour":"230D17","thermometerFillColour":"0915F9","thermometerTextColour":"F9F9FC"},"charity":{"id":2050,"name":"The Demo Charity","description":"We raise money to support the work of Great Ormond Street Hospital so that it can help more children who need its specialist expertise.","logoUrl":"http://images.sandbox.justgiving.com/image/52525737-74a6-4d8e-a7c0-519887f6f2d3.jpg","logoAbsoluteUrl":"http://images.sandbox.justgiving.com/image/52525737-74a6-4d8e-a7c0-519887f6f2d3.jpg","profilePageUrl":null,"registrationNumber":"123456"},"media":{"images":[{"caption":"","url":"http://images.sandbox.justgiving.com/image/trainer-no-branding_web.jpg?imagetype=frpphoto&trymigrate=true&sourcepath=Stock","absoluteUrl":"http://images.sandbox.justgiving.com/image/trainer-no-branding_web.jpg?imagetype=frpphoto&trymigrate=true&sourcepath=Stock"},{"caption":"Test caption 24fdb4b2-56f9-4ea9-b1f1-ff483726e071","url":"http://images.sandbox.justgiving.com/image/fd128aff-a9ce-423b-b0ea-4de23a69d2c2.jpg?imagetype=frpphoto&trymigrate=true","absoluteUrl":"http://images.sandbox.justgiving.com/image/fd128aff-a9ce-423b-b0ea-4de23a69d2c2.jpg?imagetype=frpphoto&trymigrate=true"}]},"story":"<p>Thanks for taking the time to visit my JustGiving page.</p><p>Donating through JustGiving is simple, fast and totally secure. Your details are safe with JustGiving – they’ll never sell them on or send unwanted emails. Once you donate, they’ll send your money directly to the charity. So it’s the most efficient way to donate – saving time and cutting costs for the charity.</p>","domain":"v3-sandbox.justgiving.com","smsCode":"SBUB82","companyAppealId":0,"rememberedPersonSummary":null,"pageSummaryWhat":null,"pageSummaryWhy":null,"teams":null,"pageSummary":""}
+
+2015-04-30 10:44:54,120 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] PUT https://api-sandbox.justgiving.com/v1/account
+[AuthorizationMode] Anonymous
+[AppId] 6c37285f
+[ApplicationKey?] No
+[RequestBody] application/json: {"reference":"MY-REF","title":"Ms","firstName":"Integration","lastName":"Tester","address":{"line1":"Blue Fin Building","line2":"Southwark Street","townOrCity":"London","countyOrState":"London","country":"United Kingdom","postcodeOrZipcode":"SE1 0TU"},"email":"integration-test-2015430104451@justgiving.com","password":"a856bbc0-0284-4469-bf1b-b79ec92cf38f","acceptTermsAndConditions":true}
+[HttpHeader] Accept: application/json
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 Account created successfully
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 1533ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/30/2015 09:44:52
+[HttpHeader] X-JustGiving-Operation: AccountApi:AccountRegistration
+[HttpHeader] Content-Length: 97
+[HttpHeader] Cache-Control: private
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Thu, 30 Apr 2015 09:44:54 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"country":"United Kingdom","email":"integration-test-2015430104451@justgiving.com","error":null}
+
+2015-04-30 10:44:57,183 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] PUT https://api-sandbox.justgiving.com/v1/fundraising/pages
+[AuthorizationMode] Basic
+[AppId] 6c37285f
+[ApplicationKey?] No
+[RequestBody] application/json: {"reference":null,"charityId":2050,"eventId":756550,"eventRef":null,"pageShortName":"Sdk2-test-6316b936d18f4a28954c1fca92187ab8","pageTitle":"Sdk2 Test Page","activityType":null,"targetAmount":null,"justGivingOptIn":false,"charityOptIn":false,"eventDate":null,"eventName":null,"attribution":null,"charityFunded":false,"causeId":null,"companyAppealId":null,"expiryDate":null,"pageStory":null,"pageSummaryWhat":null,"pageSummaryWhy":null,"customCodes":null,"theme":null,"images":null,"videos":null,"rememberedPersonReference":null}
+[HttpHeader] Accept: application/json
+[HttpHeader] Authorization: Basic aW50ZWdyYXRpb24tdGVzdC0yMDE1NDMwMTA0NDUxQGp1c3RnaXZpbmcuY29tOmE4NTZiYmMwLTAyODQtNDQ2OS1iZjFiLWI3OWVjOTJjZjM4Zg==
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 201 Created
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 2966ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/30/2015 09:44:54
+[HttpHeader] X-JustGiving-Operation: FundraisingApi:RegisterFundraisingPage
+[HttpHeader] Content-Length: 332
+[HttpHeader] Cache-Control: private, s-maxage=0
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Thu, 30 Apr 2015 09:44:57 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"error":null,"next":{"rel":"https:\/\/api-sandbox.justgiving.com\/\/v1\/fundraising\/pages","uri":"http:\/\/v3-sandbox.justgiving.com\/Sdk2-test-6316b936d18f4a28954c1fca92187ab8","type":"application\/html"},"pageId":3736130,"signOnUrl":"http:\/\/v3-sandbox.justgiving.com\/auth\/f715fe88-f1d5-460d-b7c8-f60abe586051","warnings":[]}
+
+2015-04-30 10:44:57,864 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] PUT https://api-sandbox.justgiving.com/v1/fundraising/pages/{pageShortName}/images
+[AuthorizationMode] Basic
+[AppId] 6c37285f
+[ApplicationKey?] No
+[UrlSegment] pageShortName: Sdk2-test-6316b936d18f4a28954c1fca92187ab8
+[RequestBody] application/json: {"url":"https://images.justgiving.com/image/b02dcadb-2897-4083-855d-c43b4fa18256.jpg?template=size200x200","caption":"Test caption 5a69a6ef-c355-43be-8f4c-81cce9d8104b","isDefault":false}
+[HttpHeader] Accept: application/json
+[HttpHeader] Authorization: Basic aW50ZWdyYXRpb24tdGVzdC0yMDE1NDMwMTA0NDUxQGp1c3RnaXZpbmcuY29tOmE4NTZiYmMwLTAyODQtNDQ2OS1iZjFiLWI3OWVjOTJjZjM4Zg==
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 OK
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 585ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/30/2015 09:44:57
+[HttpHeader] X-JustGiving-Operation: FundraisingApi:AddImageToFundraisingPage
+[HttpHeader] Content-Length: 239
+[HttpHeader] Cache-Control: private, s-maxage=0
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Thu, 30 Apr 2015 09:44:58 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"next":{"rel":"https:\/\/api-sandbox.justgiving.com\/\/v1\/fundraising\/pages\/Sdk2-test-6316b936d18f4a28954c1fca92187ab8\/images","uri":"http:\/\/www.justgiving.com\/Sdk2-test-6316b936d18f4a28954c1fca92187ab8","type":"application\/xml"}}
+
+2015-04-30 10:44:58,452 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] GET https://api-sandbox.justgiving.com/v1/fundraising/pages/{pageShortName}
+[AuthorizationMode] Basic
+[AppId] 6c37285f
+[ApplicationKey?] No
+[UrlSegment] pageShortName: Sdk2-test-6316b936d18f4a28954c1fca92187ab8
+[HttpHeader] Accept: application/json
+[HttpHeader] Authorization: Basic aW50ZWdyYXRpb24tdGVzdC0yMDE1NDMwMTA0NDUxQGp1c3RnaXZpbmcuY29tOmE4NTZiYmMwLTAyODQtNDQ2OS1iZjFiLWI3OWVjOTJjZjM4Zg==
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 OK
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 520ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/30/2015 09:44:58
+[HttpHeader] X-JustGiving-Operation: FundraisingApi:GetFundraisingPageDetails
+[HttpHeader] Content-Length: 2959
+[HttpHeader] Cache-Control: private
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Thu, 30 Apr 2015 09:44:58 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"pageId":"3736130","activityCharityCreated":true,"activityType":"Running_Marathons","activityId":"756550","attribution":"","eventName":"Bubble-Bobble Run 1","eventId":756550,"currencySymbol":"£","currencyCode":"GBP","pageShortName":"Sdk2-test-6316b936d18f4a28954c1fca92187ab8","image":{"caption":"","url":"http://images.sandbox.justgiving.com/image/trainer-no-branding_web.jpg?imagetype=frpphoto&trymigrate=true&sourcepath=Stock","absoluteUrl":"http://images.sandbox.justgiving.com/image/trainer-no-branding_web.jpg?imagetype=frpphoto&trymigrate=true&sourcepath=Stock"},"imageCount":"2","status":"Active","owner":"Integration Tester","ownerProfileImageUrls":{"OriginalSize":"","Size150x150Face":""},"consumerId":30635159,"title":"Sdk2 Test Page","showEventDate":"True","eventDate":"\/Date(1451520000000+0000)\/","showExpiryDate":"False","expiryDate":"\/Date(1459378800000+0100)\/","fundraisingTarget":"0.00","totalRaisedPercentageOfFundraisingTarget":"0","totalRaisedOffline":"0","totalRaisedOnline":"0","totalRaisedSms":"0","grandTotalRaisedExcludingGiftAid":"0","totalEstimatedGiftAid":"0","branding":{"buttonColour":"0915F9","buttonTextColour":"F9F9FC","headerTextColour":"230D17","thermometerBackgroundColour":"230D17","thermometerFillColour":"0915F9","thermometerTextColour":"F9F9FC"},"charity":{"id":2050,"name":"The Demo Charity","description":"We raise money to support the work of Great Ormond Street Hospital so that it can help more children who need its specialist expertise.","logoUrl":"http://images.sandbox.justgiving.com/image/52525737-74a6-4d8e-a7c0-519887f6f2d3.jpg","logoAbsoluteUrl":"http://images.sandbox.justgiving.com/image/52525737-74a6-4d8e-a7c0-519887f6f2d3.jpg","profilePageUrl":null,"registrationNumber":"123456"},"media":{"images":[{"caption":"","url":"http://images.sandbox.justgiving.com/image/trainer-no-branding_web.jpg?imagetype=frpphoto&trymigrate=true&sourcepath=Stock","absoluteUrl":"http://images.sandbox.justgiving.com/image/trainer-no-branding_web.jpg?imagetype=frpphoto&trymigrate=true&sourcepath=Stock"},{"caption":"Test caption 5a69a6ef-c355-43be-8f4c-81cce9d8104b","url":"http://images.sandbox.justgiving.com/image/7564d133-0bd9-4d3f-aff3-c1d640fed6ff.jpg?imagetype=frpphoto&trymigrate=true","absoluteUrl":"http://images.sandbox.justgiving.com/image/7564d133-0bd9-4d3f-aff3-c1d640fed6ff.jpg?imagetype=frpphoto&trymigrate=true"}]},"story":"<p>Thanks for taking the time to visit my JustGiving page.</p><p>Donating through JustGiving is simple, fast and totally secure. Your details are safe with JustGiving – they’ll never sell them on or send unwanted emails. Once you donate, they’ll send your money directly to the charity. So it’s the most efficient way to donate – saving time and cutting costs for the charity.</p>","domain":"v3-sandbox.justgiving.com","smsCode":"YBMA77","companyAppealId":0,"rememberedPersonSummary":null,"pageSummaryWhat":null,"pageSummaryWhy":null,"teams":null,"pageSummary":""}
+
+2015-04-30 10:44:59,208 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] DELETE https://api-sandbox.justgiving.com/v1/fundraising/pages/{pageShortName}/images/{imageName}
+[AuthorizationMode] Basic
+[AppId] 6c37285f
+[ApplicationKey?] No
+[UrlSegment] pageShortName: Sdk2-test-6316b936d18f4a28954c1fca92187ab8
+[UrlSegment] imageName: 7564d133-0bd9-4d3f-aff3-c1d640fed6ff_jpg
+[HttpHeader] Accept: application/json
+[HttpHeader] Authorization: Basic aW50ZWdyYXRpb24tdGVzdC0yMDE1NDMwMTA0NDUxQGp1c3RnaXZpbmcuY29tOmE4NTZiYmMwLTAyODQtNDQ2OS1iZjFiLWI3OWVjOTJjZjM4Zg==
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 OK
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 715ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/30/2015 09:44:58
+[HttpHeader] X-JustGiving-Operation: FundraisingApi:DeleteFundraisingPageImage
+[HttpHeader] Content-Length: 0
+[HttpHeader] Cache-Control: private, s-maxage=0
+[HttpHeader] Date: Thu, 30 Apr 2015 09:44:59 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+
+2015-04-30 10:44:59,728 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] GET https://api-sandbox.justgiving.com/v1/fundraising/pages/{pageShortName}
+[AuthorizationMode] Basic
+[AppId] 6c37285f
+[ApplicationKey?] No
+[UrlSegment] pageShortName: Sdk2-test-6316b936d18f4a28954c1fca92187ab8
+[HttpHeader] Accept: application/json
+[HttpHeader] Authorization: Basic aW50ZWdyYXRpb24tdGVzdC0yMDE1NDMwMTA0NDUxQGp1c3RnaXZpbmcuY29tOmE4NTZiYmMwLTAyODQtNDQ2OS1iZjFiLWI3OWVjOTJjZjM4Zg==
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 OK
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 493ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/30/2015 09:44:59
+[HttpHeader] X-JustGiving-Operation: FundraisingApi:GetFundraisingPageDetails
+[HttpHeader] Content-Length: 2633
+[HttpHeader] Cache-Control: private
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Thu, 30 Apr 2015 09:44:59 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"pageId":"3736130","activityCharityCreated":true,"activityType":"Running_Marathons","activityId":"756550","attribution":"","eventName":"Bubble-Bobble Run 1","eventId":756550,"currencySymbol":"£","currencyCode":"GBP","pageShortName":"Sdk2-test-6316b936d18f4a28954c1fca92187ab8","image":{"caption":"","url":"http://images.sandbox.justgiving.com/image/trainer-no-branding_web.jpg?imagetype=frpphoto&trymigrate=true&sourcepath=Stock","absoluteUrl":"http://images.sandbox.justgiving.com/image/trainer-no-branding_web.jpg?imagetype=frpphoto&trymigrate=true&sourcepath=Stock"},"imageCount":"1","status":"Active","owner":"Integration Tester","ownerProfileImageUrls":{"OriginalSize":"","Size150x150Face":""},"consumerId":30635159,"title":"Sdk2 Test Page","showEventDate":"True","eventDate":"\/Date(1451520000000+0000)\/","showExpiryDate":"False","expiryDate":"\/Date(1459378800000+0100)\/","fundraisingTarget":"0.00","totalRaisedPercentageOfFundraisingTarget":"0","totalRaisedOffline":"0","totalRaisedOnline":"0","totalRaisedSms":"0","grandTotalRaisedExcludingGiftAid":"0","totalEstimatedGiftAid":"0","branding":{"buttonColour":"0915F9","buttonTextColour":"F9F9FC","headerTextColour":"230D17","thermometerBackgroundColour":"230D17","thermometerFillColour":"0915F9","thermometerTextColour":"F9F9FC"},"charity":{"id":2050,"name":"The Demo Charity","description":"We raise money to support the work of Great Ormond Street Hospital so that it can help more children who need its specialist expertise.","logoUrl":"http://images.sandbox.justgiving.com/image/52525737-74a6-4d8e-a7c0-519887f6f2d3.jpg","logoAbsoluteUrl":"http://images.sandbox.justgiving.com/image/52525737-74a6-4d8e-a7c0-519887f6f2d3.jpg","profilePageUrl":null,"registrationNumber":"123456"},"media":{"images":[{"caption":"","url":"http://images.sandbox.justgiving.com/image/trainer-no-branding_web.jpg?imagetype=frpphoto&trymigrate=true&sourcepath=Stock","absoluteUrl":"http://images.sandbox.justgiving.com/image/trainer-no-branding_web.jpg?imagetype=frpphoto&trymigrate=true&sourcepath=Stock"}]},"story":"<p>Thanks for taking the time to visit my JustGiving page.</p><p>Donating through JustGiving is simple, fast and totally secure. Your details are safe with JustGiving – they’ll never sell them on or send unwanted emails. Once you donate, they’ll send your money directly to the charity. So it’s the most efficient way to donate – saving time and cutting costs for the charity.</p>","domain":"v3-sandbox.justgiving.com","smsCode":"YBMA77","companyAppealId":0,"rememberedPersonSummary":null,"pageSummaryWhat":null,"pageSummaryWhy":null,"teams":null,"pageSummary":""}
+
+2015-04-30 10:46:20,430 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] PUT https://api-sandbox.justgiving.com/v1/account
+[AuthorizationMode] Anonymous
+[AppId] 6c37285f
+[ApplicationKey?] No
+[RequestBody] application/json: {"reference":"MY-REF","title":"Ms","firstName":"Integration","lastName":"Tester","address":{"line1":"Blue Fin Building","line2":"Southwark Street","townOrCity":"London","countyOrState":"London","country":"United Kingdom","postcodeOrZipcode":"SE1 0TU"},"email":"integration-test-2015430104617@justgiving.com","password":"a7b81080-9b12-40be-9202-6368fa6cf093","acceptTermsAndConditions":true}
+[HttpHeader] Accept: application/json
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 Account created successfully
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 1633ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/30/2015 09:46:18
+[HttpHeader] X-JustGiving-Operation: AccountApi:AccountRegistration
+[HttpHeader] Content-Length: 97
+[HttpHeader] Cache-Control: private
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Thu, 30 Apr 2015 09:46:20 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"country":"United Kingdom","email":"integration-test-2015430104617@justgiving.com","error":null}
+
+2015-04-30 10:46:23,322 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] PUT https://api-sandbox.justgiving.com/v1/fundraising/pages
+[AuthorizationMode] Basic
+[AppId] 6c37285f
+[ApplicationKey?] No
+[RequestBody] application/json: {"reference":null,"charityId":2050,"eventId":756550,"eventRef":null,"pageShortName":"Sdk2-test-2e88842d42db4bb0ae5e76a6b057ae61","pageTitle":"Sdk2 Test Page","activityType":null,"targetAmount":null,"justGivingOptIn":false,"charityOptIn":false,"eventDate":null,"eventName":null,"attribution":null,"charityFunded":false,"causeId":null,"companyAppealId":null,"expiryDate":null,"pageStory":null,"pageSummaryWhat":null,"pageSummaryWhy":null,"customCodes":null,"theme":null,"images":null,"videos":null,"rememberedPersonReference":null}
+[HttpHeader] Accept: application/json
+[HttpHeader] Authorization: Basic aW50ZWdyYXRpb24tdGVzdC0yMDE1NDMwMTA0NjE3QGp1c3RnaXZpbmcuY29tOmE3YjgxMDgwLTliMTItNDBiZS05MjAyLTYzNjhmYTZjZjA5Mw==
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 201 Created
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 2786ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/30/2015 09:46:20
+[HttpHeader] X-JustGiving-Operation: FundraisingApi:RegisterFundraisingPage
+[HttpHeader] Content-Length: 332
+[HttpHeader] Cache-Control: private, s-maxage=0
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Thu, 30 Apr 2015 09:46:23 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"error":null,"next":{"rel":"https:\/\/api-sandbox.justgiving.com\/\/v1\/fundraising\/pages","uri":"http:\/\/v3-sandbox.justgiving.com\/Sdk2-test-2e88842d42db4bb0ae5e76a6b057ae61","type":"application\/html"},"pageId":3736131,"signOnUrl":"http:\/\/v3-sandbox.justgiving.com\/auth\/94ebebf5-b704-4938-bc37-e1a5cefeac19","warnings":[]}
+
+2015-04-30 10:46:23,954 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] GET https://api-sandbox.justgiving.com/v1/fundraising/pages/{pageShortName}
+[AuthorizationMode] Basic
+[AppId] 6c37285f
+[ApplicationKey?] No
+[UrlSegment] pageShortName: Sdk2-test-2e88842d42db4bb0ae5e76a6b057ae61
+[HttpHeader] Accept: application/json
+[HttpHeader] Authorization: Basic aW50ZWdyYXRpb24tdGVzdC0yMDE1NDMwMTA0NjE3QGp1c3RnaXZpbmcuY29tOmE3YjgxMDgwLTliMTItNDBiZS05MjAyLTYzNjhmYTZjZjA5Mw==
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 OK
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 503ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/30/2015 09:46:23
+[HttpHeader] X-JustGiving-Operation: FundraisingApi:GetFundraisingPageDetails
+[HttpHeader] Content-Length: 2633
+[HttpHeader] Cache-Control: private
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Thu, 30 Apr 2015 09:46:24 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"pageId":"3736131","activityCharityCreated":true,"activityType":"Running_Marathons","activityId":"756550","attribution":"","eventName":"Bubble-Bobble Run 1","eventId":756550,"currencySymbol":"£","currencyCode":"GBP","pageShortName":"Sdk2-test-2e88842d42db4bb0ae5e76a6b057ae61","image":{"caption":"","url":"http://images.sandbox.justgiving.com/image/trainer-no-branding_web.jpg?imagetype=frpphoto&trymigrate=true&sourcepath=Stock","absoluteUrl":"http://images.sandbox.justgiving.com/image/trainer-no-branding_web.jpg?imagetype=frpphoto&trymigrate=true&sourcepath=Stock"},"imageCount":"1","status":"Active","owner":"Integration Tester","ownerProfileImageUrls":{"OriginalSize":"","Size150x150Face":""},"consumerId":30635160,"title":"Sdk2 Test Page","showEventDate":"True","eventDate":"\/Date(1451520000000+0000)\/","showExpiryDate":"False","expiryDate":"\/Date(1459378800000+0100)\/","fundraisingTarget":"0.00","totalRaisedPercentageOfFundraisingTarget":"0","totalRaisedOffline":"0","totalRaisedOnline":"0","totalRaisedSms":"0","grandTotalRaisedExcludingGiftAid":"0","totalEstimatedGiftAid":"0","branding":{"buttonColour":"0915F9","buttonTextColour":"F9F9FC","headerTextColour":"230D17","thermometerBackgroundColour":"230D17","thermometerFillColour":"0915F9","thermometerTextColour":"F9F9FC"},"charity":{"id":2050,"name":"The Demo Charity","description":"We raise money to support the work of Great Ormond Street Hospital so that it can help more children who need its specialist expertise.","logoUrl":"http://images.sandbox.justgiving.com/image/52525737-74a6-4d8e-a7c0-519887f6f2d3.jpg","logoAbsoluteUrl":"http://images.sandbox.justgiving.com/image/52525737-74a6-4d8e-a7c0-519887f6f2d3.jpg","profilePageUrl":null,"registrationNumber":"123456"},"media":{"images":[{"caption":"","url":"http://images.sandbox.justgiving.com/image/trainer-no-branding_web.jpg?imagetype=frpphoto&trymigrate=true&sourcepath=Stock","absoluteUrl":"http://images.sandbox.justgiving.com/image/trainer-no-branding_web.jpg?imagetype=frpphoto&trymigrate=true&sourcepath=Stock"}]},"story":"<p>Thanks for taking the time to visit my JustGiving page.</p><p>Donating through JustGiving is simple, fast and totally secure. Your details are safe with JustGiving – they’ll never sell them on or send unwanted emails. Once you donate, they’ll send your money directly to the charity. So it’s the most efficient way to donate – saving time and cutting costs for the charity.</p>","domain":"v3-sandbox.justgiving.com","smsCode":"CWGW82","companyAppealId":0,"rememberedPersonSummary":null,"pageSummaryWhat":null,"pageSummaryWhy":null,"teams":null,"pageSummary":""}
+
+2015-04-30 10:46:24,344 [Runner thread] WARN  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] DELETE https://api-sandbox.justgiving.com/v1/fundraising/pages/{pageShortName}/images/{imageName}
+[AuthorizationMode] Basic
+[AppId] 6c37285f
+[ApplicationKey?] No
+[UrlSegment] pageShortName: Sdk2-test-2e88842d42db4bb0ae5e76a6b057ae61
+[UrlSegment] imageName: stock_trainer-no-branding_web_jpg
+[HttpHeader] Accept: application/json
+[HttpHeader] Authorization: Basic aW50ZWdyYXRpb24tdGVzdC0yMDE1NDMwMTA0NjE3QGp1c3RnaXZpbmcuY29tOmE3YjgxMDgwLTliMTItNDBiZS05MjAyLTYzNjhmYTZjZjA5Mw==
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 400 Validation errors occured.
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 332ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/30/2015 09:46:24
+[HttpHeader] X-JustGiving-Operation: FundraisingApi:DeleteFundraisingPageImage
+[HttpHeader] Content-Length: 2295
+[HttpHeader] Cache-Control: private, s-maxage=0
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Thu, 30 Apr 2015 09:46:24 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] [{"id":"400","desc":"You cannot delete your last image"},{"id":"DebugException","desc":"GG.Api.Core.ApiValidationException: [400, You cannot delete your last image]\u000d\u000a   at GG.Api.Core.ActionCommandBase`1.Execute(ValidationErrors validationErrors) in d:\\BuildAgent\\work\\7201540685b22b6f\\GG.Api\\Core\\ActionCommandBase.cs:line 17\u000d\u000a   at GG.Api.Core.BaseApiController.ExecuteApiResult[TData](IActionCommand`1 command) in d:\\BuildAgent\\work\\7201540685b22b6f\\GG.Api\\Core\\BaseApiController.cs:line 83\u000d\u000a   at GG.Api.Services.Controllers.FundraisingApiController.DeleteFundraisingPageImage(String pageShortName, String imageName) in c:\\buildagent\\work\\ccf80515c2ac7f58\\Website\\GG.Api.Services\\Controllers\\FundraisingApiController.cs:line 479\u000d\u000a   at lambda_method(Closure , ControllerBase , Object[] )\u000d\u000a   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)\u000d\u000a   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)\u000d\u000a   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)\u000d\u000a   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass15.<InvokeActionMethodWithFilters>b__12()\u000d\u000a   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation)\u000d\u000a   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass15.<>c__DisplayClass17.<InvokeActionMethodWithFilters>b__14()\u000d\u000a   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation)\u000d\u000a   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass15.<>c__DisplayClass17.<InvokeActionMethodWithFilters>b__14()\u000d\u000a   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodWithFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor, IDictionary`2 parameters)\u000d\u000a   at System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)"}]
+
+2015-04-30 10:46:24,849 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] GET https://api-sandbox.justgiving.com/v1/fundraising/pages/{pageShortName}
+[AuthorizationMode] Basic
+[AppId] 6c37285f
+[ApplicationKey?] No
+[UrlSegment] pageShortName: Sdk2-test-2e88842d42db4bb0ae5e76a6b057ae61
+[HttpHeader] Accept: application/json
+[HttpHeader] Authorization: Basic aW50ZWdyYXRpb24tdGVzdC0yMDE1NDMwMTA0NjE3QGp1c3RnaXZpbmcuY29tOmE3YjgxMDgwLTliMTItNDBiZS05MjAyLTYzNjhmYTZjZjA5Mw==
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 OK
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 474ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/30/2015 09:46:24
+[HttpHeader] X-JustGiving-Operation: FundraisingApi:GetFundraisingPageDetails
+[HttpHeader] Content-Length: 2633
+[HttpHeader] Cache-Control: private
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Thu, 30 Apr 2015 09:46:24 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"pageId":"3736131","activityCharityCreated":true,"activityType":"Running_Marathons","activityId":"756550","attribution":"","eventName":"Bubble-Bobble Run 1","eventId":756550,"currencySymbol":"£","currencyCode":"GBP","pageShortName":"Sdk2-test-2e88842d42db4bb0ae5e76a6b057ae61","image":{"caption":"","url":"http://images.sandbox.justgiving.com/image/trainer-no-branding_web.jpg?imagetype=frpphoto&trymigrate=true&sourcepath=Stock","absoluteUrl":"http://images.sandbox.justgiving.com/image/trainer-no-branding_web.jpg?imagetype=frpphoto&trymigrate=true&sourcepath=Stock"},"imageCount":"1","status":"Active","owner":"Integration Tester","ownerProfileImageUrls":{"OriginalSize":"","Size150x150Face":""},"consumerId":30635160,"title":"Sdk2 Test Page","showEventDate":"True","eventDate":"\/Date(1451520000000+0000)\/","showExpiryDate":"False","expiryDate":"\/Date(1459378800000+0100)\/","fundraisingTarget":"0.00","totalRaisedPercentageOfFundraisingTarget":"0","totalRaisedOffline":"0","totalRaisedOnline":"0","totalRaisedSms":"0","grandTotalRaisedExcludingGiftAid":"0","totalEstimatedGiftAid":"0","branding":{"buttonColour":"0915F9","buttonTextColour":"F9F9FC","headerTextColour":"230D17","thermometerBackgroundColour":"230D17","thermometerFillColour":"0915F9","thermometerTextColour":"F9F9FC"},"charity":{"id":2050,"name":"The Demo Charity","description":"We raise money to support the work of Great Ormond Street Hospital so that it can help more children who need its specialist expertise.","logoUrl":"http://images.sandbox.justgiving.com/image/52525737-74a6-4d8e-a7c0-519887f6f2d3.jpg","logoAbsoluteUrl":"http://images.sandbox.justgiving.com/image/52525737-74a6-4d8e-a7c0-519887f6f2d3.jpg","profilePageUrl":null,"registrationNumber":"123456"},"media":{"images":[{"caption":"","url":"http://images.sandbox.justgiving.com/image/trainer-no-branding_web.jpg?imagetype=frpphoto&trymigrate=true&sourcepath=Stock","absoluteUrl":"http://images.sandbox.justgiving.com/image/trainer-no-branding_web.jpg?imagetype=frpphoto&trymigrate=true&sourcepath=Stock"}]},"story":"<p>Thanks for taking the time to visit my JustGiving page.</p><p>Donating through JustGiving is simple, fast and totally secure. Your details are safe with JustGiving – they’ll never sell them on or send unwanted emails. Once you donate, they’ll send your money directly to the charity. So it’s the most efficient way to donate – saving time and cutting costs for the charity.</p>","domain":"v3-sandbox.justgiving.com","smsCode":"CWGW82","companyAppealId":0,"rememberedPersonSummary":null,"pageSummaryWhat":null,"pageSummaryWhy":null,"teams":null,"pageSummary":""}
+
+2015-04-30 10:46:40,954 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] PUT https://api-sandbox.justgiving.com/v1/account
+[AuthorizationMode] Anonymous
+[AppId] 6c37285f
+[ApplicationKey?] No
+[RequestBody] application/json: {"reference":"MY-REF","title":"Ms","firstName":"Integration","lastName":"Tester","address":{"line1":"Blue Fin Building","line2":"Southwark Street","townOrCity":"London","countyOrState":"London","country":"United Kingdom","postcodeOrZipcode":"SE1 0TU"},"email":"integration-test-2015430104638@justgiving.com","password":"0a6b0f4b-c95a-4955-82fa-8baf22a99529","acceptTermsAndConditions":true}
+[HttpHeader] Accept: application/json
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 Account created successfully
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 1377ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/30/2015 09:46:39
+[HttpHeader] X-JustGiving-Operation: AccountApi:AccountRegistration
+[HttpHeader] Content-Length: 97
+[HttpHeader] Cache-Control: private
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Thu, 30 Apr 2015 09:46:41 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"country":"United Kingdom","email":"integration-test-2015430104638@justgiving.com","error":null}
+
+2015-04-30 10:46:43,753 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] PUT https://api-sandbox.justgiving.com/v1/fundraising/pages
+[AuthorizationMode] Basic
+[AppId] 6c37285f
+[ApplicationKey?] No
+[RequestBody] application/json: {"reference":null,"charityId":2050,"eventId":756550,"eventRef":null,"pageShortName":"Sdk2-test-74f6f6b5f34d42bcada38503e887d487","pageTitle":"Sdk2 Test Page","activityType":null,"targetAmount":null,"justGivingOptIn":false,"charityOptIn":false,"eventDate":null,"eventName":null,"attribution":null,"charityFunded":false,"causeId":null,"companyAppealId":null,"expiryDate":null,"pageStory":null,"pageSummaryWhat":null,"pageSummaryWhy":null,"customCodes":null,"theme":null,"images":null,"videos":null,"rememberedPersonReference":null}
+[HttpHeader] Accept: application/json
+[HttpHeader] Authorization: Basic aW50ZWdyYXRpb24tdGVzdC0yMDE1NDMwMTA0NjM4QGp1c3RnaXZpbmcuY29tOjBhNmIwZjRiLWM5NWEtNDk1NS04MmZhLThiYWYyMmE5OTUyOQ==
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 201 Created
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 2709ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/30/2015 09:46:41
+[HttpHeader] X-JustGiving-Operation: FundraisingApi:RegisterFundraisingPage
+[HttpHeader] Content-Length: 332
+[HttpHeader] Cache-Control: private, s-maxage=0
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Thu, 30 Apr 2015 09:46:44 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"error":null,"next":{"rel":"https:\/\/api-sandbox.justgiving.com\/\/v1\/fundraising\/pages","uri":"http:\/\/v3-sandbox.justgiving.com\/Sdk2-test-74f6f6b5f34d42bcada38503e887d487","type":"application\/html"},"pageId":3736132,"signOnUrl":"http:\/\/v3-sandbox.justgiving.com\/auth\/6a65e887-c064-404b-bd38-ac9890ed7ed6","warnings":[]}
+
+2015-04-30 10:46:44,321 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] GET https://api-sandbox.justgiving.com/v1/fundraising/pages/{pageShortName}
+[AuthorizationMode] Basic
+[AppId] 6c37285f
+[ApplicationKey?] No
+[UrlSegment] pageShortName: Sdk2-test-74f6f6b5f34d42bcada38503e887d487
+[HttpHeader] Accept: application/json
+[HttpHeader] Authorization: Basic aW50ZWdyYXRpb24tdGVzdC0yMDE1NDMwMTA0NjM4QGp1c3RnaXZpbmcuY29tOjBhNmIwZjRiLWM5NWEtNDk1NS04MmZhLThiYWYyMmE5OTUyOQ==
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 OK
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 473ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/30/2015 09:46:44
+[HttpHeader] X-JustGiving-Operation: FundraisingApi:GetFundraisingPageDetails
+[HttpHeader] Content-Length: 2633
+[HttpHeader] Cache-Control: private
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Thu, 30 Apr 2015 09:46:44 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"pageId":"3736132","activityCharityCreated":true,"activityType":"Running_Marathons","activityId":"756550","attribution":"","eventName":"Bubble-Bobble Run 1","eventId":756550,"currencySymbol":"£","currencyCode":"GBP","pageShortName":"Sdk2-test-74f6f6b5f34d42bcada38503e887d487","image":{"caption":"","url":"http://images.sandbox.justgiving.com/image/trainer-no-branding_web.jpg?imagetype=frpphoto&trymigrate=true&sourcepath=Stock","absoluteUrl":"http://images.sandbox.justgiving.com/image/trainer-no-branding_web.jpg?imagetype=frpphoto&trymigrate=true&sourcepath=Stock"},"imageCount":"1","status":"Active","owner":"Integration Tester","ownerProfileImageUrls":{"OriginalSize":"","Size150x150Face":""},"consumerId":30635161,"title":"Sdk2 Test Page","showEventDate":"True","eventDate":"\/Date(1451520000000+0000)\/","showExpiryDate":"False","expiryDate":"\/Date(1459378800000+0100)\/","fundraisingTarget":"0.00","totalRaisedPercentageOfFundraisingTarget":"0","totalRaisedOffline":"0","totalRaisedOnline":"0","totalRaisedSms":"0","grandTotalRaisedExcludingGiftAid":"0","totalEstimatedGiftAid":"0","branding":{"buttonColour":"0915F9","buttonTextColour":"F9F9FC","headerTextColour":"230D17","thermometerBackgroundColour":"230D17","thermometerFillColour":"0915F9","thermometerTextColour":"F9F9FC"},"charity":{"id":2050,"name":"The Demo Charity","description":"We raise money to support the work of Great Ormond Street Hospital so that it can help more children who need its specialist expertise.","logoUrl":"http://images.sandbox.justgiving.com/image/52525737-74a6-4d8e-a7c0-519887f6f2d3.jpg","logoAbsoluteUrl":"http://images.sandbox.justgiving.com/image/52525737-74a6-4d8e-a7c0-519887f6f2d3.jpg","profilePageUrl":null,"registrationNumber":"123456"},"media":{"images":[{"caption":"","url":"http://images.sandbox.justgiving.com/image/trainer-no-branding_web.jpg?imagetype=frpphoto&trymigrate=true&sourcepath=Stock","absoluteUrl":"http://images.sandbox.justgiving.com/image/trainer-no-branding_web.jpg?imagetype=frpphoto&trymigrate=true&sourcepath=Stock"}]},"story":"<p>Thanks for taking the time to visit my JustGiving page.</p><p>Donating through JustGiving is simple, fast and totally secure. Your details are safe with JustGiving – they’ll never sell them on or send unwanted emails. Once you donate, they’ll send your money directly to the charity. So it’s the most efficient way to donate – saving time and cutting costs for the charity.</p>","domain":"v3-sandbox.justgiving.com","smsCode":"MVFK76","companyAppealId":0,"rememberedPersonSummary":null,"pageSummaryWhat":null,"pageSummaryWhy":null,"teams":null,"pageSummary":""}
+
+2015-04-30 10:46:44,777 [Runner thread] WARN  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] DELETE https://api-sandbox.justgiving.com/v1/fundraising/pages/{pageShortName}/images/{imageName}
+[AuthorizationMode] Basic
+[AppId] 6c37285f
+[ApplicationKey?] No
+[UrlSegment] pageShortName: Sdk2-test-74f6f6b5f34d42bcada38503e887d487
+[UrlSegment] imageName: stock_trainer-no-branding_web_jpg
+[HttpHeader] Accept: application/json
+[HttpHeader] Authorization: Basic aW50ZWdyYXRpb24tdGVzdC0yMDE1NDMwMTA0NjM4QGp1c3RnaXZpbmcuY29tOjBhNmIwZjRiLWM5NWEtNDk1NS04MmZhLThiYWYyMmE5OTUyOQ==
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 400 Validation errors occured.
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 316ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/30/2015 09:46:44
+[HttpHeader] X-JustGiving-Operation: FundraisingApi:DeleteFundraisingPageImage
+[HttpHeader] Content-Length: 2295
+[HttpHeader] Cache-Control: private, s-maxage=0
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Thu, 30 Apr 2015 09:46:45 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] [{"id":"400","desc":"You cannot delete your last image"},{"id":"DebugException","desc":"GG.Api.Core.ApiValidationException: [400, You cannot delete your last image]\u000d\u000a   at GG.Api.Core.ActionCommandBase`1.Execute(ValidationErrors validationErrors) in d:\\BuildAgent\\work\\7201540685b22b6f\\GG.Api\\Core\\ActionCommandBase.cs:line 17\u000d\u000a   at GG.Api.Core.BaseApiController.ExecuteApiResult[TData](IActionCommand`1 command) in d:\\BuildAgent\\work\\7201540685b22b6f\\GG.Api\\Core\\BaseApiController.cs:line 83\u000d\u000a   at GG.Api.Services.Controllers.FundraisingApiController.DeleteFundraisingPageImage(String pageShortName, String imageName) in c:\\buildagent\\work\\ccf80515c2ac7f58\\Website\\GG.Api.Services\\Controllers\\FundraisingApiController.cs:line 479\u000d\u000a   at lambda_method(Closure , ControllerBase , Object[] )\u000d\u000a   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)\u000d\u000a   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)\u000d\u000a   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)\u000d\u000a   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass15.<InvokeActionMethodWithFilters>b__12()\u000d\u000a   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation)\u000d\u000a   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass15.<>c__DisplayClass17.<InvokeActionMethodWithFilters>b__14()\u000d\u000a   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation)\u000d\u000a   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass15.<>c__DisplayClass17.<InvokeActionMethodWithFilters>b__14()\u000d\u000a   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodWithFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor, IDictionary`2 parameters)\u000d\u000a   at System.Web.Mvc.ControllerActionInvoker.InvokeAction(ControllerContext controllerContext, String actionName)"}]
+
+2015-04-30 10:46:45,309 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] GET https://api-sandbox.justgiving.com/v1/fundraising/pages/{pageShortName}
+[AuthorizationMode] Basic
+[AppId] 6c37285f
+[ApplicationKey?] No
+[UrlSegment] pageShortName: Sdk2-test-74f6f6b5f34d42bcada38503e887d487
+[HttpHeader] Accept: application/json
+[HttpHeader] Authorization: Basic aW50ZWdyYXRpb24tdGVzdC0yMDE1NDMwMTA0NjM4QGp1c3RnaXZpbmcuY29tOjBhNmIwZjRiLWM5NWEtNDk1NS04MmZhLThiYWYyMmE5OTUyOQ==
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 OK
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 504ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/30/2015 09:46:45
+[HttpHeader] X-JustGiving-Operation: FundraisingApi:GetFundraisingPageDetails
+[HttpHeader] Content-Length: 2633
+[HttpHeader] Cache-Control: private
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Thu, 30 Apr 2015 09:46:45 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"pageId":"3736132","activityCharityCreated":true,"activityType":"Running_Marathons","activityId":"756550","attribution":"","eventName":"Bubble-Bobble Run 1","eventId":756550,"currencySymbol":"£","currencyCode":"GBP","pageShortName":"Sdk2-test-74f6f6b5f34d42bcada38503e887d487","image":{"caption":"","url":"http://images.sandbox.justgiving.com/image/trainer-no-branding_web.jpg?imagetype=frpphoto&trymigrate=true&sourcepath=Stock","absoluteUrl":"http://images.sandbox.justgiving.com/image/trainer-no-branding_web.jpg?imagetype=frpphoto&trymigrate=true&sourcepath=Stock"},"imageCount":"1","status":"Active","owner":"Integration Tester","ownerProfileImageUrls":{"OriginalSize":"","Size150x150Face":""},"consumerId":30635161,"title":"Sdk2 Test Page","showEventDate":"True","eventDate":"\/Date(1451520000000+0000)\/","showExpiryDate":"False","expiryDate":"\/Date(1459378800000+0100)\/","fundraisingTarget":"0.00","totalRaisedPercentageOfFundraisingTarget":"0","totalRaisedOffline":"0","totalRaisedOnline":"0","totalRaisedSms":"0","grandTotalRaisedExcludingGiftAid":"0","totalEstimatedGiftAid":"0","branding":{"buttonColour":"0915F9","buttonTextColour":"F9F9FC","headerTextColour":"230D17","thermometerBackgroundColour":"230D17","thermometerFillColour":"0915F9","thermometerTextColour":"F9F9FC"},"charity":{"id":2050,"name":"The Demo Charity","description":"We raise money to support the work of Great Ormond Street Hospital so that it can help more children who need its specialist expertise.","logoUrl":"http://images.sandbox.justgiving.com/image/52525737-74a6-4d8e-a7c0-519887f6f2d3.jpg","logoAbsoluteUrl":"http://images.sandbox.justgiving.com/image/52525737-74a6-4d8e-a7c0-519887f6f2d3.jpg","profilePageUrl":null,"registrationNumber":"123456"},"media":{"images":[{"caption":"","url":"http://images.sandbox.justgiving.com/image/trainer-no-branding_web.jpg?imagetype=frpphoto&trymigrate=true&sourcepath=Stock","absoluteUrl":"http://images.sandbox.justgiving.com/image/trainer-no-branding_web.jpg?imagetype=frpphoto&trymigrate=true&sourcepath=Stock"}]},"story":"<p>Thanks for taking the time to visit my JustGiving page.</p><p>Donating through JustGiving is simple, fast and totally secure. Your details are safe with JustGiving – they’ll never sell them on or send unwanted emails. Once you donate, they’ll send your money directly to the charity. So it’s the most efficient way to donate – saving time and cutting costs for the charity.</p>","domain":"v3-sandbox.justgiving.com","smsCode":"MVFK76","companyAppealId":0,"rememberedPersonSummary":null,"pageSummaryWhat":null,"pageSummaryWhy":null,"teams":null,"pageSummary":""}
+
+2015-04-30 10:47:59,748 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] PUT https://api-sandbox.justgiving.com/v1/account
+[AuthorizationMode] Anonymous
+[AppId] 6c37285f
+[ApplicationKey?] No
+[RequestBody] application/json: {"reference":"MY-REF","title":"Ms","firstName":"Integration","lastName":"Tester","address":{"line1":"Blue Fin Building","line2":"Southwark Street","townOrCity":"London","countyOrState":"London","country":"United Kingdom","postcodeOrZipcode":"SE1 0TU"},"email":"integration-test-2015430104756@justgiving.com","password":"394e0cf3-a317-4d26-932d-0168782d1e44","acceptTermsAndConditions":true}
+[HttpHeader] Accept: application/json
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 Account created successfully
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 1539ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/30/2015 09:47:58
+[HttpHeader] X-JustGiving-Operation: AccountApi:AccountRegistration
+[HttpHeader] Content-Length: 97
+[HttpHeader] Cache-Control: private
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Thu, 30 Apr 2015 09:47:59 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"country":"United Kingdom","email":"integration-test-2015430104756@justgiving.com","error":null}
+
+2015-04-30 10:48:02,681 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] PUT https://api-sandbox.justgiving.com/v1/fundraising/pages
+[AuthorizationMode] Basic
+[AppId] 6c37285f
+[ApplicationKey?] No
+[RequestBody] application/json: {"reference":null,"charityId":2050,"eventId":756550,"eventRef":null,"pageShortName":"Sdk2-test-234a8ee82138441cb211b519bd25090a","pageTitle":"Sdk2 Test Page","activityType":null,"targetAmount":null,"justGivingOptIn":false,"charityOptIn":false,"eventDate":null,"eventName":null,"attribution":null,"charityFunded":false,"causeId":null,"companyAppealId":null,"expiryDate":null,"pageStory":null,"pageSummaryWhat":null,"pageSummaryWhy":null,"customCodes":null,"theme":null,"images":null,"videos":null,"rememberedPersonReference":null}
+[HttpHeader] Accept: application/json
+[HttpHeader] Authorization: Basic aW50ZWdyYXRpb24tdGVzdC0yMDE1NDMwMTA0NzU2QGp1c3RnaXZpbmcuY29tOjM5NGUwY2YzLWEzMTctNGQyNi05MzJkLTAxNjg3ODJkMWU0NA==
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 201 Created
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 2817ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/30/2015 09:48:00
+[HttpHeader] X-JustGiving-Operation: FundraisingApi:RegisterFundraisingPage
+[HttpHeader] Content-Length: 332
+[HttpHeader] Cache-Control: private, s-maxage=0
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Thu, 30 Apr 2015 09:48:03 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"error":null,"next":{"rel":"https:\/\/api-sandbox.justgiving.com\/\/v1\/fundraising\/pages","uri":"http:\/\/v3-sandbox.justgiving.com\/Sdk2-test-234a8ee82138441cb211b519bd25090a","type":"application\/html"},"pageId":3736133,"signOnUrl":"http:\/\/v3-sandbox.justgiving.com\/auth\/3ccaca58-ca2e-4e1f-a9ef-22c3d2f76ae5","warnings":[]}
+
+2015-04-30 10:48:03,438 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] GET https://api-sandbox.justgiving.com/v1/fundraising/pages/{pageShortName}
+[AuthorizationMode] Basic
+[AppId] 6c37285f
+[ApplicationKey?] No
+[UrlSegment] pageShortName: Sdk2-test-234a8ee82138441cb211b519bd25090a
+[HttpHeader] Accept: application/json
+[HttpHeader] Authorization: Basic aW50ZWdyYXRpb24tdGVzdC0yMDE1NDMwMTA0NzU2QGp1c3RnaXZpbmcuY29tOjM5NGUwY2YzLWEzMTctNGQyNi05MzJkLTAxNjg3ODJkMWU0NA==
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 OK
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 608ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/30/2015 09:48:03
+[HttpHeader] X-JustGiving-Operation: FundraisingApi:GetFundraisingPageDetails
+[HttpHeader] Content-Length: 2633
+[HttpHeader] Cache-Control: private
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Thu, 30 Apr 2015 09:48:03 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"pageId":"3736133","activityCharityCreated":true,"activityType":"Running_Marathons","activityId":"756550","attribution":"","eventName":"Bubble-Bobble Run 1","eventId":756550,"currencySymbol":"£","currencyCode":"GBP","pageShortName":"Sdk2-test-234a8ee82138441cb211b519bd25090a","image":{"caption":"","url":"http://images.sandbox.justgiving.com/image/trainer-no-branding_web.jpg?imagetype=frpphoto&trymigrate=true&sourcepath=Stock","absoluteUrl":"http://images.sandbox.justgiving.com/image/trainer-no-branding_web.jpg?imagetype=frpphoto&trymigrate=true&sourcepath=Stock"},"imageCount":"1","status":"Active","owner":"Integration Tester","ownerProfileImageUrls":{"OriginalSize":"","Size150x150Face":""},"consumerId":30635162,"title":"Sdk2 Test Page","showEventDate":"True","eventDate":"\/Date(1451520000000+0000)\/","showExpiryDate":"False","expiryDate":"\/Date(1459378800000+0100)\/","fundraisingTarget":"0.00","totalRaisedPercentageOfFundraisingTarget":"0","totalRaisedOffline":"0","totalRaisedOnline":"0","totalRaisedSms":"0","grandTotalRaisedExcludingGiftAid":"0","totalEstimatedGiftAid":"0","branding":{"buttonColour":"0915F9","buttonTextColour":"F9F9FC","headerTextColour":"230D17","thermometerBackgroundColour":"230D17","thermometerFillColour":"0915F9","thermometerTextColour":"F9F9FC"},"charity":{"id":2050,"name":"The Demo Charity","description":"We raise money to support the work of Great Ormond Street Hospital so that it can help more children who need its specialist expertise.","logoUrl":"http://images.sandbox.justgiving.com/image/52525737-74a6-4d8e-a7c0-519887f6f2d3.jpg","logoAbsoluteUrl":"http://images.sandbox.justgiving.com/image/52525737-74a6-4d8e-a7c0-519887f6f2d3.jpg","profilePageUrl":null,"registrationNumber":"123456"},"media":{"images":[{"caption":"","url":"http://images.sandbox.justgiving.com/image/trainer-no-branding_web.jpg?imagetype=frpphoto&trymigrate=true&sourcepath=Stock","absoluteUrl":"http://images.sandbox.justgiving.com/image/trainer-no-branding_web.jpg?imagetype=frpphoto&trymigrate=true&sourcepath=Stock"}]},"story":"<p>Thanks for taking the time to visit my JustGiving page.</p><p>Donating through JustGiving is simple, fast and totally secure. Your details are safe with JustGiving – they’ll never sell them on or send unwanted emails. Once you donate, they’ll send your money directly to the charity. So it’s the most efficient way to donate – saving time and cutting costs for the charity.</p>","domain":"v3-sandbox.justgiving.com","smsCode":"YUMS80","companyAppealId":0,"rememberedPersonSummary":null,"pageSummaryWhat":null,"pageSummaryWhy":null,"teams":null,"pageSummary":""}
+
+2015-04-30 10:48:04,213 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] PUT https://api-sandbox.justgiving.com/v1/fundraising/pages/{pageShortName}/images
+[AuthorizationMode] Basic
+[AppId] 6c37285f
+[ApplicationKey?] No
+[UrlSegment] pageShortName: Sdk2-test-234a8ee82138441cb211b519bd25090a
+[RequestBody] application/json: {"url":"https://images.justgiving.com/image/b02dcadb-2897-4083-855d-c43b4fa18256.jpg?template=size200x200","caption":"","isDefault":false}
+[HttpHeader] Accept: application/json
+[HttpHeader] Authorization: Basic aW50ZWdyYXRpb24tdGVzdC0yMDE1NDMwMTA0NzU2QGp1c3RnaXZpbmcuY29tOjM5NGUwY2YzLWEzMTctNGQyNi05MzJkLTAxNjg3ODJkMWU0NA==
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 OK
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 740ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/30/2015 09:48:03
+[HttpHeader] X-JustGiving-Operation: FundraisingApi:AddImageToFundraisingPage
+[HttpHeader] Content-Length: 239
+[HttpHeader] Cache-Control: private, s-maxage=0
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Thu, 30 Apr 2015 09:48:03 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"next":{"rel":"https:\/\/api-sandbox.justgiving.com\/\/v1\/fundraising\/pages\/Sdk2-test-234a8ee82138441cb211b519bd25090a\/images","uri":"http:\/\/www.justgiving.com\/Sdk2-test-234a8ee82138441cb211b519bd25090a","type":"application\/xml"}}
+
+2015-04-30 10:48:04,814 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] DELETE https://api-sandbox.justgiving.com/v1/fundraising/pages/{pageShortName}/images/{imageName}
+[AuthorizationMode] Basic
+[AppId] 6c37285f
+[ApplicationKey?] No
+[UrlSegment] pageShortName: Sdk2-test-234a8ee82138441cb211b519bd25090a
+[UrlSegment] imageName: stock_trainer-no-branding_web_jpg
+[HttpHeader] Accept: application/json
+[HttpHeader] Authorization: Basic aW50ZWdyYXRpb24tdGVzdC0yMDE1NDMwMTA0NzU2QGp1c3RnaXZpbmcuY29tOjM5NGUwY2YzLWEzMTctNGQyNi05MzJkLTAxNjg3ODJkMWU0NA==
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 OK
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 535ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/30/2015 09:48:04
+[HttpHeader] X-JustGiving-Operation: FundraisingApi:DeleteFundraisingPageImage
+[HttpHeader] Content-Length: 0
+[HttpHeader] Cache-Control: private, s-maxage=0
+[HttpHeader] Date: Thu, 30 Apr 2015 09:48:05 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+
+2015-04-30 10:48:05,309 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] GET https://api-sandbox.justgiving.com/v1/fundraising/pages/{pageShortName}
+[AuthorizationMode] Basic
+[AppId] 6c37285f
+[ApplicationKey?] No
+[UrlSegment] pageShortName: Sdk2-test-234a8ee82138441cb211b519bd25090a
+[HttpHeader] Accept: application/json
+[HttpHeader] Authorization: Basic aW50ZWdyYXRpb24tdGVzdC0yMDE1NDMwMTA0NzU2QGp1c3RnaXZpbmcuY29tOjM5NGUwY2YzLWEzMTctNGQyNi05MzJkLTAxNjg3ODJkMWU0NA==
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 OK
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 467ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/30/2015 09:48:05
+[HttpHeader] X-JustGiving-Operation: FundraisingApi:GetFundraisingPageDetails
+[HttpHeader] Content-Length: 2617
+[HttpHeader] Cache-Control: private
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Thu, 30 Apr 2015 09:48:05 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"pageId":"3736133","activityCharityCreated":true,"activityType":"Running_Marathons","activityId":"756550","attribution":"","eventName":"Bubble-Bobble Run 1","eventId":756550,"currencySymbol":"£","currencyCode":"GBP","pageShortName":"Sdk2-test-234a8ee82138441cb211b519bd25090a","image":{"caption":"","url":"http://images.sandbox.justgiving.com/image/75c16936-babf-43a3-9d27-9392071825fd.jpg?imagetype=frpphoto&trymigrate=true","absoluteUrl":"http://images.sandbox.justgiving.com/image/75c16936-babf-43a3-9d27-9392071825fd.jpg?imagetype=frpphoto&trymigrate=true"},"imageCount":"1","status":"Active","owner":"Integration Tester","ownerProfileImageUrls":{"OriginalSize":"","Size150x150Face":""},"consumerId":30635162,"title":"Sdk2 Test Page","showEventDate":"True","eventDate":"\/Date(1451520000000+0000)\/","showExpiryDate":"False","expiryDate":"\/Date(1459378800000+0100)\/","fundraisingTarget":"0.00","totalRaisedPercentageOfFundraisingTarget":"0","totalRaisedOffline":"0","totalRaisedOnline":"0","totalRaisedSms":"0","grandTotalRaisedExcludingGiftAid":"0","totalEstimatedGiftAid":"0","branding":{"buttonColour":"0915F9","buttonTextColour":"F9F9FC","headerTextColour":"230D17","thermometerBackgroundColour":"230D17","thermometerFillColour":"0915F9","thermometerTextColour":"F9F9FC"},"charity":{"id":2050,"name":"The Demo Charity","description":"We raise money to support the work of Great Ormond Street Hospital so that it can help more children who need its specialist expertise.","logoUrl":"http://images.sandbox.justgiving.com/image/52525737-74a6-4d8e-a7c0-519887f6f2d3.jpg","logoAbsoluteUrl":"http://images.sandbox.justgiving.com/image/52525737-74a6-4d8e-a7c0-519887f6f2d3.jpg","profilePageUrl":null,"registrationNumber":"123456"},"media":{"images":[{"caption":"","url":"http://images.sandbox.justgiving.com/image/75c16936-babf-43a3-9d27-9392071825fd.jpg?imagetype=frpphoto&trymigrate=true","absoluteUrl":"http://images.sandbox.justgiving.com/image/75c16936-babf-43a3-9d27-9392071825fd.jpg?imagetype=frpphoto&trymigrate=true"}]},"story":"<p>Thanks for taking the time to visit my JustGiving page.</p><p>Donating through JustGiving is simple, fast and totally secure. Your details are safe with JustGiving – they’ll never sell them on or send unwanted emails. Once you donate, they’ll send your money directly to the charity. So it’s the most efficient way to donate – saving time and cutting costs for the charity.</p>","domain":"v3-sandbox.justgiving.com","smsCode":"YUMS80","companyAppealId":0,"rememberedPersonSummary":null,"pageSummaryWhat":null,"pageSummaryWhy":null,"teams":null,"pageSummary":""}
+
+2015-04-30 10:48:41,796 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] PUT https://api-sandbox.justgiving.com/v1/account
+[AuthorizationMode] Anonymous
+[AppId] 6c37285f
+[ApplicationKey?] No
+[RequestBody] application/json: {"reference":"MY-REF","title":"Ms","firstName":"Integration","lastName":"Tester","address":{"line1":"Blue Fin Building","line2":"Southwark Street","townOrCity":"London","countyOrState":"London","country":"United Kingdom","postcodeOrZipcode":"SE1 0TU"},"email":"integration-test-2015430104838@justgiving.com","password":"100ee0fc-dddd-46fa-b033-ce3eaceb0587","acceptTermsAndConditions":true}
+[HttpHeader] Accept: application/json
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 Account created successfully
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 1602ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/30/2015 09:48:40
+[HttpHeader] X-JustGiving-Operation: AccountApi:AccountRegistration
+[HttpHeader] Content-Length: 97
+[HttpHeader] Cache-Control: private
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Thu, 30 Apr 2015 09:48:41 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"country":"United Kingdom","email":"integration-test-2015430104838@justgiving.com","error":null}
+
+2015-04-30 10:48:44,489 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] PUT https://api-sandbox.justgiving.com/v1/fundraising/pages
+[AuthorizationMode] Basic
+[AppId] 6c37285f
+[ApplicationKey?] No
+[RequestBody] application/json: {"reference":null,"charityId":2050,"eventId":756550,"eventRef":null,"pageShortName":"Sdk2-test-0b7ea9f92b1740cd8ff40dc456f876d9","pageTitle":"Sdk2 Test Page","activityType":null,"targetAmount":null,"justGivingOptIn":false,"charityOptIn":false,"eventDate":null,"eventName":null,"attribution":null,"charityFunded":false,"causeId":null,"companyAppealId":null,"expiryDate":null,"pageStory":null,"pageSummaryWhat":null,"pageSummaryWhy":null,"customCodes":null,"theme":null,"images":null,"videos":null,"rememberedPersonReference":null}
+[HttpHeader] Accept: application/json
+[HttpHeader] Authorization: Basic aW50ZWdyYXRpb24tdGVzdC0yMDE1NDMwMTA0ODM4QGp1c3RnaXZpbmcuY29tOjEwMGVlMGZjLWRkZGQtNDZmYS1iMDMzLWNlM2VhY2ViMDU4Nw==
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 201 Created
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 2578ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/30/2015 09:48:42
+[HttpHeader] X-JustGiving-Operation: FundraisingApi:RegisterFundraisingPage
+[HttpHeader] Content-Length: 332
+[HttpHeader] Cache-Control: private, s-maxage=0
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Thu, 30 Apr 2015 09:48:44 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"error":null,"next":{"rel":"https:\/\/api-sandbox.justgiving.com\/\/v1\/fundraising\/pages","uri":"http:\/\/v3-sandbox.justgiving.com\/Sdk2-test-0b7ea9f92b1740cd8ff40dc456f876d9","type":"application\/html"},"pageId":3736134,"signOnUrl":"http:\/\/v3-sandbox.justgiving.com\/auth\/3ad503d1-f3d0-44af-b891-b3bdb1ee8a1f","warnings":[]}
+
+2015-04-30 10:48:45,122 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] GET https://api-sandbox.justgiving.com/v1/fundraising/pages/{pageShortName}
+[AuthorizationMode] Basic
+[AppId] 6c37285f
+[ApplicationKey?] No
+[UrlSegment] pageShortName: Sdk2-test-0b7ea9f92b1740cd8ff40dc456f876d9
+[HttpHeader] Accept: application/json
+[HttpHeader] Authorization: Basic aW50ZWdyYXRpb24tdGVzdC0yMDE1NDMwMTA0ODM4QGp1c3RnaXZpbmcuY29tOjEwMGVlMGZjLWRkZGQtNDZmYS1iMDMzLWNlM2VhY2ViMDU4Nw==
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 OK
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 492ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/30/2015 09:48:44
+[HttpHeader] X-JustGiving-Operation: FundraisingApi:GetFundraisingPageDetails
+[HttpHeader] Content-Length: 2633
+[HttpHeader] Cache-Control: private
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Thu, 30 Apr 2015 09:48:44 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"pageId":"3736134","activityCharityCreated":true,"activityType":"Running_Marathons","activityId":"756550","attribution":"","eventName":"Bubble-Bobble Run 1","eventId":756550,"currencySymbol":"£","currencyCode":"GBP","pageShortName":"Sdk2-test-0b7ea9f92b1740cd8ff40dc456f876d9","image":{"caption":"","url":"http://images.sandbox.justgiving.com/image/trainer-no-branding_web.jpg?imagetype=frpphoto&trymigrate=true&sourcepath=Stock","absoluteUrl":"http://images.sandbox.justgiving.com/image/trainer-no-branding_web.jpg?imagetype=frpphoto&trymigrate=true&sourcepath=Stock"},"imageCount":"1","status":"Active","owner":"Integration Tester","ownerProfileImageUrls":{"OriginalSize":"","Size150x150Face":""},"consumerId":30635163,"title":"Sdk2 Test Page","showEventDate":"True","eventDate":"\/Date(1451520000000+0000)\/","showExpiryDate":"False","expiryDate":"\/Date(1459378800000+0100)\/","fundraisingTarget":"0.00","totalRaisedPercentageOfFundraisingTarget":"0","totalRaisedOffline":"0","totalRaisedOnline":"0","totalRaisedSms":"0","grandTotalRaisedExcludingGiftAid":"0","totalEstimatedGiftAid":"0","branding":{"buttonColour":"0915F9","buttonTextColour":"F9F9FC","headerTextColour":"230D17","thermometerBackgroundColour":"230D17","thermometerFillColour":"0915F9","thermometerTextColour":"F9F9FC"},"charity":{"id":2050,"name":"The Demo Charity","description":"We raise money to support the work of Great Ormond Street Hospital so that it can help more children who need its specialist expertise.","logoUrl":"http://images.sandbox.justgiving.com/image/52525737-74a6-4d8e-a7c0-519887f6f2d3.jpg","logoAbsoluteUrl":"http://images.sandbox.justgiving.com/image/52525737-74a6-4d8e-a7c0-519887f6f2d3.jpg","profilePageUrl":null,"registrationNumber":"123456"},"media":{"images":[{"caption":"","url":"http://images.sandbox.justgiving.com/image/trainer-no-branding_web.jpg?imagetype=frpphoto&trymigrate=true&sourcepath=Stock","absoluteUrl":"http://images.sandbox.justgiving.com/image/trainer-no-branding_web.jpg?imagetype=frpphoto&trymigrate=true&sourcepath=Stock"}]},"story":"<p>Thanks for taking the time to visit my JustGiving page.</p><p>Donating through JustGiving is simple, fast and totally secure. Your details are safe with JustGiving – they’ll never sell them on or send unwanted emails. Once you donate, they’ll send your money directly to the charity. So it’s the most efficient way to donate – saving time and cutting costs for the charity.</p>","domain":"v3-sandbox.justgiving.com","smsCode":"TJEP59","companyAppealId":0,"rememberedPersonSummary":null,"pageSummaryWhat":null,"pageSummaryWhy":null,"teams":null,"pageSummary":""}
+
+2015-04-30 10:48:45,652 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] PUT https://api-sandbox.justgiving.com/v1/fundraising/pages/{pageShortName}/images
+[AuthorizationMode] Basic
+[AppId] 6c37285f
+[ApplicationKey?] No
+[UrlSegment] pageShortName: Sdk2-test-0b7ea9f92b1740cd8ff40dc456f876d9
+[RequestBody] application/json: {"url":"https://images.justgiving.com/image/b02dcadb-2897-4083-855d-c43b4fa18256.jpg?template=size200x200","caption":"Test caption 6ecd7e6f-cb98-431c-a6e1-3c58c7f407f9","isDefault":false}
+[HttpHeader] Accept: application/json
+[HttpHeader] Authorization: Basic aW50ZWdyYXRpb24tdGVzdC0yMDE1NDMwMTA0ODM4QGp1c3RnaXZpbmcuY29tOjEwMGVlMGZjLWRkZGQtNDZmYS1iMDMzLWNlM2VhY2ViMDU4Nw==
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 OK
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 498ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/30/2015 09:48:45
+[HttpHeader] X-JustGiving-Operation: FundraisingApi:AddImageToFundraisingPage
+[HttpHeader] Content-Length: 239
+[HttpHeader] Cache-Control: private, s-maxage=0
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Thu, 30 Apr 2015 09:48:45 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"next":{"rel":"https:\/\/api-sandbox.justgiving.com\/\/v1\/fundraising\/pages\/Sdk2-test-0b7ea9f92b1740cd8ff40dc456f876d9\/images","uri":"http:\/\/www.justgiving.com\/Sdk2-test-0b7ea9f92b1740cd8ff40dc456f876d9","type":"application\/xml"}}
+
+2015-04-30 10:48:46,074 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] DELETE https://api-sandbox.justgiving.com/v1/fundraising/pages/{pageShortName}/images/{imageName}
+[AuthorizationMode] Basic
+[AppId] 6c37285f
+[ApplicationKey?] No
+[UrlSegment] pageShortName: Sdk2-test-0b7ea9f92b1740cd8ff40dc456f876d9
+[UrlSegment] imageName: stock_trainer-no-branding_web_jpg
+[HttpHeader] Accept: application/json
+[HttpHeader] Authorization: Basic aW50ZWdyYXRpb24tdGVzdC0yMDE1NDMwMTA0ODM4QGp1c3RnaXZpbmcuY29tOjEwMGVlMGZjLWRkZGQtNDZmYS1iMDMzLWNlM2VhY2ViMDU4Nw==
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 OK
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 357ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/30/2015 09:48:46
+[HttpHeader] X-JustGiving-Operation: FundraisingApi:DeleteFundraisingPageImage
+[HttpHeader] Content-Length: 0
+[HttpHeader] Cache-Control: private, s-maxage=0
+[HttpHeader] Date: Thu, 30 Apr 2015 09:48:45 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+
+2015-04-30 10:48:46,593 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] GET https://api-sandbox.justgiving.com/v1/fundraising/pages/{pageShortName}
+[AuthorizationMode] Basic
+[AppId] 6c37285f
+[ApplicationKey?] No
+[UrlSegment] pageShortName: Sdk2-test-0b7ea9f92b1740cd8ff40dc456f876d9
+[HttpHeader] Accept: application/json
+[HttpHeader] Authorization: Basic aW50ZWdyYXRpb24tdGVzdC0yMDE1NDMwMTA0ODM4QGp1c3RnaXZpbmcuY29tOjEwMGVlMGZjLWRkZGQtNDZmYS1iMDMzLWNlM2VhY2ViMDU4Nw==
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 OK
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 485ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/30/2015 09:48:46
+[HttpHeader] X-JustGiving-Operation: FundraisingApi:GetFundraisingPageDetails
+[HttpHeader] Content-Length: 2715
+[HttpHeader] Cache-Control: private
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Thu, 30 Apr 2015 09:48:46 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"pageId":"3736134","activityCharityCreated":true,"activityType":"Running_Marathons","activityId":"756550","attribution":"","eventName":"Bubble-Bobble Run 1","eventId":756550,"currencySymbol":"£","currencyCode":"GBP","pageShortName":"Sdk2-test-0b7ea9f92b1740cd8ff40dc456f876d9","image":{"caption":"Test caption 6ecd7e6f-cb98-431c-a6e1-3c58c7f407f9","url":"http://images.sandbox.justgiving.com/image/d8daac7a-db80-4a80-b7ae-caddf5f185ad.jpg?imagetype=frpphoto&trymigrate=true","absoluteUrl":"http://images.sandbox.justgiving.com/image/d8daac7a-db80-4a80-b7ae-caddf5f185ad.jpg?imagetype=frpphoto&trymigrate=true"},"imageCount":"1","status":"Active","owner":"Integration Tester","ownerProfileImageUrls":{"OriginalSize":"","Size150x150Face":""},"consumerId":30635163,"title":"Sdk2 Test Page","showEventDate":"True","eventDate":"\/Date(1451520000000+0000)\/","showExpiryDate":"False","expiryDate":"\/Date(1459378800000+0100)\/","fundraisingTarget":"0.00","totalRaisedPercentageOfFundraisingTarget":"0","totalRaisedOffline":"0","totalRaisedOnline":"0","totalRaisedSms":"0","grandTotalRaisedExcludingGiftAid":"0","totalEstimatedGiftAid":"0","branding":{"buttonColour":"0915F9","buttonTextColour":"F9F9FC","headerTextColour":"230D17","thermometerBackgroundColour":"230D17","thermometerFillColour":"0915F9","thermometerTextColour":"F9F9FC"},"charity":{"id":2050,"name":"The Demo Charity","description":"We raise money to support the work of Great Ormond Street Hospital so that it can help more children who need its specialist expertise.","logoUrl":"http://images.sandbox.justgiving.com/image/52525737-74a6-4d8e-a7c0-519887f6f2d3.jpg","logoAbsoluteUrl":"http://images.sandbox.justgiving.com/image/52525737-74a6-4d8e-a7c0-519887f6f2d3.jpg","profilePageUrl":null,"registrationNumber":"123456"},"media":{"images":[{"caption":"Test caption 6ecd7e6f-cb98-431c-a6e1-3c58c7f407f9","url":"http://images.sandbox.justgiving.com/image/d8daac7a-db80-4a80-b7ae-caddf5f185ad.jpg?imagetype=frpphoto&trymigrate=true","absoluteUrl":"http://images.sandbox.justgiving.com/image/d8daac7a-db80-4a80-b7ae-caddf5f185ad.jpg?imagetype=frpphoto&trymigrate=true"}]},"story":"<p>Thanks for taking the time to visit my JustGiving page.</p><p>Donating through JustGiving is simple, fast and totally secure. Your details are safe with JustGiving – they’ll never sell them on or send unwanted emails. Once you donate, they’ll send your money directly to the charity. So it’s the most efficient way to donate – saving time and cutting costs for the charity.</p>","domain":"v3-sandbox.justgiving.com","smsCode":"TJEP59","companyAppealId":0,"rememberedPersonSummary":null,"pageSummaryWhat":null,"pageSummaryWhy":null,"teams":null,"pageSummary":""}
+
+2015-04-30 10:52:44,124 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] PUT https://api-sandbox.justgiving.com/v1/account
+[AuthorizationMode] Anonymous
+[AppId] 6c37285f
+[ApplicationKey?] No
+[RequestBody] application/json: {"reference":"MY-REF","title":"Ms","firstName":"Integration","lastName":"Tester","address":{"line1":"Blue Fin Building","line2":"Southwark Street","townOrCity":"London","countyOrState":"London","country":"United Kingdom","postcodeOrZipcode":"SE1 0TU"},"email":"integration-test-2015430105241@justgiving.com","password":"51696f12-f04b-4b75-8b22-8fad43a8445b","acceptTermsAndConditions":true}
+[HttpHeader] Accept: application/json
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 Account created successfully
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 1518ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/30/2015 09:52:42
+[HttpHeader] X-JustGiving-Operation: AccountApi:AccountRegistration
+[HttpHeader] Content-Length: 97
+[HttpHeader] Cache-Control: private
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Thu, 30 Apr 2015 09:52:44 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"country":"United Kingdom","email":"integration-test-2015430105241@justgiving.com","error":null}
+
+2015-04-30 10:52:46,841 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] PUT https://api-sandbox.justgiving.com/v1/fundraising/pages
+[AuthorizationMode] Basic
+[AppId] 6c37285f
+[ApplicationKey?] No
+[RequestBody] application/json: {"reference":null,"charityId":2050,"eventId":756550,"eventRef":null,"pageShortName":"Sdk2-test-a06d290e327543dd86f8c6dbf4fbcafe","pageTitle":"Sdk2 Test Page","activityType":null,"targetAmount":null,"justGivingOptIn":false,"charityOptIn":false,"eventDate":null,"eventName":null,"attribution":null,"charityFunded":false,"causeId":null,"companyAppealId":null,"expiryDate":null,"pageStory":null,"pageSummaryWhat":null,"pageSummaryWhy":null,"customCodes":null,"theme":null,"images":null,"videos":null,"rememberedPersonReference":null}
+[HttpHeader] Accept: application/json
+[HttpHeader] Authorization: Basic aW50ZWdyYXRpb24tdGVzdC0yMDE1NDMwMTA1MjQxQGp1c3RnaXZpbmcuY29tOjUxNjk2ZjEyLWYwNGItNGI3NS04YjIyLThmYWQ0M2E4NDQ1Yg==
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 201 Created
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 2600ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/30/2015 09:52:44
+[HttpHeader] X-JustGiving-Operation: FundraisingApi:RegisterFundraisingPage
+[HttpHeader] Content-Length: 332
+[HttpHeader] Cache-Control: private, s-maxage=0
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Thu, 30 Apr 2015 09:52:47 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"error":null,"next":{"rel":"https:\/\/api-sandbox.justgiving.com\/\/v1\/fundraising\/pages","uri":"http:\/\/v3-sandbox.justgiving.com\/Sdk2-test-a06d290e327543dd86f8c6dbf4fbcafe","type":"application\/html"},"pageId":3736135,"signOnUrl":"http:\/\/v3-sandbox.justgiving.com\/auth\/ade7f5e4-ed23-487b-b04c-a91c367e2daa","warnings":[]}
+
+2015-04-30 10:52:47,482 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] PUT https://api-sandbox.justgiving.com/v1/fundraising/pages/{pageShortName}/images
+[AuthorizationMode] Basic
+[AppId] 6c37285f
+[ApplicationKey?] No
+[UrlSegment] pageShortName: Sdk2-test-a06d290e327543dd86f8c6dbf4fbcafe
+[RequestBody] application/json: {"url":"https://images.justgiving.com/image/b02dcadb-2897-4083-855d-c43b4fa18256.jpg?template=size200x200","caption":"Test caption ff6bf2f3-163a-4855-ae92-9fc854c3a2b7","isDefault":false}
+[HttpHeader] Accept: application/json
+[HttpHeader] Authorization: Basic aW50ZWdyYXRpb24tdGVzdC0yMDE1NDMwMTA1MjQxQGp1c3RnaXZpbmcuY29tOjUxNjk2ZjEyLWYwNGItNGI3NS04YjIyLThmYWQ0M2E4NDQ1Yg==
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 OK
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 509ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/30/2015 09:52:47
+[HttpHeader] X-JustGiving-Operation: FundraisingApi:AddImageToFundraisingPage
+[HttpHeader] Content-Length: 239
+[HttpHeader] Cache-Control: private, s-maxage=0
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Thu, 30 Apr 2015 09:52:47 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] {"next":{"rel":"https:\/\/api-sandbox.justgiving.com\/\/v1\/fundraising\/pages\/Sdk2-test-a06d290e327543dd86f8c6dbf4fbcafe\/images","uri":"http:\/\/www.justgiving.com\/Sdk2-test-a06d290e327543dd86f8c6dbf4fbcafe","type":"application\/xml"}}
+
+2015-04-30 10:52:47,854 [Runner thread] INFO  JustGiving.Api.Sdk2.Logging.Log4NetLogProvider [(null)] - 
+[HttpRequest] GET https://api-sandbox.justgiving.com/v1/fundraising/pages/{pageShortName}/images
+[AuthorizationMode] Basic
+[AppId] 6c37285f
+[ApplicationKey?] No
+[UrlSegment] pageShortName: Sdk2-test-a06d290e327543dd86f8c6dbf4fbcafe
+[HttpHeader] Accept: application/json
+[HttpHeader] Authorization: Basic aW50ZWdyYXRpb24tdGVzdC0yMDE1NDMwMTA1MjQxQGp1c3RnaXZpbmcuY29tOjUxNjk2ZjEyLWYwNGItNGI3NS04YjIyLThmYWQ0M2E4NDQ1Yg==
+[HttpHeader] x-app-id: 6c37285f
+[HttpHeader] x-justgiving-sdk-version: 2.0.0.0
+[QueryString] debug: true
+
+[HttpResponse]
+[HttpStatus] 200 OK
+[HttpHeader] X-JustGiving-Version: 3.106.1.1960
+[HttpHeader] Access-Control-Allow-Origin: *
+[HttpHeader] Access-Control-Allow-Methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS
+[HttpHeader] Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, Referer, User-Agent, Origin, Accept, Host, x-app-id, x-api-key, x-application-key
+[HttpHeader] Access-Control-Max-Age: 300
+[HttpHeader] X-AspNetMvc-Version: 3.0
+[HttpHeader] X-JustGiving-RenderTime: 302ms
+[HttpHeader] X-JustGiving-MachineName: JUST-LN1-SND01
+[HttpHeader] X-JustGiving-UTCTimeStamp: 04/30/2015 09:52:47
+[HttpHeader] X-JustGiving-Operation: FundraisingApi:GetImagesForFundraisingPage
+[HttpHeader] Content-Length: 602
+[HttpHeader] Cache-Control: private
+[HttpHeader] Content-Type: application/json; charset=utf-8
+[HttpHeader] Date: Thu, 30 Apr 2015 09:52:47 GMT
+[HttpHeader] Server: Microsoft-IIS/6.0
+[HttpHeader] X-AspNet-Version: 4.0.30319
+[HttpHeader] X-Powered-By: ASP.NET
+[ResponseBody] [{"caption":"","url":"//images.sandbox.justgiving.com/image/trainer-no-branding_web.jpg?imagetype=frpphoto&trymigrate=true&sourcepath=Stock","absoluteUrl":"http://images.sandbox.justgiving.com/image/trainer-no-branding_web.jpg?imagetype=frpphoto&trymigrate=true&sourcepath=Stock"},{"caption":"Test caption ff6bf2f3-163a-4855-ae92-9fc854c3a2b7","url":"//images.sandbox.justgiving.com/image/6f59d5fb-7abb-4aae-874f-b8d427fd736a.jpg?imagetype=frpphoto&trymigrate=true","absoluteUrl":"http://images.sandbox.justgiving.com/image/6f59d5fb-7abb-4aae-874f-b8d427fd736a.jpg?imagetype=frpphoto&trymigrate=true"}]
+

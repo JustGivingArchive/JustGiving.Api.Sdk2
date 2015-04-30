@@ -113,6 +113,7 @@
     <Compile Include="Model\Event\Response\PagesForEvent.cs" />
     <Compile Include="Model\Event\Response\RestResponseNavigationElement.cs" />
     <Compile Include="Model\Fundraising\Request\ActivityType.cs" />
+    <Compile Include="Model\Fundraising\Request\AddImageToFundraisingPageRequest.cs" />
     <Compile Include="Model\Fundraising\Request\FundraisingPageAttribution.cs" />
     <Compile Include="Model\Fundraising\Request\FundraisingPageRegistration.cs" />
     <Compile Include="Model\Fundraising\Request\ImageInfo.cs" />
@@ -123,6 +124,7 @@
     <Compile Include="Model\Fundraising\Request\RememberedPersonReference.cs" />
     <Compile Include="Model\Fundraising\Request\StorySupplement.cs" />
     <Compile Include="Model\Fundraising\Request\VideoInfo.cs" />
+    <Compile Include="Model\Fundraising\Response\AddImageToFundraisingPageResponse.cs" />
     <Compile Include="Model\Fundraising\Response\ErrorResponse.cs" />
     <Compile Include="Model\Fundraising\Response\FundraisingPageAttribution.cs" />
     <Compile Include="Model\Fundraising\Response\FundraisingPageBranding.cs" />
