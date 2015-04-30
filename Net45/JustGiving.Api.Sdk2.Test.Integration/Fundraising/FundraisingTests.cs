@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Net;
+using System.Net.Configuration;
 using System.Reflection;
 using JustGiving.Api.Sdk2.Model.Fundraising.Request;
 using NUnit.Framework;
@@ -485,7 +486,7 @@ namespace JustGiving.Api.Sdk2.Test.Integration.Fundraising
 
             const string imageUrl = "https://images.justgiving.com/image/b02dcadb-2897-4083-855d-c43b4fa18256.jpg?template=size200x200";
             var caption = "Test caption " + Guid.NewGuid();
-            var result = await client.Fundraising.AddImageToFundraisingPage(pageName, new AddImageToFundraisingPageRequest{Caption = caption, IsDefault=false, Url = imageUrl});
+            var result = await client.Fundraising.AddImageToFundraisingPage(pageName, new ImageInfo{Caption = caption, IsDefault=false, Url = imageUrl});
             var frpInfo = await client.Fundraising.GetFundraisingPageDetails(pageName);
             
             Assert.That(result.StatusCode, Is.EqualTo(HttpStatusCode.OK));
@@ -510,7 +511,7 @@ namespace JustGiving.Api.Sdk2.Test.Integration.Fundraising
 
             const string imageUrl = "https://images.justgiving.com/image/b02dcadb-2897-4083-855d-c43b4fa18256.jpg?template=size200x200";
             var caption = "Test caption " + Guid.NewGuid();
-            var result = await client.Fundraising.AddImageToFundraisingPage(pageName, new AddImageToFundraisingPageRequest { Caption = caption, IsDefault = true, Url = imageUrl });
+            var result = await client.Fundraising.AddImageToFundraisingPage(pageName, new ImageInfo { Caption = caption, IsDefault = true, Url = imageUrl });
             var frpInfo = await client.Fundraising.GetFundraisingPageDetails(pageName);
 
             Assert.That(result.StatusCode, Is.EqualTo(HttpStatusCode.OK));
@@ -535,7 +536,7 @@ namespace JustGiving.Api.Sdk2.Test.Integration.Fundraising
 
             const string imageUrl = "https://images.justgiving.com/image/b02dcadb-2897-4083-855d-c43b4fa18256.jpg?template=size200x200";
             var caption = "Test caption " + Guid.NewGuid();
-            await client.Fundraising.AddImageToFundraisingPage(pageName, new AddImageToFundraisingPageRequest { Caption = caption, IsDefault = false, Url = imageUrl });
+            await client.Fundraising.AddImageToFundraisingPage(pageName, new ImageInfo { Caption = caption, IsDefault = false, Url = imageUrl });
             var frpInfo = await client.Fundraising.GetFundraisingPageDetails(pageName);
             var imageUri = new Uri(frpInfo.Data.Media.Images.First(im => im.Caption == caption).Url);
             var imageName = imageUri.Segments[imageUri.Segments.Length - 1];
@@ -564,7 +565,7 @@ namespace JustGiving.Api.Sdk2.Test.Integration.Fundraising
             var frpInfo = await client.Fundraising.GetFundraisingPageDetails(pageName);
             var otherCaption = "Test caption " + Guid.NewGuid();
             const string otherImageUrl = "https://images.justgiving.com/image/b02dcadb-2897-4083-855d-c43b4fa18256.jpg?template=size200x200";
-            await client.Fundraising.AddImageToFundraisingPage(pageName, new AddImageToFundraisingPageRequest { Caption = otherCaption, IsDefault = false, Url = otherImageUrl });
+            await client.Fundraising.AddImageToFundraisingPage(pageName, new ImageInfo { Caption = otherCaption, IsDefault = false, Url = otherImageUrl });
 
             var caption = frpInfo.Data.Image.Caption;
             var imageUri = new Uri(frpInfo.Data.Image.Url);
@@ -594,7 +595,7 @@ namespace JustGiving.Api.Sdk2.Test.Integration.Fundraising
 
             const string imageUrl = "https://images.justgiving.com/image/b02dcadb-2897-4083-855d-c43b4fa18256.jpg?template=size200x200";
             var caption = "Test caption " + Guid.NewGuid();
-            await client.Fundraising.AddImageToFundraisingPage(pageName, new AddImageToFundraisingPageRequest { Caption = caption, IsDefault = false, Url = imageUrl });
+            await client.Fundraising.AddImageToFundraisingPage(pageName, new ImageInfo(){ Caption = caption, IsDefault = false, Url = imageUrl });
             var result = await client.Fundraising.GetImagesForFundraisingPage(pageName);
 
             Assert.That(result.StatusCode, Is.EqualTo(HttpStatusCode.OK));
@@ -602,6 +603,118 @@ namespace JustGiving.Api.Sdk2.Test.Integration.Fundraising
             Assert.That(result.Data.Count, Is.EqualTo(2));
         }
 
+        [Test]
+        public async void CanAddVideoToFundraisingPage()
+        {
+            const int eventId = 756550;
+            var pageName = "Sdk2-test-" + Guid.NewGuid().ToString("N");
+            var client = await TestContext.CreateBasicAuthClientAndUser();
+            var frpRequest = new FundraisingPageRegistration
+            {
+                CharityId = TestContext.DemoCharityId,
+                PageShortName = pageName,
+                PageTitle = "Sdk2 Test Page",
+                EventId = eventId
+            };
+
+            await client.Fundraising.RegisterFundraisingPage(frpRequest);
+
+            const string videoUrl = "http://www.youtube.com/watch?v=ZmD7z7uH-Hg";
+            var caption = "Test caption " + Guid.NewGuid();
+            var result = await client.Fundraising.AddVideoToFundraisingPage(pageName, new VideoInfo { Caption = caption, IsDefault = false, Url = videoUrl });
+
+            Assert.That(result.StatusCode, Is.EqualTo(HttpStatusCode.OK));
+        }
+
+        [Test]
+        public async void CanGetVideosForFundraisingPage()
+        {
+            const int eventId = 756550;
+            var pageName = "Sdk2-test-" + Guid.NewGuid().ToString("N");
+            var client = await TestContext.CreateBasicAuthClientAndUser();
+            var frpRequest = new FundraisingPageRegistration
+            {
+                CharityId = TestContext.DemoCharityId,
+                PageShortName = pageName,
+                PageTitle = "Sdk2 Test Page",
+                EventId = eventId
+            };
+
+            await client.Fundraising.RegisterFundraisingPage(frpRequest);
+
+            const string videoUrl = "http://www.youtube.com/watch?v=ZmD7z7uH-Hg";
+            var caption = "Test caption " + Guid.NewGuid();
+            await client.Fundraising.AddVideoToFundraisingPage(pageName, new VideoInfo { Caption = caption, IsDefault = false, Url = videoUrl });
+
+            var result = await client.Fundraising.GetVideosForFundraisingPage(pageName);
+
+            Assert.That(result.StatusCode, Is.EqualTo(HttpStatusCode.OK));
+            Assert.That(result.Data.Count, Is.EqualTo(1));
+        }
+
+        [Test]
+        public async void CanCancelFundraisingPage()
+        {
+            const int eventId = 756550;
+            var pageName = "Sdk2-test-" + Guid.NewGuid().ToString("N");
+            var client = await TestContext.CreateBasicAuthClientAndUser();
+            var frpRequest = new FundraisingPageRegistration
+            {
+                CharityId = TestContext.DemoCharityId,
+                PageShortName = pageName,
+                PageTitle = "Sdk2 Test Page",
+                EventId = eventId
+            };
+
+            await client.Fundraising.RegisterFundraisingPage(frpRequest);
+            var response = await client.Fundraising.CancelFundraisingPage(pageName);
+            var fprInfo = await client.Fundraising.GetFundraisingPageDetails(pageName);
+
+            Assert.That(response.StatusCode, Is.EqualTo(HttpStatusCode.OK));
+            Assert.That(fprInfo.StatusCode, Is.EqualTo(HttpStatusCode.Gone));
+        }
+
+        [Test]
+        public async void CanUpdateNotificationsPreferences()
+        {
+            const int eventId = 756550;
+            var pageName = "Sdk2-test-" + Guid.NewGuid().ToString("N");
+            var client = await TestContext.CreateBasicAuthClientAndUser();
+            var frpRequest = new FundraisingPageRegistration
+            {
+                CharityId = TestContext.DemoCharityId,
+                PageShortName = pageName,
+                PageTitle = "Sdk2 Test Page",
+                EventId = eventId
+            };
+
+            await client.Fundraising.RegisterFundraisingPage(frpRequest);
+
+            var response = await client.Fundraising.UpdateNotificationsPreferences(pageName, new NotificationPreferences{DonationAlerts = true, FundraisingTips = true, RegularUpdates = true});
+
+            Assert.That(response.StatusCode, Is.EqualTo(HttpStatusCode.OK));
+        }
+
+        [Test]
+        public async void CanUpdatePageSummary()
+        {
+            const int eventId = 756550;
+            var pageName = "Sdk2-test-" + Guid.NewGuid().ToString("N");
+            var client = await TestContext.CreateBasicAuthClientAndUser();
+            var frpRequest = new FundraisingPageRegistration
+            {
+                CharityId = TestContext.DemoCharityId,
+                PageShortName = pageName,
+                PageTitle = "Sdk2 Test Page",
+                EventId = eventId
+            };
+
+            await client.Fundraising.RegisterFundraisingPage(frpRequest);
+
+            var response = await client.Fundraising.UpdateFundraisingPageSummary(pageName, new FundraisingPageSummary{PageSummaryWhat = "Foo", PageSummaryWhy = "Bar"});
+
+            Assert.That(response.StatusCode, Is.EqualTo(HttpStatusCode.OK));
+        }
 
         private byte[] GetEmbeddedTestImage()
         {

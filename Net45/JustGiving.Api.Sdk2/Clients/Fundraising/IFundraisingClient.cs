@@ -27,8 +27,13 @@ namespace JustGiving.Api.Sdk2.Clients.Fundraising
         Task<IRestResponse> DeleteFundraisingPageAttribution(string pageShortName);
         Task<HttpResponseMessage> UploadImage(string pageShortName, byte[] imageData, string contentType, string caption = "");
         Task<HttpResponseMessage> UploadDefaultImage(string pageShortName, byte[] imageData, string contentType, string caption = "");
-        Task<IRestResponse<AddImageToFundraisingPageResponse>> AddImageToFundraisingPage(string pageShortName, AddImageToFundraisingPageRequest request);
+        Task<IRestResponse<AddImageToFundraisingPageResponse>> AddImageToFundraisingPage(string pageShortName, ImageInfo image);
         Task<IRestResponse> DeleteFundraisingPageImage(string pageShortName, string imageFileName, bool isStockImage);
         Task<IRestResponse<List<FundraisingPageImage>>> GetImagesForFundraisingPage(string pageShortName);
+        Task<IRestResponse<AddVideoToFundraisingPageResponse>> AddVideoToFundraisingPage(string pageShortName, VideoInfo video);
+        Task<IRestResponse<List<FundraisingPageVideo>>> GetVideosForFundraisingPage(string pageShortName);
+        Task<IRestResponse> CancelFundraisingPage(string pageShortName);
+        Task<IRestResponse> UpdateNotificationsPreferences(string pageShortName, NotificationPreferences preferences);
+        Task<IRestResponse> UpdateFundraisingPageSummary(string pageName, FundraisingPageSummary summary);
     }
 }

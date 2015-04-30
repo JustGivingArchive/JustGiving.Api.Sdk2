@@ -184,7 +184,7 @@ namespace JustGiving.Api.Sdk2.Clients.Fundraising
             return await ExecuteRaw(resource, HttpMethod.Post, imageData, contentType);
         }
 
-        public async Task<IRestResponse<AddImageToFundraisingPageResponse>> AddImageToFundraisingPage(string pageShortName, AddImageToFundraisingPageRequest image)
+        public async Task<IRestResponse<AddImageToFundraisingPageResponse>> AddImageToFundraisingPage(string pageShortName, ImageInfo image)
         {
             const string resource = "/v1/fundraising/pages/{pageShortName}/images";
             var request = new RestRequest(resource, Method.PUT);
@@ -210,6 +210,54 @@ namespace JustGiving.Api.Sdk2.Clients.Fundraising
             var request = new RestRequest(resource, Method.GET);
             request.AddUrlSegment("pageShortName", pageShortName);
             var response = Execute<List<FundraisingPageImage>>(request);
+            return response;
+        }
+
+        public async Task<IRestResponse<AddVideoToFundraisingPageResponse>> AddVideoToFundraisingPage(string pageShortName, VideoInfo video)
+        {
+            const string resource = "/v1/fundraising/pages/{pageShortName}/videos";
+            var request = new RestRequest(resource, Method.PUT);
+            request.AddUrlSegment("pageShortName", pageShortName);
+            request.AddJsonBody(video);
+            var response = await Execute<AddVideoToFundraisingPageResponse>(request);
+            return response;
+        }
+
+        public async Task<IRestResponse<List<FundraisingPageVideo>>> GetVideosForFundraisingPage(string pageShortName)
+        {
+            const string resource = "/v1/fundraising/pages/{pageShortName}/videos";
+            var request = new RestRequest(resource, Method.GET);
+            request.AddUrlSegment("pageShortName", pageShortName);
+            var response = await Execute<List<FundraisingPageVideo>>(request);
+            return response;
+        }
+
+        public async Task<IRestResponse> CancelFundraisingPage(string pageShortName)
+        {
+            const string resource = "/v1/fundraising/pages/{pageShortName}";
+            var request = new RestRequest(resource, Method.DELETE);
+            request.AddUrlSegment("pageShortName", pageShortName);
+            var response = await Execute(request);
+            return response;
+        }
+
+        public async Task<IRestResponse> UpdateNotificationsPreferences(string pageShortName, NotificationPreferences preferences)
+        {
+            const string resource = "/v1/fundraising/pages/{pageShortName}/notifications";
+            var request = new RestRequest(resource, Method.PUT);
+            request.AddUrlSegment("pageShortName", pageShortName);
+            request.AddJsonBody(preferences);
+            var response = await Execute(request);
+            return response;
+        }
+
+        public async Task<IRestResponse> UpdateFundraisingPageSummary(string pageName, FundraisingPageSummary summary)
+        {
+            const string resource = "/v1/fundraising/pages/{pageShortName}/summary";
+            var request = new RestRequest(resource, Method.PUT);
+            request.AddUrlSegment("pageShortName", pageName);
+            request.AddJsonBody(summary);
+            var response = await Execute(request);
             return response;
         }
     }
