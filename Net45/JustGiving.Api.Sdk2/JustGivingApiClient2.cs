@@ -7,6 +7,7 @@ using JustGiving.Api.Sdk2.Clients.Currency;
 using JustGiving.Api.Sdk2.Clients.Donation;
 using JustGiving.Api.Sdk2.Clients.Event;
 using JustGiving.Api.Sdk2.Clients.Fundraising;
+using JustGiving.Api.Sdk2.Clients.OneSearch;
 using JustGiving.Api.Sdk2.Configuration;
 using JustGiving.Api.Sdk2.Configuration.Logging;
 using JustGiving.Api.Sdk2.Http;
@@ -30,6 +31,7 @@ namespace JustGiving.Api.Sdk2
         private DonationClient _donation;
         private FundraisingClient _fundraising;
         private EventClient _event;
+        private OneSearchClient _oneSearch;
         private IRestClient _restClient;
         private HttpClient _httpClient;
         private ApiRequestLogger _logger;
@@ -310,6 +312,22 @@ namespace JustGiving.Api.Sdk2
                 }
 
                 return _fundraising;
+            }
+        }
+
+        /// <summary>
+        /// API resources for working with OneSearch, our unified search API
+        /// </summary>
+        public OneSearchClient OneSearch
+        {
+            get
+            {
+                if (_oneSearch == null)
+                {
+                    _oneSearch = new OneSearchClient(RestClient, HttpClient, Logger);
+                }
+
+                return _oneSearch;
             }
         }
 
