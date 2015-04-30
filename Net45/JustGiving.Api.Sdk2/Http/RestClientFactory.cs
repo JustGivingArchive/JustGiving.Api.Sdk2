@@ -7,6 +7,11 @@ namespace JustGiving.Api.Sdk2.Http
 {
     internal class RestClientFactory
     {
+        /// <summary>
+        /// Initializes a RestSharp client and configures it with settings necessary for it to interoperate with JustGiving's Consumer API resources.
+        /// </summary>
+        /// <param name="options"></param>
+        /// <returns></returns>
         public IRestClient CreateClient(ClientOptions options)
         {
             var client = new RestClient(options.Endpoint);

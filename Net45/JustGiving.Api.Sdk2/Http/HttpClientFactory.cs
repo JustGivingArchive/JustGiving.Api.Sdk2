@@ -6,6 +6,9 @@ using JustGiving.Api.Sdk2.Security;
 
 namespace JustGiving.Api.Sdk2.Http
 {
+    /// <summary>
+    /// For making raw HTTP requests e.g. uploading images
+    /// </summary>
     internal class HttpClientFactory
     {
         public HttpClient CreateClient(ClientOptions options)

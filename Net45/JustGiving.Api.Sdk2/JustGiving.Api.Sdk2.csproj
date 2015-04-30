@@ -63,6 +63,8 @@
     <Compile Include="Clients\Fundraising\IFundraisingClient.cs" />
     <Compile Include="Clients\OneSearch\IOneSearchClient.cs" />
     <Compile Include="Clients\OneSearch\OneSearchClient.cs" />
+    <Compile Include="Clients\Project\IProjectClient.cs" />
+    <Compile Include="Clients\Project\ProjectClient.cs" />
     <Compile Include="Http\HttpClientFactory.cs" />
     <Compile Include="JustGivingApiClient2.cs" />
     <Compile Include="Clients\Account\IAccountClient.cs" />
@@ -150,6 +152,9 @@
     <Compile Include="Model\OneSearch\Response\GroupedResults.cs" />
     <Compile Include="Model\OneSearch\Response\OneSearchResponse.cs" />
     <Compile Include="Model\OneSearch\Response\Results.cs" />
+    <Compile Include="Model\Project\GlobalGivingImage.cs" />
+    <Compile Include="Model\Project\GlobalProject.cs" />
+    <Compile Include="Model\Project\ProgressUpdate.cs" />
     <Compile Include="Security\AuthorizationMode.cs" />
     <Compile Include="Security\Basic\BasicCredential.cs" />
     <Compile Include="Configuration\ClientOptions.cs" />

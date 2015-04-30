@@ -8,6 +8,7 @@ using JustGiving.Api.Sdk2.Clients.Donation;
 using JustGiving.Api.Sdk2.Clients.Event;
 using JustGiving.Api.Sdk2.Clients.Fundraising;
 using JustGiving.Api.Sdk2.Clients.OneSearch;
+using JustGiving.Api.Sdk2.Clients.Project;
 using JustGiving.Api.Sdk2.Configuration;
 using JustGiving.Api.Sdk2.Configuration.Logging;
 using JustGiving.Api.Sdk2.Http;
@@ -32,6 +33,7 @@ namespace JustGiving.Api.Sdk2
         private FundraisingClient _fundraising;
         private EventClient _event;
         private OneSearchClient _oneSearch;
+        private ProjectClient _project;
         private IRestClient _restClient;
         private HttpClient _httpClient;
         private ApiRequestLogger _logger;
@@ -328,6 +330,22 @@ namespace JustGiving.Api.Sdk2
                 }
 
                 return _oneSearch;
+            }
+        }
+
+        /// <summary>
+        /// API resources for working with projects.
+        /// </summary>
+        public ProjectClient Project
+        {
+            get
+            {
+                if (_project == null)
+                {
+                    _project = new ProjectClient(RestClient, HttpClient, Logger);
+                }
+
+                return _project;
             }
         }
 
