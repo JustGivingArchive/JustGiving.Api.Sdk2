@@ -26,5 +26,6 @@ namespace JustGiving.Api.Sdk2.Clients.Fundraising
         Task<IRestResponse<Model.Fundraising.Response.FundraisingPageAttribution>> GetFundraisingPageAttribution(string pageShortName);
         Task<IRestResponse> DeleteFundraisingPageAttribution(string pageShortName);
         Task<HttpResponseMessage> UploadImage(string pageShortName, byte[] imageData, string contentType, string caption = "");
+        Task<HttpResponseMessage> UploadDefaultImage(string pageShortName, byte[] imageData, string contentType, string caption = "");
     }
 }

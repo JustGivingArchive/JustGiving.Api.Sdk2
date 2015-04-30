@@ -172,5 +172,16 @@ namespace JustGiving.Api.Sdk2.Clients.Fundraising
 
             return await ExecuteRaw(resource, HttpMethod.Post, imageData, contentType);
         }
+
+        public async Task<HttpResponseMessage> UploadDefaultImage(string pageShortName, byte[] imageData, string contentType, string caption = "")
+        {
+            var resource = string.Format("/v1/fundraising/pages/{0}/images/default", pageShortName);
+            if (!string.IsNullOrWhiteSpace(caption))
+            {
+                resource += "?caption=" + Uri.EscapeUriString(caption);
+            }
+
+            return await ExecuteRaw(resource, HttpMethod.Post, imageData, contentType);
+        }
     }
 }

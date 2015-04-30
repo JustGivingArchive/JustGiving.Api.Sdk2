@@ -426,9 +426,37 @@ namespace JustGiving.Api.Sdk2.Test.Integration.Fundraising
             await client.Fundraising.RegisterFundraisingPage(frpRequest);
 
             var image = GetEmbeddedTestImage();
-            var result = await client.Fundraising.UploadImage(pageName, image, "image/png", "My caption");
+            var caption = "Test caption " + Guid.NewGuid();
+            var result = await client.Fundraising.UploadImage(pageName, image, "image/png", caption);
+            var frpInfo = await client.Fundraising.GetFundraisingPageDetails(pageName);
+            
+            Assert.That(result.StatusCode, Is.EqualTo(HttpStatusCode.OK));
+            Assert.That(frpInfo.Data.Media.Images.Any(im => im.Caption == caption));
+        }
+
+        [Test]
+        public async void CanUploadDefaultImage()
+        {
+            const int eventId = 756550;
+            var pageName = "Sdk2-test-" + Guid.NewGuid().ToString("N");
+            var client = await TestContext.CreateBasicAuthClientAndUser();
+            var frpRequest = new FundraisingPageRegistration
+            {
+                CharityId = TestContext.DemoCharityId,
+                PageShortName = pageName,
+                PageTitle = "Sdk2 Test Page",
+                EventId = eventId
+            };
+
+            await client.Fundraising.RegisterFundraisingPage(frpRequest);
+
+            var image = GetEmbeddedTestImage();
+            var caption = "Test caption " + Guid.NewGuid();
+            var result = await client.Fundraising.UploadDefaultImage(pageName, image, "image/png", caption);
+            var frpInfo = await client.Fundraising.GetFundraisingPageDetails(pageName);
 
             Assert.That(result.StatusCode, Is.EqualTo(HttpStatusCode.OK));
+            Assert.That(frpInfo.Data.Image.Caption, Is.EqualTo(caption));
         }
 
         [Test]
