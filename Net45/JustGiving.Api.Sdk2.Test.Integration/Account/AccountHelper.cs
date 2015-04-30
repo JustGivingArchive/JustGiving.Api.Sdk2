@@ -7,8 +7,8 @@ namespace JustGiving.Api.Sdk2.Test.Integration.Account
     {
         public static Registration CreateRegistration(out string username, out string password)
         {
-            username = string.Format("integration-test-{0}{1}{2}{3}{4}{5}@justgiving.com", DateTime.Now.Year, DateTime.Now.Month,
-                DateTime.Now.Day, DateTime.Now.Hour, DateTime.Now.Minute, DateTime.Now.Second);
+            username = string.Format("integration-test-{0}{1}{2}{3}{4}{5}-{6}@justgiving.com", DateTime.Now.Year, DateTime.Now.Month,
+                DateTime.Now.Day, DateTime.Now.Hour, DateTime.Now.Minute, DateTime.Now.Second, Guid.NewGuid().ToString("N"));
             password = Guid.NewGuid().ToString();
 
             var reg = new Registration
