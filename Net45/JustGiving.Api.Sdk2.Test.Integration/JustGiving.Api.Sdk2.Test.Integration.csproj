@@ -62,6 +62,7 @@
     <Compile Include="Fundraising\FundraisingTests.cs" />
     <Compile Include="OneSearch\OneSearchTests.cs" />
     <Compile Include="Project\ProjectTests.cs" />
+    <Compile Include="Search\SearchTests.cs" />
     <Compile Include="TestContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
