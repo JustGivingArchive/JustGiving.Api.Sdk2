@@ -1,6 +1,6 @@
-var JG = (function () {
+;; var JG = (function () {
 
-    var _appId, _scope, _environment, _apiEndpoint, _authorizationEndpoint, _accessToken;
+    var _appId, _scope, _environment, _apiEndpoint, _authorizationEndpoint, _accessToken, _connected;
 
     var init = function (options) {
         JG.CustomElements.register();
@@ -10,20 +10,20 @@ var JG = (function () {
         _apiEndpoint = Constants.environments[_environment];
         _authorizationEndpoint = Constants.identityServers[_environment] + Constants.authorizeResource;
 
-      var signedIn = false;
+        var signedIn = false;
         if (window.location.hash) {
             signedIn = _processTokenCallback();
         }
-    else {
-        signedIn = checkConnected();
-    }
+        else {
+            signedIn = checkConnected();
+        }
 
         if (!signedIn) {
             _initLoginButtons();
         }
     };
 
-    var checkConnected = function (callback) {
+    var checkConnected = function (connectedCallback) {
         var cookie = Cookies.get('JGOAUTH');
         var result;
         if (cookie) {
@@ -41,12 +41,17 @@ var JG = (function () {
             };
         }
 
-        callback(result);
+        if (connectedCallback != null) {
+            connectedCallback(result);
+        } else {
+        }
+
         return result.connected;
     }
 
     var signOut = function () {
         Cookies.expire('JGOAUTH');
+        _initLoginButtons();
     }
 
     var getFundraisingPages = function (callback, errorCallback) {
@@ -78,12 +83,41 @@ var JG = (function () {
             if (request.status >= 200 && request.status < 400) {
                 var data = JSON.parse(request.responseText);
                 callback(data);
-            } 
+            }
         };
 
         request.onerror = function () {
             if (errorCallback) {
                 errorCallback();
+            }
+        };
+
+        request.send();
+    }
+
+    var getAccount = function (callback, errorCallback) {
+
+        var request = _createRequest('GET', '/v1/account');
+
+        request.onreadystatechange = function (e) {
+            if (request.readyState === 4) {
+                if (request.status < 200 || request.status >= 400) {
+                    errorCallback();
+                    failed = true;
+                } 
+            }
+        };
+
+        request.onload = function () {
+            if (request.status >= 200 && request.status < 400) {
+                var data = JSON.parse(request.responseText);
+                callback(data);
+            }
+        };
+
+        request.onerror = function (err) {
+            if (errorCallback) {
+                errorCallback(err);
             }
         };
 
@@ -104,7 +138,7 @@ var JG = (function () {
     }
 
     var _getToken = function () {
-       
+
         var redirectUri = document.location.href.match(/(^[^#]*)/)[0];
         var responseType = "id_token token";
         var state = Date.now() + "" + Math.random();
@@ -144,8 +178,8 @@ var JG = (function () {
                 idToken = jwt_decode(result.id_token);
             }
         }
-    
-    var data = false;
+
+        var data = false;
 
         if (success) {
 
@@ -159,7 +193,7 @@ var JG = (function () {
 
             Cookies.set('JGOAUTH', JSON.stringify(data), { expires: result.expires });
         } else {
-       Cookies.expire('JGOAUTH');
+            Cookies.expire('JGOAUTH');
         }
 
         var loginButtons = document.querySelectorAll('jg-login');
@@ -168,7 +202,10 @@ var JG = (function () {
             if (loginButton.getAttribute('onlogin')) {
                 var methodName = loginButton.getAttribute('onlogin');
                 var callback = window[methodName];
-                callback(data);
+                if (callback != null) {
+                    callback(data);
+                }
+                
             }
         });
 
@@ -204,12 +241,12 @@ var JG = (function () {
         });
     }
 
-    var Constants = (function() {
+    var Constants = (function () {
 
         var defaultScopes = 'openid profile email fundraise account';
         var authorizeResource = '/connect/authorize';
         var environments = new Array();
-        environments['local'] = "http://api.local.justgiving.com";
+        environments['local'] = "https://api.local.justgiving.com";
         environments['dev'] = "https://api-integration.staging.justgiving.com";
         environments['staging'] = "https://api-integration.staging.justgiving.com";
         environments['sandbox'] = "https://api-sandbox.justgiving.com";
@@ -232,11 +269,11 @@ var JG = (function () {
 
     var CustomElements = (function () {
 
-        var register = function() {
+        var register = function () {
             _loginButton();
         };
 
-        var _loginButton = function() {
+        var _loginButton = function () {
             document.registerElement('jg-login', {
                 prototype: Object.create(HTMLSpanElement.prototype),
                 extends: 'span'
@@ -254,11 +291,12 @@ var JG = (function () {
         signOut: signOut,
         getFundraisingPages: getFundraisingPages,
         getFeed: getFeed,
+        getAccount: getAccount,
         CustomElements: CustomElements
     };
 
 })();
 
 window.onload = function () {
-    
+
 }

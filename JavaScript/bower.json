@@ -20,6 +20,7 @@
   ],
   "dependencies": {
     "Cookies": "~1.2.1",
-    "jwt-decode": "~1.1.0"
+    "jwt-decode": "~1.1.0",
+    "webcomponentsjs": "~0.7.2"
   }
 }
